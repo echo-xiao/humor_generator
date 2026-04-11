@@ -3,3 +3,7 @@
 __pycache__/
 .DS_Store
 *.pyc
+OpenHowNet/
+data/cilin.txt
+*.jsonl
+data/*.pkl
