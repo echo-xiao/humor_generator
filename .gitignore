@@ -7,3 +7,4 @@ OpenHowNet/
 data/cilin.txt
 *.jsonl
 data/*.pkl
+*.ipynb
