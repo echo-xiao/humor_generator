@@ -148,16 +148,11 @@ graph LR
 ```mermaid
 graph LR
     subgraph SRC["Raw Sources"]
-        S1["YouTube Standup"]
-        S2["Xiaohongshu"]
-        S3["Image OCR"]
+        S1["YouTube Standup"] --> S2["Xiaohongshu"] --> S3["Image OCR"]
     end
 
     subgraph EXT["External Data"]
-        E1["ConceptNet 272k"]
-        E2["Xiehouyu 14k"]
-        E3["Idioms 55k"]
-        E4["Homophones 14k"]
+        E1["ConceptNet 272k"] --> E2["Xiehouyu 14k"] --> E3["Idioms 55k"] --> E4["Homophones 14k"]
     end
 
     SRC -->|"subtitle /<br/>FunASR /<br/>OCR"| GCS["GCS<br/>raw txt"]
