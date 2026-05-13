@@ -7,21 +7,21 @@ graph TD
     ROOT["Current LLM-Only Humor Generation"] --> P1 & P2 & P3
 
     subgraph P1["Low Quality Output"]
-        P1A["Generic / repetitive jokes"] --> P1B["No structural humor theory"]
-        P1B --> P1C["Temperature randomness != real humor"]
+        P1A["Generic, repetitive jokes"] --> P1B["No humor theory applied"]
+        P1B --> P1C["Randomness is not humor"]
     end
 
     subgraph P2["No Humor Knowledge"]
-        P2A["No humor-specific KG"] --> P2B["No conflict / irony edges"]
-        P2B --> P2C["No sentiment or domain annotation"]
+        P2A["No humor-specific KG"] --> P2B["No conflict or irony edges"]
+        P2B --> P2C["No sentiment or domain labels"]
     end
 
     subgraph P3["Weak Evaluation"]
         P3A["LLM self-evaluates own jokes"] --> P3B["Single-dimension scoring"]
-        P3B --> P3C["No empathy / novelty metrics"]
+        P3B --> P3C["No empathy or novelty metrics"]
     end
 
-    P1C --> RESULT["Result: Unfunny, shallow,<br/>indistinguishable from templates"]
+    P1C --> RESULT["Unfunny, shallow, template-like"]
     P2C --> RESULT
     P3C --> RESULT
 
