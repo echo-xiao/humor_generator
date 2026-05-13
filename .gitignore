@@ -12,6 +12,9 @@ data/external_triples/
 data/annotations/
 *.pkl
 
+# Docs (local only, not committed)
+docs/
+
 # IDE
 .idea/
 .vscode/
