@@ -1,10 +1,17 @@
 .env
-*.json
 __pycache__/
 .DS_Store
 *.pyc
-OpenHowNet/
-data/cilin.txt
-*.jsonl
-data/*.pkl
 *.ipynb
+
+# 大文件/数据（不提交）
+data/cache/
+data/input_data/
+data/external/
+data/external_triples/
+data/annotations/
+*.pkl
+
+# IDE
+.idea/
+.vscode/

@@ -17,9 +17,8 @@ from google import genai
 from google.genai import errors as genai_errors
 from dotenv import load_dotenv
 
-load_dotenv()
-
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+_PROJECT_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
+load_dotenv(os.path.join(_PROJECT_ROOT, ".env"))
 
 # ==================== 配置 ====================
 PROJECT_ID = "gen-lang-client-0577448366"
@@ -32,9 +31,10 @@ RAG_FILES = [
     "data/input_data/rag_ready_十万个梗库.jsonl",
 ]
 
-DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
+DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data", "cache")
 MEMES_CACHE_PATH = os.path.join(DATA_DIR, "rag_memes.json")
 EMBEDDINGS_CACHE_PATH = os.path.join(DATA_DIR, "rag_embeddings.json")
+NODE_EMBEDDINGS_CACHE_PATH = os.path.join(DATA_DIR, "node_embeddings.json")
 
 # ==================== 初始化 ====================
 client = genai.Client(api_key=GEMINI_API_KEY)
@@ -158,6 +158,49 @@ def retrieve(topic, humor_slot, top_k=3, memes=None, embeddings=None):
     ]
     scored.sort(reverse=True)
     return [meme for _, meme in scored[:top_k]]
+
+
+# ==================== 节点语义匹配 ====================
+
+def build_or_load_node_embeddings(G):
+    """为图谱中有意义的节点构建 embedding 缓存（首次约需几分钟）"""
+    from .graph import NOISE_NODES
+    nodes = sorted([n for n in G.nodes() if 1 <= len(n) <= 8 and n not in NOISE_NODES])
+
+    if os.path.exists(NODE_EMBEDDINGS_CACHE_PATH):
+        with open(NODE_EMBEDDINGS_CACHE_PATH, encoding="utf-8") as f:
+            cached = json.load(f)
+        if cached.get("count") == len(nodes):
+            return cached["nodes"], cached["embeddings"]
+        print(f"  节点数变化（{cached.get('count')} → {len(nodes)}），重建索引...")
+
+    print(f"  构建节点 embedding 索引（{len(nodes)} 个节点，首次约需几分钟）...")
+    embeddings = embed_texts(nodes, batch_size=20)
+
+    os.makedirs(DATA_DIR, exist_ok=True)
+    with open(NODE_EMBEDDINGS_CACHE_PATH, "w", encoding="utf-8") as f:
+        json.dump({"count": len(nodes), "nodes": nodes, "embeddings": embeddings}, f)
+
+    return nodes, embeddings
+
+
+def find_similar_node(topic, G, top_k=3, threshold=0.6):
+    """语义最相似的图谱节点，返回 [(score, node), ...]"""
+    nodes, node_embeddings = build_or_load_node_embeddings(G)
+
+    try:
+        query_result = client.models.embed_content(model=EMBED_MODEL, contents=topic)
+        query_emb = query_result.embeddings[0].values
+    except Exception as e:
+        print(f"  节点语义匹配 embedding 失败: {e}")
+        return []
+
+    scored = [
+        (cosine_similarity(query_emb, emb), node)
+        for emb, node in zip(node_embeddings, nodes)
+    ]
+    scored.sort(reverse=True)
+    return [(s, n) for s, n in scored[:top_k] if s >= threshold]
 
 
 # ==================== 主程序（演示） ====================

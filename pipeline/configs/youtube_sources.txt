@@ -1,0 +1,16 @@
+# YouTube 素材来源
+# 格式：source名称 | URL
+# 用 # 开头的行是注释
+#
+# DEFAULT_FILTER 对所有来源生效，单独加 | filter=xxx 可覆盖默认值
+
+DEFAULT_FILTER=脱口秀,喜剧,喜人奇妙夜,德云社,爆笑,吐槽,王建国,王雪琴,主咖和Ta的朋友们
+
+腾讯喜剧综艺          | https://www.youtube.com/@WeTVComedyOfficial/
+腾讯热播综艺    | https://www.youtube.com/@TencentVideoShow/
+一起追综吧           | https://www.youtube.com/@video-cntalkshow/
+综剧安利社    | https://www.youtube.com/@talkshowchannel/
+腾讯视频      | https://www.youtube.com/@TencentVideo/
+喜综大爆炸        | https://www.youtube.com/@TheBigBangComedy/
+综艺show         | https://www.youtube.com/@C-HitShow/
+爆梗          | https://www.youtube.com/@爆梗PunchlineTV/

@@ -1,3 +1,27 @@
+"""
+extract_transcripts.py — 脱口秀视频逐字转录
+
+流程：
+  GCS original_data/xhs_data/{脱口秀大咖|脱口秀集锦}*.zip
+    → 解压视频（.mp4/.mov/.avi）
+    → ffmpeg 提取音频（mp3）
+    → Gemini 逐字转录（按段子/笑点换行分段）
+    → 上传 GCS data/raw_data/{source_name}/{video}.txt
+
+数据源（SOURCES 列表，可扩展）：
+  - 脱口秀大咖
+  - 脱口秀集锦
+
+特点：
+  - 断点续传（查云端已有 txt，跳过已完成）
+  - tqdm 进度条
+  - 限流自动指数退避重试
+  - 处理完立即清理本地视频/音频，节省磁盘
+
+依赖：ffmpeg（系统命令），GEMINI_API_KEY（环境变量）
+运行：python generate_input_data/extract/extract_transcripts.py
+"""
+
 import os
 import zipfile
 import subprocess
