@@ -146,50 +146,39 @@ graph LR
 ## 4. Data Flow
 
 ```mermaid
-graph TD
-    subgraph COLLECT["Collection Layer"]
-        YT["YouTube Standup"] -->|subtitle / FunASR| TXT1["transcript .txt"]
-        XHS["Xiaohongshu Video"] -->|Gemini transcribe| TXT2["transcript .txt"]
-        IMG["Image Posts"] -->|OCR| TXT3["text .txt"]
-        MEMES["Meme Libraries"] -->|extract| TXT4["meme .txt"]
+graph LR
+    subgraph SRC["Raw Sources"]
+        S1["YouTube Standup"]
+        S2["Xiaohongshu"]
+        S3["Image OCR"]
     end
 
-    subgraph EXTERNAL["External Data Import"]
-        CN["ConceptNet 5.7"] -->|filter zh + t2s| CN_J["conceptnet_zh.jsonl<br/>272k triples"]
-        XHY["Xiehouyu Dict"] --> XHY_J["xiehouyu.jsonl<br/>14k"]
-        CY["Idiom Dict"] --> CY_J["chengyu.jsonl<br/>55k"]
-        PY["jieba + pypinyin"] --> HP_J["homophone.jsonl<br/>14k"]
-        DLUT["DLUT Sentiment"] --> SENT["sentiment.json<br/>27k words"]
-        CIL["Cilin Package"] --> CIL_J["cilin.json<br/>77k words"]
+    subgraph EXT["External Data"]
+        E1["ConceptNet 272k"]
+        E2["Xiehouyu 14k"]
+        E3["Idioms 55k"]
+        E4["Homophones 14k"]
     end
 
-    TXT1 & TXT2 & TXT3 -->|upload| GCS["GCS raw_data/"]
-    GCS -->|Gemini extract| TRIP["Humor Triples JSONL<br/>conflict / irony / cause"]
-    TXT4 --> RAG_J["RAG-ready JSONL<br/>1975 memes"]
+    SRC -->|"subtitle /<br/>FunASR /<br/>OCR"| GCS["GCS<br/>raw txt"]
+    GCS -->|"Gemini<br/>extract"| TRIP["Humor<br/>Triples"]
 
-    TRIP --> MERGE["Merge All Triples<br/>358k total"]
-    CN_J --> MERGE
-    XHY_J --> MERGE
-    CY_J --> MERGE
-    HP_J --> MERGE
+    EXT -->|"convert"| TRIP
 
-    MERGE --> BUILD["Build NetworkX Graph<br/>195k nodes / 314k edges"]
+    TRIP --> BUILD["Build Graph<br/>195k nodes<br/>314k edges"]
 
-    SENT -->|annotate nodes| BUILD
-    CIL_J -->|annotate nodes| BUILD
+    ANN["Annotations<br/>sentiment 27k<br/>cilin 77k"] -->|"label nodes"| BUILD
 
-    BUILD --> HW["Compute humor_weight<br/>source priority + sentiment<br/>+ cross-domain + relation"]
+    BUILD -->|"humor_weight"| PKL["Knowledge<br/>Graph .pkl"]
 
-    HW --> PKL["knowledge_graph.pkl<br/>saved local + GCS"]
-
-    PKL --> RUNTIME["Runtime: Generate Jokes"]
-    RAG_J --> RUNTIME
+    PKL --> RUN["15 Strategies<br/>+ Critic"]
+    MEME["RAG Memes<br/>1975"] --> RUN
 
     style GCS fill:#228be6,color:#fff
     style TRIP fill:#4c6ef5,color:#fff
     style BUILD fill:#ae3ec9,color:#fff
     style PKL fill:#f03e3e,color:#fff
-    style RUNTIME fill:#2b8a3e,color:#fff
+    style RUN fill:#2b8a3e,color:#fff
 ```
 
 ## 5. Ideal Knowledge Graph
@@ -279,41 +268,20 @@ graph TD
 ## 6. Evaluation Framework
 
 ```mermaid
-graph TD
-    CAND["Candidate Jokes<br/>(15+ from all strategies)"] --> SCORE
+graph LR
+    CAND["15+ Candidates"] --> D4["Empathy<br/>(highest weight)<br/>pain_frequency"] & D1["Humor<br/>surprise /<br/>incongruity"] & D3["Naturalness<br/>colloquial /<br/>standup"] & D2["Relevance<br/>on-topic"] & D5["Novelty<br/>(lowest weight)<br/>corpus distance"]
 
-    subgraph SCORE["Multi-Dimensional Scoring (each 1-5)"]
-        D1["Humor<br/>surprise / incongruity /<br/>absurdity"]
-        D2["Relevance<br/>on-topic / slot alignment"]
-        D3["Naturalness<br/>colloquial / standup tone"]
-        D4["Empathy (highest weight)<br/>pain_frequency weighted /<br/>negative nodes prioritized"]
-        D5["Novelty (lowest weight)<br/>cosine distance from<br/>existing joke corpus"]
-    end
+    D4 & D1 & D3 & D2 & D5 --> RANK["Weighted Rank<br/>empathy > humor > natural<br/>> relevance > novelty"]
 
-    SCORE --> RANK["Rank by Weighted Total<br/>empathy > humor > natural<br/>> relevance > novelty"]
+    RANK --> R1["Specific Critique"] --> R2["Targeted Rewrite"] --> R3["Re-score"]
+    R3 -->|"better"| R4["Accept"]
+    R3 -->|"worse"| R5["Keep Original"]
 
-    RANK --> TOP["Top-K Candidates"]
+    R4 & R5 --> FINAL["Final Joke +<br/>Score Breakdown"]
 
-    TOP --> REFINE
-
-    subgraph REFINE["Adversarial Refinement"]
-        R1["Critic generates<br/>actionable + specific feedback"]
-        R1 --> R2["Generator rewrites<br/>based on critique"]
-        R2 --> R3["Re-score new version"]
-        R3 -->|"improved"| R4["Accept new version"]
-        R3 -->|"not improved"| R5["Keep original"]
-    end
-
-    REFINE --> FINAL["Final Output<br/>with score breakdown"]
-
-    subgraph SIGNALS["Underlying Signals"]
-        S1["humor_weight<br/>relation + source + sentiment<br/>+ cross-domain + degree"]
-        S2["Empathy Score<br/>avg pain_frequency<br/>of involved nodes"]
-        S3["Simplicity<br/>word count / sentence count"]
-        S4["Benchmark Target<br/>CHumor 2.0: human 78%<br/>vs best LLM 60%"]
-    end
-
-    SIGNALS -.-> SCORE
+    S1["humor_weight"] -.-> D1
+    S2["pain_frequency"] -.-> D4
+    S3["CHumor 2.0<br/>human 78%<br/>vs LLM 60%"] -.-> RANK
 
     style CAND fill:#228be6,color:#fff
     style D4 fill:#f03e3e,color:#fff
