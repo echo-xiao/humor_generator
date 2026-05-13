@@ -163,29 +163,29 @@ xhs-humor-data/data/
 
 ## Humor Strategies
 
-| # | Strategy | Status | Data Sources | Method |
-|---|----------|--------|-------------|--------|
-| 1a | **KG Contrast** positive x negative | ✅ Implemented | KG + DLUT sentiment + HowNet + Cilin | Find one-hop neighbors, score by sentiment polarity opposition x semantic distance |
-| 1b | **KG Two-Slot** | ✅ Implemented | KG + Cilin | Find two high-value neighbors, pick pair with max cross-domain tension |
-| 1c | **KG Best Humor Slot** | ✅ Implemented | KG (humor_weight) | find_humor_slots() with multi-dim scoring: relation type + source priority + sentiment + cross-domain |
-| 2a | **Causal Chain** | ✅ Implemented | KG causal edges + sentiment | DFS along cause/effect edges 2-4 hops, score endpoints by negativity |
-| 2b | **Expectation Violation** | ✅ Implemented | KG expect/reality edges + sentiment | Find "expects" vs "actually" edges, rank by sentiment gap |
-| 3 | **Semantic Distance** | ✅ Implemented | HowNet sememes | Jaccard distance on sememe sets, find "seemingly similar but fundamentally opposite" pairs |
-| 4 | **Context Shift** | ✅ Implemented | Cilin + KG filter | Cross-domain words (different Cilin level-1), filtered by KG presence |
-| 5a | **Homophone** | ✅ Implemented | KG homophone edges + pypinyin | Query graph homophone edges, fallback to pypinyin real-time lookup |
-| 5b | **Character Decompose** | ✅ Implemented | Unicode + char mapping + KG | Decompose characters (婚=女+昏), combine with KG context |
-| 6 | **Ambiguity** | ✅ Implemented | HowNet multi-sense | Multi-sense polysemy, score by ambiguity (activation balance) x diversity (sememe distance) |
-| 7 | **Redefinition** | ✅ Implemented | KG "essence_is/equals" edges | Find "essence_is / equals / actually" relation targets, template: "所谓X，就是Y" |
-| 8 | **Concretize** | ✅ Implemented | KG + dimension matrix | Force topic into concrete dimensions (time/money/action/scene/count), absurd precision |
-| 9 | **Self-Contradiction** | ✅ Implemented | KG purpose vs result + sentiment | Find "purpose_is" (positive) vs "causes" (negative), opposite polarity = self-defeating |
-| 10 | **Hyperbolic Deflation** | ✅ Implemented | KG grand/mundane edges + sentiment | Find "symbolizes" (grand) vs "causes" (mundane), grand opening → trivial ending |
-| 11 | **Xiehouyu** | ✅ Implemented | KG xiehouyu edges (14k) | Search xiehouyu edges by topic keyword, combine with KG context for new riddles |
-| 12 | **RAG Replace** | ✅ Implemented | RAG meme store (1975) | Post-process: check if meme store has material to fuse into existing candidates |
-| 13 | **Self-Deprecation** | ✅ Implemented | KG + DLUT sentiment | Find most negative neighbor nodes, frame as "我就是那种..." or "我们这代人..." |
-| 14 | **False Analogy** | ✅ Implemented | Cilin + KG + HowNet | Cross-domain word → find shared neighbors (why alike) + different neighbors (break point) |
-| 15 | **Ironic Reversal** | ✅ Implemented | KG irony/sarcasm edges + sentiment | Find irony/sarcasm relation edges, or use positive tone to describe negative reality |
-| + | **Multi-Method Fusion** | Planned | All sources | Score all neighbor pairs on 4 dimensions (KG + Cilin + HowNet + sentiment), pick strongest conflict pair |
-| - | **LLM Baseline** | Reference | None | Pure LLM generation without data guidance (comparison baseline) |
+| # | Strategy | Data Sources | Method |
+|---|----------|-------------|--------|
+| 1a | **KG Contrast** positive x negative | KG + DLUT sentiment + HowNet + Cilin | Find one-hop neighbors, score by sentiment polarity opposition x semantic distance |
+| 1b | **KG Two-Slot** | KG + Cilin | Find two high-value neighbors, pick pair with max cross-domain tension |
+| 1c | **KG Best Humor Slot** | KG (humor_weight) | find_humor_slots() with multi-dim scoring: relation type + source priority + sentiment + cross-domain |
+| 2a | **Causal Chain** | KG causal edges + sentiment | DFS along cause/effect edges 2-4 hops, score endpoints by negativity |
+| 2b | **Expectation Violation** | KG expect/reality edges + sentiment | Find "expects" vs "actually" edges, rank by sentiment gap |
+| 3 | **Semantic Distance** | HowNet sememes | Jaccard distance on sememe sets, find "seemingly similar but fundamentally opposite" pairs |
+| 4 | **Context Shift** | Cilin + KG filter | Cross-domain words (different Cilin level-1), filtered by KG presence |
+| 5a | **Homophone** | KG homophone edges + pypinyin | Query graph homophone edges, fallback to pypinyin real-time lookup |
+| 5b | **Character Decompose** | Unicode + char mapping + KG | Decompose characters (婚=女+昏), combine with KG context |
+| 6 | **Ambiguity** | HowNet multi-sense | Multi-sense polysemy, score by ambiguity (activation balance) x diversity (sememe distance) |
+| 7 | **Redefinition** | KG "essence_is/equals" edges | Find "essence_is / equals / actually" relation targets, template: "所谓X，就是Y" |
+| 8 | **Concretize** | KG + dimension matrix | Force topic into concrete dimensions (time/money/action/scene/count), absurd precision |
+| 9 | **Self-Contradiction** | KG purpose vs result + sentiment | Find "purpose_is" (positive) vs "causes" (negative), opposite polarity = self-defeating |
+| 10 | **Hyperbolic Deflation** | KG grand/mundane edges + sentiment | Find "symbolizes" (grand) vs "causes" (mundane), grand opening → trivial ending |
+| 11 | **Xiehouyu** | KG xiehouyu edges (14k) | Search xiehouyu edges by topic keyword, combine with KG context for new riddles |
+| 12 | **RAG Replace** | RAG meme store (1975) | Post-process: check if meme store has material to fuse into existing candidates |
+| 13 | **Self-Deprecation** | KG + DLUT sentiment | Find most negative neighbor nodes, frame as "我就是那种..." or "我们这代人..." |
+| 14 | **False Analogy** | Cilin + KG + HowNet | Cross-domain word → find shared neighbors (why alike) + different neighbors (break point) |
+| 15 | **Ironic Reversal** | KG irony/sarcasm edges + sentiment | Find irony/sarcasm relation edges, or use positive tone to describe negative reality |
+| + | **Multi-Method Fusion** | All sources | Score all neighbor pairs on 4 dimensions (KG + Cilin + HowNet + sentiment), pick strongest conflict pair |
+| - | **LLM Baseline** | None | Pure LLM generation without data guidance (comparison baseline) |
 
 ## 理论基础
 
