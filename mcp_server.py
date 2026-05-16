@@ -430,5 +430,98 @@ def list_all_posts() -> str:
     return "\n".join(lines)
 
 
+@mcp.tool()
+def match_images(post_text: str) -> str:
+    """
+    为确认后的帖子文案匹配 Google Photos 图片。
+
+    输入完整的帖子文案（===图1=== 格式），系统会从你的 Google Photos 里
+    为每张图推荐最合适的照片，并返回查看链接。
+
+    Args:
+        post_text: 确认后的帖子文案，格式为 ===图1=== ... ===图2=== ...
+    """
+    try:
+        from pipeline.images.match_images import match_images_for_post, format_results
+        results = match_images_for_post(post_text)
+        if not results:
+            return "匹配失败。请确认：\n1. 图片索引已构建（python pipeline/images/photo_index.py）\n2. 文案格式正确（===图1=== ...）"
+        return format_results(results)
+    except Exception as e:
+        return f"图片匹配出错: {e}"
+
+
+@mcp.tool()
+def render_and_preview(post_text: str, title: str = "") -> str:
+    """
+    渲染帖子所有图片并打开预览文件夹 + 上传到 Google Drive。
+
+    第1张图自动用封面模式（大黑块+白字），其余用正常排版。
+    渲染完成后上传到 Google Drive "小红书发布" 文件夹，手机可直接下载发布。
+
+    Args:
+        post_text: 确认后的帖子文案，格式为 ===图1=== ... ===图2=== ...
+        title: 帖子标题（用于创建子文件夹）
+    """
+    try:
+        from pipeline.publish.publish import preview_post
+        rendered = preview_post(post_text)
+        if not rendered:
+            return "渲染失败，请检查文案格式"
+
+        upload_msg = ""
+        try:
+            from pipeline.images.photo_index import get_drive_creds
+            import requests as _req
+            creds = get_drive_creds()
+
+            resp = _req.get(
+                "https://www.googleapis.com/drive/v3/files",
+                headers={"Authorization": f"Bearer {creds.token}"},
+                params={"q": "name='小红书发布' and mimeType='application/vnd.google-apps.folder' and trashed=false",
+                        "fields": "files(id)"},
+            )
+            folders = resp.json().get("files", [])
+            if folders:
+                folder_id = folders[0]["id"]
+            else:
+                resp = _req.post(
+                    "https://www.googleapis.com/drive/v3/files",
+                    headers={"Authorization": f"Bearer {creds.token}", "Content-Type": "application/json"},
+                    json={"name": "小红书发布", "mimeType": "application/vnd.google-apps.folder"},
+                )
+                folder_id = resp.json()["id"]
+
+            from datetime import datetime
+            sub_name = title if title else datetime.now().strftime("%m%d_%H%M")
+            resp = _req.post(
+                "https://www.googleapis.com/drive/v3/files",
+                headers={"Authorization": f"Bearer {creds.token}", "Content-Type": "application/json"},
+                json={"name": sub_name, "mimeType": "application/vnd.google-apps.folder", "parents": [folder_id]},
+            )
+            sub_id = resp.json()["id"]
+
+            for img_path in rendered:
+                fname = os.path.basename(img_path)
+                metadata = json.dumps({"name": fname, "parents": [sub_id]})
+                with open(img_path, "rb") as f:
+                    img_data = f.read()
+                _req.post(
+                    "https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart",
+                    headers={"Authorization": f"Bearer {creds.token}"},
+                    files={
+                        "metadata": ("metadata", metadata, "application/json"),
+                        "file": (fname, img_data, "image/jpeg"),
+                    },
+                )
+            upload_msg = f"\n\n已上传到 Google Drive: 小红书发布/{sub_name}\n手机打开 Google Drive app 即可下载发布"
+        except Exception as e:
+            upload_msg = f"\n\nGoogle Drive 上传失败({e})，请手动从预览文件夹获取图片"
+
+        return f"渲染完成！共 {len(rendered)} 张图片\n预览文件夹已打开{upload_msg}"
+    except Exception as e:
+        return f"渲染出错: {e}"
+
+
 if __name__ == "__main__":
     mcp.run()
