@@ -1,7 +1,8 @@
 """
 render_post.py — 仿"妈的欧洲账本"风格渲染
 
-方案：Gemini只选模式和位置区域，代码精确控制排版（不再让AI输出坐标）
+Gemini 看图+看文案 → 输出排版指令 → Pillow 渲染
+学习博主几十种排版变化，每张图独立设计
 """
 
 import json
@@ -9,6 +10,7 @@ import os
 import re
 import sys
 import base64
+import time
 
 from PIL import Image, ImageDraw, ImageFont
 from dotenv import load_dotenv
@@ -30,11 +32,12 @@ gemini_client = genai.Client(api_key=GEMINI_API_KEY)
 
 W, H = 1080, 1440
 
-# 字体：Hiragino Sans GB W6（粗体）最接近博主字体
 FONT_BOLD_PATH = "/System/Library/Fonts/Hiragino Sans GB.ttc"
-FONT_BOLD_IDX = 2  # W6 Bold
+FONT_BOLD_IDX = 2
 FONT_REG_PATH = "/System/Library/Fonts/Hiragino Sans GB.ttc"
-FONT_REG_IDX = 0   # W3 Regular
+FONT_REG_IDX = 0
+
+STYLE_EXAMPLES_DIR = "/tmp/mama_sample/all_imgs"
 
 
 def _font(size, bold=True):
@@ -47,13 +50,11 @@ def _font(size, bold=True):
 
 
 def _tw(draw, text, font):
-    """文字宽度"""
     bbox = draw.textbbox((0, 0), text, font=font)
     return bbox[2] - bbox[0], bbox[3] - bbox[1]
 
 
 def _wrap(draw, text, font, max_w):
-    """自动换行"""
     lines = []
     for para in text.split("\n"):
         cur = ""
@@ -70,7 +71,6 @@ def _wrap(draw, text, font, max_w):
 
 
 def _crop34(img):
-    """裁剪到3:4"""
     w, h = img.size
     r = W / H
     if w / h > r:
@@ -82,237 +82,239 @@ def _crop34(img):
     return img.resize((W, H), Image.LANCZOS)
 
 
-def _draw_white_bar_text(draw, x, y, text, font, padding=14):
-    """白底黑字标题条（博主最常用的样式）"""
-    tw, th = _tw(draw, text, font)
-    # 白色背景条
-    draw.rectangle(
-        [x - padding, y - padding // 2, x + tw + padding, y + th + padding // 2],
-        fill=(255, 255, 255, 235),
-    )
-    # 黑字
-    draw.text((x, y), text, font=font, fill=(20, 20, 20, 255))
-    return tw, th
+def _draw_text_element(draw, elem):
+    """根据排版指令绘制一个文字元素"""
+    text = elem.get("text", "")
+    if not text:
+        return
+
+    x = max(0, min(elem.get("x", 50), W - 50))
+    y = max(0, min(elem.get("y", 400), H - 50))
+    font_size = max(20, min(elem.get("font_size", 60), 160))
+    bold = elem.get("bold", True)
+    color = elem.get("color", "white")
+    style = elem.get("style", "shadow")  # shadow / white_bar / black_bar / plain
+    max_width = elem.get("max_width", W - 100)
+
+    font = _font(font_size, bold)
+    lines = _wrap(draw, text, font, max_width)
+    line_h = int(font_size * 1.35)
+
+    # 颜色
+    if color == "red":
+        fill = (255, 59, 48, 255)
+    elif color == "black":
+        fill = (20, 20, 20, 255)
+    elif color == "gold":
+        fill = (230, 180, 50, 255)
+    else:
+        fill = (255, 255, 255, 255)
+
+    for i, line in enumerate(lines):
+        lx, ly = x, y + i * line_h
+        lw, lh = _tw(draw, line, font)
+
+        # 确保不超出画布
+        if lx + lw > W - 20:
+            lx = W - lw - 20
+        if ly + lh > H - 20:
+            ly = H - lh - 20
+
+        if style == "white_bar":
+            padding = max(8, font_size // 5)
+            draw.rectangle(
+                [lx - padding, ly - padding // 2, lx + lw + padding, ly + lh + padding // 2],
+                fill=(255, 255, 255, 235),
+            )
+            draw.text((lx, ly), line, font=font, fill=(20, 20, 20, 255))
+
+        elif style == "black_bar":
+            padding = max(10, font_size // 4)
+            draw.rectangle(
+                [lx - padding, ly - padding // 2, lx + lw + padding, ly + lh + padding // 2],
+                fill=(0, 0, 0, 220),
+            )
+            draw.text((lx, ly), line, font=font, fill=(255, 255, 255, 255))
+
+        elif style == "shadow":
+            shadow = (0, 0, 0, 200)
+            for dx, dy in [(-2, -2), (-2, 2), (2, -2), (2, 2), (0, -2), (0, 2), (-2, 0), (2, 0)]:
+                draw.text((lx + dx, ly + dy), line, font=font, fill=shadow)
+            draw.text((lx + 3, ly + 3), line, font=font, fill=(0, 0, 0, 100))
+            draw.text((lx, ly), line, font=font, fill=fill)
+
+        else:  # plain
+            draw.text((lx, ly), line, font=font, fill=fill)
 
 
-def _draw_shadow_text(draw, x, y, text, font, color=(255, 255, 255, 255)):
-    """带描边阴影的文字（暗色照片用）"""
-    shadow = (0, 0, 0, 200)
-    for dx, dy in [(-2, -2), (-2, 2), (2, -2), (2, 2), (0, -2), (0, 2), (-2, 0), (2, 0)]:
-        draw.text((x + dx, y + dy), text, font=font, fill=shadow)
-    draw.text((x + 3, y + 3), text, font=font, fill=(0, 0, 0, 100))
-    draw.text((x, y), text, font=font, fill=color)
-    return _tw(draw, text, font)
-
-
-def _analyze_photo(photo_path):
-    """让Gemini分析照片，只返回简单指令"""
+def _get_layout(photo_path, main_text, sub_text, is_cover=False, max_retries=3):
+    """让 Gemini 看图+文案，输出排版指令"""
     with open(photo_path, "rb") as f:
         img_b64 = base64.b64encode(f.read()).decode()
 
-    prompt = (
-        "分析这张照片用于文字排版。只回答以下3个问题，每行一个答案：\n"
-        "1. 照片整体是亮色还是暗色？（亮/暗）\n"
-        "2. 照片哪个区域有空白/纯色适合放大标题？（上/中/下）\n"
-        "3. 照片右下角区域是否适合放小字？（是/否）\n"
-        "只输出3行，如：亮\n上\n是"
-    )
-
-    try:
-        resp = gemini_client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=[prompt, {"inline_data": {"mime_type": "image/jpeg", "data": img_b64}}],
-            config={"max_output_tokens": 50, "thinking_config": {"thinking_budget": 256}},
+    if is_cover:
+        prompt = (
+            '为这张照片设计封面排版。封面要视觉冲击强，在信息流里抓眼球。\n\n'
+            f'文案：{main_text}\n\n'
+            '封面风格参考：大黑色不透明方块+超大白字，或者超大白字直接叠在暗处。\n'
+            '关键词要特别大(100-140px)。\n\n'
         )
-        lines = resp.text.strip().split("\n")
-        brightness = "暗" if "暗" in lines[0] else "亮"
-        position = "上"
-        for l in lines:
-            if "中" in l:
-                position = "中"
-            elif "下" in l:
-                position = "下"
-            elif "上" in l:
-                position = "上"
-        sub_ok = "否" not in lines[-1] if len(lines) > 2 else True
-        return brightness, position, sub_ok
-    except Exception:
-        return "亮", "中", True
-
-
-def render_cover(photo_path, main_text, output_path=None):
-    """
-    渲染封面图（第1张）——大黑色方块 + 超大白字
-
-    风格：视觉冲击强，在小红书信息流里抓眼球
-    """
-    img = Image.open(photo_path).convert("RGBA")
-    img = _crop34(img)
-    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    draw = ImageDraw.Draw(layer)
-
-    # 文字拆行
-    lines = [l.strip() for l in main_text.strip().split("\n") if l.strip()]
-
-    # 根据文字量决定字号
-    max_chars = max(len(l) for l in lines) if lines else 1
-    if max_chars <= 4:
-        font_size = 140
-    elif max_chars <= 6:
-        font_size = 110
-    elif max_chars <= 10:
-        font_size = 85
     else:
-        font_size = 70
+        prompt = (
+            '为这张照片设计文字排版，风格参考"妈的欧洲账本"。\n\n'
+            f'大标题：{main_text}\n'
+            f'小字注释：{sub_text}\n\n'
+            '## 博主的排版规律（你必须学习并灵活运用）\n'
+            '1. 文字放在照片空白/暗处/纯色区域，绝不遮挡主要物品（食物/产品/动物/建筑细节）\n'
+            '2. 如果有人脸，文字必须覆盖脸部\n'
+            '3. 同一张图里字号差异很大：关键词可以80-120px，注释30-38px\n'
+            '4. style类型：\n'
+            '   - shadow: 白字+黑色描边阴影（暗色背景用）\n'
+            '   - white_bar: 白色背景条+黑字（亮色/杂色背景用，最常见）\n'
+            '   - black_bar: 黑色背景条+白字（需要强调/背景太杂时用）\n'
+            '   - plain: 纯色文字无效果（已有高对比度时用）\n'
+            '5. 金额用红色(color="red")或白色，字号要大(90-120px)\n'
+            '6. 小字注释通常右对齐放右下角，或放在不影响主体的角落\n'
+            '7. 大标题偏左对齐居多，但也可以居中或右对齐\n'
+            '8. 有时关键词占半个屏幕（"哥本哈根。""那就嫁了吧。"），句号也是设计元素\n'
+            '9. 颜色有时跟照片配合（金色产品配gold文字）\n'
+            '10. 不要所有元素都用同一种style，要混搭\n\n'
+        )
 
-    title_font = _font(font_size)
-
-    # 计算每行实际宽度和总高度
-    max_block_w = W - 80
-    rendered_lines = []
-    for line in lines:
-        # 如果一行太长，自动换行
-        wrapped = _wrap(draw, line, title_font, max_block_w - 80)
-        rendered_lines.extend(wrapped)
-
-    line_h = int(font_size * 1.35)
-    total_text_h = len(rendered_lines) * line_h
-    max_line_w = max((_tw(draw, l, title_font)[0] for l in rendered_lines), default=0)
-
-    # 黑色方块：居中偏上，紧贴文字
-    block_pad_x = 50
-    block_pad_y = 40
-    block_w = max_line_w + block_pad_x * 2
-    block_h = total_text_h + block_pad_y * 2
-
-    block_x = (W - block_w) // 2 - 20  # 稍偏左
-    block_y = int(H * 0.28) - block_h // 2
-
-    # 画黑色方块
-    draw.rectangle(
-        [block_x, block_y, block_x + block_w, block_y + block_h],
-        fill=(0, 0, 0, 235),
+    prompt += (
+        '输出JSON，每个元素一个对象：\n'
+        '{"elements":[{"text":"文字","x":50,"y":300,"font_size":70,"bold":true,'
+        '"color":"white","style":"white_bar","max_width":800}]}\n\n'
+        'color: white/black/red/gold\n'
+        'style: shadow/white_bar/black_bar/plain\n'
+        'x范围0-1080, y范围0-1440\n'
+        '元素之间不能重叠。只输出JSON。'
     )
 
-    # 画白色大字（居中在方块内）
-    for i, line in enumerate(rendered_lines):
-        lw, _ = _tw(draw, line, title_font)
-        x = block_x + (block_w - lw) // 2
-        y = block_y + block_pad_y + i * line_h
-        draw.text((x, y), line, font=title_font, fill=(255, 255, 255, 255))
+    contents = [prompt]
 
-    result = Image.alpha_composite(img, layer).convert("RGB")
+    # 传入风格参考图（如果存在）
+    ref_files = ["orig_09.jpg", "orig_11.jpg", "orig_18.jpg", "orig_28.jpg", "orig_32.jpg"]
+    refs_added = 0
+    for ref in ref_files:
+        ref_path = os.path.join(STYLE_EXAMPLES_DIR, ref)
+        if os.path.exists(ref_path) and refs_added < 3:
+            if refs_added == 0:
+                contents.append("以下是风格参考图：")
+            with open(ref_path, "rb") as f:
+                contents.append({"inline_data": {"mime_type": "image/jpeg", "data": base64.b64encode(f.read()).decode()}})
+            refs_added += 1
 
-    if output_path is None:
-        base = os.path.splitext(os.path.basename(photo_path))[0]
-        out_dir = os.path.join(_PROJECT_ROOT, "output")
-        os.makedirs(out_dir, exist_ok=True)
-        output_path = os.path.join(out_dir, f"{base}_cover.jpg")
+    contents.append("以下是需要排版的照片：")
+    contents.append({"inline_data": {"mime_type": "image/jpeg", "data": img_b64}})
 
-    result.save(output_path, "JPEG", quality=95)
-    return output_path
+    for attempt in range(max_retries):
+        try:
+            resp = gemini_client.models.generate_content(
+                model="gemini-2.5-flash",
+                contents=contents,
+                config={"max_output_tokens": 4096, "thinking_config": {"thinking_budget": 1024}},
+            )
+
+            raw = resp.text
+            if not raw:
+                continue
+            raw = raw.strip()
+
+            # 提取 JSON
+            if "```" in raw:
+                parts = raw.split("```")
+                for part in parts:
+                    part = part.strip()
+                    if part.startswith("json"):
+                        part = part[4:].strip()
+                    if part.startswith("{"):
+                        raw = part
+                        break
+
+            # 清理注释和尾逗号
+            cleaned_lines = []
+            for line in raw.split('\n'):
+                in_str = False
+                clean = []
+                for ci, c in enumerate(line):
+                    if c == '"' and (ci == 0 or line[ci-1] != '\\'):
+                        in_str = not in_str
+                    if not in_str and ci + 1 < len(line) and line[ci:ci+2] == '//':
+                        break
+                    clean.append(c)
+                cleaned_lines.append(''.join(clean).rstrip())
+            cleaned = '\n'.join(cleaned_lines)
+            cleaned = re.sub(r',(\s*[}\]])', r'\1', cleaned)
+
+            try:
+                layout = json.loads(cleaned)
+                if "elements" in layout and len(layout["elements"]) > 0:
+                    return layout
+            except json.JSONDecodeError:
+                # 尝试提取 JSON 对象
+                match = re.search(r'\{[^{}]*"elements"\s*:\s*\[.*?\]\s*\}', cleaned, re.DOTALL)
+                if match:
+                    try:
+                        layout = json.loads(match.group())
+                        if layout.get("elements"):
+                            return layout
+                    except json.JSONDecodeError:
+                        pass
+
+            if attempt < max_retries - 1:
+                time.sleep(2)
+
+        except Exception as e:
+            if attempt < max_retries - 1:
+                time.sleep(2)
+            else:
+                break
+
+    # Fallback：简单布局
+    return _fallback_layout(main_text, sub_text, is_cover)
+
+
+def _fallback_layout(main_text, sub_text, is_cover):
+    """Gemini 失败时的备用布局"""
+    elements = []
+    if is_cover:
+        elements.append({
+            "text": main_text, "x": 60, "y": 400,
+            "font_size": 90, "bold": True, "color": "white",
+            "style": "black_bar", "max_width": 900,
+        })
+    else:
+        elements.append({
+            "text": main_text, "x": 45, "y": 350,
+            "font_size": 65, "bold": True, "color": "black",
+            "style": "white_bar", "max_width": 900,
+        })
+        if sub_text:
+            elements.append({
+                "text": sub_text, "x": 500, "y": 1200,
+                "font_size": 32, "bold": True, "color": "white",
+                "style": "shadow", "max_width": 500,
+            })
+    return {"elements": elements}
 
 
 def render_slide(photo_path, main_text, sub_text="", output_path=None, is_cover=False):
-    """
-    渲染一张"妈的欧洲账本"风格图片
+    """渲染一张"妈的欧洲账本"风格图片"""
+    # 1. Gemini 分析排版
+    layout = _get_layout(photo_path, main_text, sub_text, is_cover)
 
-    Args:
-        photo_path: 照片路径
-        main_text: 大标题文字
-        sub_text: 小字注释
-        output_path: 输出路径
-        is_cover: 是否为封面图（第1张）
-    """
-    if is_cover:
-        return render_cover(photo_path, main_text, output_path)
-    # 1. 分析照片
-    brightness, title_pos, sub_ok = _analyze_photo(photo_path)
-
-    # 2. 加载和裁剪照片
+    # 2. 加载照片
     img = Image.open(photo_path).convert("RGBA")
     img = _crop34(img)
     layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     draw = ImageDraw.Draw(layer)
 
-    # 3. 提取金额
-    price_match = re.search(r'[-]?[¥$￥]\s*[\d,]+\.?\d*', main_text)
-    price = price_match.group(0) if price_match else None
-    clean_main = main_text.replace(price, "").strip() if price else main_text
+    # 3. 绘制每个元素
+    for elem in layout.get("elements", []):
+        _draw_text_element(draw, elem)
 
-    # 4. 决定排版模式
-    use_white_bar = (brightness == "亮")  # 亮色照片用白底黑字，暗色照片用白字
-
-    # 5. 标题位置
-    margin_left = 45
-    max_title_w = W - margin_left * 2 - 30
-    title_font_size = 65
-
-    # 根据文字长度调整字号
-    test_font = _font(title_font_size)
-    test_lines = _wrap(draw, clean_main, test_font, max_title_w)
-    if len(test_lines) > 3:
-        title_font_size = 55
-    elif len(test_lines) <= 1 and len(clean_main) <= 8:
-        title_font_size = 80
-
-    title_font = _font(title_font_size)
-    title_lines = _wrap(draw, clean_main, title_font, max_title_w)
-    line_h = int(title_font_size * 1.45)
-
-    # Y起始位置
-    if title_pos == "上":
-        title_y = 100
-    elif title_pos == "下":
-        title_y = H - 200 - len(title_lines) * line_h
-    else:  # 中
-        title_y = (H - len(title_lines) * line_h) // 2 - 80
-
-    # 6. 绘制金额（红色大字）
-    if price:
-        price_font = _font(100)
-        if use_white_bar:
-            pw, ph = _draw_white_bar_text(draw, W - 350, title_y - 120, price, price_font, padding=16)
-        else:
-            _draw_shadow_text(draw, W - 350, title_y - 120, price, price_font, color=(255, 59, 48, 255))
-
-    # 7. 绘制大标题
-    for i, line in enumerate(title_lines):
-        x = margin_left
-        y = title_y + i * line_h
-
-        if use_white_bar:
-            _draw_white_bar_text(draw, x, y, line, title_font, padding=14)
-        else:
-            _draw_shadow_text(draw, x, y, line, title_font)
-
-    # 8. 绘制小字注释（右下角，右对齐）
-    if sub_text:
-        sub_font = _font(32, bold=True)
-        sub_lines = [l.strip() for l in sub_text.strip().split("\n") if l.strip()]
-        sub_line_h = 44
-        margin_right = 50
-        margin_bottom = 60
-
-        sub_start_y = H - margin_bottom - len(sub_lines) * sub_line_h
-
-        # 确保不和标题重叠
-        title_bottom = title_y + len(title_lines) * line_h + 30
-        if sub_start_y < title_bottom:
-            sub_start_y = title_bottom + 20
-
-        for i, line in enumerate(sub_lines):
-            sw, sh = _tw(draw, line, sub_font)
-            x = W - sw - margin_right
-            y = sub_start_y + i * sub_line_h
-
-            if use_white_bar:
-                # 小字也用白底黑字，但padding更小
-                _draw_white_bar_text(draw, x, y, line, sub_font, padding=8)
-            else:
-                _draw_shadow_text(draw, x, y, line, sub_font)
-
-    # 9. 合成输出
+    # 4. 合成输出
     result = Image.alpha_composite(img, layer).convert("RGB")
 
     if output_path is None:
@@ -323,6 +325,11 @@ def render_slide(photo_path, main_text, sub_text="", output_path=None, is_cover=
 
     result.save(output_path, "JPEG", quality=95)
     return output_path
+
+
+def render_cover(photo_path, main_text, output_path=None):
+    """渲染封面图"""
+    return render_slide(photo_path, main_text, "", output_path, is_cover=True)
 
 
 def render_text_card(main_text, sub_text="", output_path=None):
@@ -371,34 +378,3 @@ def parse_slide_text(slide_text):
     if not main:
         main, sub = [lines[0]], lines[1:]
     return "\n".join(main), "\n".join(sub)
-
-
-if __name__ == "__main__":
-    out_dir = os.path.join(_PROJECT_ROOT, "output")
-    os.makedirs(out_dir, exist_ok=True)
-
-    # 测试用你自己的照片
-    test_photo = os.path.join(_PROJECT_ROOT, "output", "test_photo2.jpg")
-    if os.path.exists(test_photo):
-        out = render_slide(
-            test_photo,
-            "在LA待业的第47天\n海浪不懂KPI",
-            "但它每天准时打卡\n比我勤快",
-            os.path.join(out_dir, "v3_render_1.jpg"),
-        )
-        print(f"Render 1: {out}")
-
-        out2 = render_slide(
-            test_photo,
-            "¥50买了杯果汁\n折合老家一周菜钱",
-            "数据不会骗人\n但洛杉矶会",
-            os.path.join(out_dir, "v3_render_2.jpg"),
-        )
-        print(f"Render 2: {out2}")
-
-    out3 = render_text_card(
-        "绕了一圈回到原点\n但原点涨价了",
-        "美本→回国大厂→失业归海\n完整闭环",
-        os.path.join(out_dir, "v3_text_card.jpg"),
-    )
-    print(f"Text card: {out3}")
