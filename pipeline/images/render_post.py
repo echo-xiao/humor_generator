@@ -318,8 +318,92 @@ def _fallback_layout(main_text, sub_text, is_cover):
     return {"elements": elements}
 
 
+def _render_cover_fixed(photo_path, main_text, output_path):
+    """封面图：固定黑块+超大白字，不依赖Gemini"""
+    img = Image.open(photo_path).convert("RGBA")
+    img = _crop34(img)
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(layer)
+
+    # 文案拆行
+    lines = [l.strip() for l in main_text.strip().split("\n") if l.strip()]
+
+    # 每行字号：短的关键词更大
+    sized_lines = []
+    for line in lines:
+        n = len(line)
+        if n <= 2:
+            fs = 160
+        elif n <= 4:
+            fs = 120
+        elif n <= 6:
+            fs = 100
+        elif n <= 10:
+            fs = 80
+        else:
+            fs = 65
+        sized_lines.append((line, fs))
+
+    # 计算总高度和最大宽度
+    total_h = 0
+    max_w = 0
+    line_metrics = []
+    for line, fs in sized_lines:
+        font = _font(fs)
+        wrapped = _wrap(draw, line, font, W - 200)
+        lh = int(fs * 1.3)
+        for wl in wrapped:
+            tw, th = _tw(draw, wl, font)
+            line_metrics.append((wl, fs, font, tw, lh))
+            max_w = max(max_w, tw)
+            total_h += lh
+
+    # 黑色方块
+    block_pad_x = 50
+    block_pad_y = 35
+    block_w = max_w + block_pad_x * 2
+    block_h = total_h + block_pad_y * 2
+
+    # 方块位置：居中偏左偏上
+    block_x = max(30, (W - block_w) // 2 - 30)
+    block_y = max(80, int(H * 0.22))
+
+    # 确保方块不超出画布
+    if block_x + block_w > W - 20:
+        block_w = W - block_x - 20
+    if block_y + block_h > H - 100:
+        block_y = H - block_h - 100
+
+    draw.rectangle(
+        [block_x, block_y, block_x + block_w, block_y + block_h],
+        fill=(0, 0, 0, 250),
+    )
+
+    # 画白字
+    cy = block_y + block_pad_y
+    for wl, fs, font, tw, lh in line_metrics:
+        # 左对齐在方块内
+        cx = block_x + block_pad_x
+        draw.text((cx, cy), wl, font=font, fill=(255, 255, 255, 255))
+        cy += lh
+
+    result = Image.alpha_composite(img, layer).convert("RGB")
+    result.save(output_path, "JPEG", quality=95)
+    return output_path
+
+
 def render_slide(photo_path, main_text, sub_text="", output_path=None, is_cover=False):
     """渲染一张"妈的欧洲账本"风格图片"""
+    if output_path is None:
+        base = os.path.splitext(os.path.basename(photo_path))[0]
+        out_dir = os.path.join(_PROJECT_ROOT, "output")
+        os.makedirs(out_dir, exist_ok=True)
+        output_path = os.path.join(out_dir, f"{base}_rendered.jpg")
+
+    # 封面用固定模板（不依赖Gemini），内页用Gemini智能排版
+    if is_cover:
+        return _render_cover_fixed(photo_path, main_text, output_path)
+
     # 1. Gemini 分析排版
     layout = _get_layout(photo_path, main_text, sub_text, is_cover)
 
