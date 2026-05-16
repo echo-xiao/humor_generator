@@ -31,46 +31,21 @@ _PROJECT_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "
 load_dotenv(os.path.join(_PROJECT_ROOT, ".env"))
 
 from google.cloud import storage
-from openai import OpenAI
+from google import genai
+from google.genai import errors as genai_errors
 from tqdm import tqdm
 
 # ==================== 配置 ====================
 
 PROJECT_ID = "gen-lang-client-0577448366"
 BUCKET_NAME = "xhs-humor-data"
-DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
-
-# 来源配置
-SOURCES = {
-    "妈的欧洲账本": {
-        "raw_prefix": "data/raw_data/妈的欧洲账本/",
-        "output_prefix": "data/analyzed_posts/",
-        "content_type": "xhs_post",  # 小红书图文帖
-    },
-    "脱口秀": {
-        "raw_prefix": "data/raw_data/youtube_脱口秀/",
-        "output_prefix": "data/analyzed_standup/",
-        "content_type": "standup",
-    },
-    "脱口秀大咖": {
-        "raw_prefix": "data/raw_data/脱口秀大咖/",
-        "output_prefix": "data/analyzed_standup/",
-        "content_type": "standup",
-    },
-    "脱口秀集锦": {
-        "raw_prefix": "data/raw_data/脱口秀集锦/",
-        "output_prefix": "data/analyzed_standup/",
-        "content_type": "standup",
-    },
-}
-
-# 默认（向后兼容）
-RAW_PREFIX = SOURCES["妈的欧洲账本"]["raw_prefix"]
-OUTPUT_PREFIX = SOURCES["妈的欧洲账本"]["output_prefix"]
+RAW_PREFIX = "data/raw_data/妈的欧洲账本/"
+OUTPUT_PREFIX = "data/analyzed_posts/"
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(message)s")
 
-ds_client = OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
+gemini_client = genai.Client(api_key=GEMINI_API_KEY)
 storage_client = storage.Client(project=PROJECT_ID)
 bucket = storage_client.bucket(BUCKET_NAME)
 
@@ -241,62 +216,10 @@ micro_rules: ["数字选读者会信的范围", "拟人化让物体变角色", "
 }}"""
 
 
-STANDUP_ANALYZE_PROMPT = """你是一个研究幽默的学者。下面是一段脱口秀/搞笑视频的文字稿。
-请找出所有笑点，每个笑点做结构化标注。
-
-注意：你的分析只用于提取"笑点机制和技巧"，不用于模仿脱口秀的风格。
-所以重点分析"为什么好笑"（机制），不需要分析"怎么说的"（风格）。
-
-标题：{title}
-
-文字稿：
-{raw_text}
-
-## 标注要求
-
-### punchlines — 每个笑点做4层分析
-
-#### 层1: structure（结构——为什么好笑）
-- mechanism: expectation_violation / redefinition / precise_absurdity / understated_irony / dual_frame / deflation / self_deprecation / escalation / callback / rule_of_three / absurd_logic
-- setup_text: 铺垫原文
-- punchline_text: 笑点原文
-- conflict_pair: [A, B]（冲突的两个概念）
-
-#### 层2: emotion（情绪——为什么共鸣）
-- pain_point: 戳中了什么痛点？
-- resonance_type: 经验共鸣 / 身份共鸣 / 情绪共鸣 / 泛化共鸣
-- who_relates: 哪类人最有感？
-
-#### 层3: language（语言——措辞技巧）
-- key_technique: 语言技巧
-- original_vs_plain: [原文, 直白说法]
-- why_better: 为什么原文更好笑？
-
-#### 层4: craft（可复用的技巧）
-- micro_rules: 从这个笑点中能提炼出的可复用规则
-- transferable: 这个笑点的机制能否用在图文帖子里？怎么用？
-
-### topic_tags
-话题标签
-
-只输出 JSON：
-{{
-    "punchlines": [
-        {{
-            "structure": {{"mechanism": "...", "setup_text": "...", "punchline_text": "...", "conflict_pair": ["A", "B"]}},
-            "emotion": {{"pain_point": "...", "resonance_type": "...", "who_relates": "..."}},
-            "language": {{"key_technique": "...", "original_vs_plain": ["原文", "直白"], "why_better": "..."}},
-            "craft": {{"micro_rules": ["..."], "transferable": "..."}}
-        }}
-    ],
-    "topic_tags": ["..."]
-}}"""
-
-
 # ==================== 加载帖子 ====================
 
-def load_posts(prefix=None):
-    blobs = list(bucket.list_blobs(prefix=prefix or RAW_PREFIX))
+def load_posts():
+    blobs = list(bucket.list_blobs(prefix=RAW_PREFIX))
     txt_blobs = [b for b in blobs if b.name.endswith('.txt')]
 
     posts = {}
@@ -345,15 +268,14 @@ def _parse_json_lenient(raw, title=""):
     except json.JSONDecodeError:
         pass
 
-    # 3. 用 DeepSeek 修复
+    # 3. 用 Gemini 修复
     try:
-        logging.info(f"尝试用 DeepSeek 修复 JSON: {title}")
-        fix_response = ds_client.chat.completions.create(
-            model="deepseek-reasoner",
-            messages=[{"role": "user", "content": f"以下 JSON 有语法错误，请修复并只输出正确的 JSON，不要任何其他内容：\n\n{raw[:8000]}"}],
-            temperature=0,
+        logging.info(f"尝试用 Gemini 修复 JSON: {title}")
+        fix_response = gemini_client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=f"以下 JSON 有语法错误，请修复并只输出正确的 JSON，不要任何其他内容：\n\n{raw[:8000]}",
         )
-        fix_text = fix_response.choices[0].message.content.strip()
+        fix_text = fix_response.text.strip()
         if fix_text.startswith("```"):
             fix_text = fix_text.split("```")[1]
             if fix_text.startswith("json"):
@@ -366,28 +288,27 @@ def _parse_json_lenient(raw, title=""):
 
 # ==================== 分析 ====================
 
-def analyze_post(title, slide_texts, max_retries=3, source="妈的欧洲账本", content_type="xhs_post"):
+def analyze_post(title, slide_texts, max_retries=3):
     raw_text = "\n===\n".join(slide_texts)
     if len(raw_text) > 10000:
         raw_text = raw_text[:10000] + "\n...(截断)"
 
-    if content_type == "standup":
-        prompt = STANDUP_ANALYZE_PROMPT.format(title=title, raw_text=raw_text)
-    else:
-        prompt = ANALYZE_PROMPT.format(title=title, num_slides=len(slide_texts), raw_text=raw_text)
+    prompt = ANALYZE_PROMPT.format(
+        title=title,
+        num_slides=len(slide_texts),
+        raw_text=raw_text,
+    )
 
     for attempt in range(max_retries):
         try:
-            response = ds_client.chat.completions.create(
-                model="deepseek-reasoner",
-                messages=[{"role": "user", "content": prompt}],
-                temperature=0.3,
+            response = gemini_client.models.generate_content(
+                model="gemini-2.5-pro",
+                contents=prompt,
             )
-            text = response.choices[0].message.content
-            if not text:
+            if not response.text:
                 return None
 
-            raw = text.strip()
+            raw = response.text.strip()
             if raw.startswith("```"):
                 raw = raw.split("```")[1]
                 if raw.startswith("json"):
@@ -397,24 +318,23 @@ def analyze_post(title, slide_texts, max_retries=3, source="妈的欧洲账本",
             if result is None:
                 continue  # retry
             result["title"] = title
-            result["source"] = source
-            result["content_type"] = content_type
-            if content_type == "xhs_post":
-                result["num_slides_original"] = len(slide_texts)
+            result["num_slides_original"] = len(slide_texts)
             return result
 
         except json.JSONDecodeError as e:
             logging.warning(f"JSON 解析失败 {title}: {e}")
-            continue
-        except Exception as e:
-            e_str = str(e)
-            if "429" in e_str or "rate" in e_str.lower():
+            continue  # retry instead of giving up
+        except genai_errors.ClientError as e:
+            if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
                 wait = 15 * (2 ** attempt)
                 logging.warning(f"限流，等待 {wait}s...")
                 time.sleep(wait)
             else:
-                logging.error(f"DeepSeek 错误: {e}")
+                logging.error(f"Gemini 错误: {e}")
                 return None
+        except Exception as e:
+            logging.error(f"分析失败 {title}: {e}")
+            return None
 
     return None
 
@@ -422,25 +342,16 @@ def analyze_post(title, slide_texts, max_retries=3, source="妈的欧洲账本",
 # ==================== 主流程 ====================
 
 def main():
-    parser = argparse.ArgumentParser(description="分析帖子/脱口秀笑点")
+    parser = argparse.ArgumentParser(description="分析妈的欧洲账本帖子")
     parser.add_argument("--limit", type=int, default=0, help="只处理前 N 篇（0=全部）")
-    parser.add_argument("--source", type=str, default="妈的欧洲账本",
-                        choices=list(SOURCES.keys()),
-                        help="数据来源（默认: 妈的欧洲账本）")
     args = parser.parse_args()
 
-    source_config = SOURCES[args.source]
-    raw_prefix = source_config["raw_prefix"]
-    output_prefix = source_config["output_prefix"]
-    content_type = source_config["content_type"]
-
-    print(f"来源: {args.source} ({content_type})")
-    print("加载内容...")
-    posts = load_posts(raw_prefix)
-    print(f"共 {len(posts)} 篇")
+    print("加载帖子...")
+    posts = load_posts()
+    print(f"共 {len(posts)} 篇帖子")
 
     # 断点续传
-    done_blobs = list(bucket.list_blobs(prefix=output_prefix))
+    done_blobs = list(bucket.list_blobs(prefix=OUTPUT_PREFIX))
     done_names = set(
         b.name.split('/')[-1].replace('.json', '')
         for b in done_blobs if b.name.endswith('.json')
@@ -456,12 +367,12 @@ def main():
 
     for post_name, blobs_list in tqdm(pending.items(), desc="分析", unit="篇"):
         slide_texts = read_post(blobs_list)
-        result = analyze_post(post_name, slide_texts, source=args.source, content_type=content_type)
+        result = analyze_post(post_name, slide_texts)
         if result is None:
             continue
 
         # 上传到 GCS
-        output_path = f"{output_prefix}{post_name}.json"
+        output_path = f"{OUTPUT_PREFIX}{post_name}.json"
         bucket.blob(output_path).upload_from_string(
             json.dumps(result, ensure_ascii=False, indent=2),
             content_type="application/json; charset=utf-8",
@@ -471,10 +382,10 @@ def main():
         punchlines = result.get("punchlines", [])
         stats["total_punchlines"] += len(punchlines)
         for p in punchlines:
-            s = p.get("structure") or {}
-            e = p.get("emotion") or {}
-            l = p.get("language") or {}
-            x = p.get("expression") or {}
+            s = p.get("structure", {})
+            e = p.get("emotion", {})
+            l = p.get("language", {})
+            x = p.get("expression", {})
             m = s.get("mechanism", "unknown")
             stats["mechanisms"][m] = stats["mechanisms"].get(m, 0) + 1
             rt = e.get("resonance_type", "unknown")
@@ -484,21 +395,21 @@ def main():
             dv = x.get("delivery", "unknown")
             stats["deliveries"][dv] = stats["deliveries"].get(dv, 0) + 1
 
-        pattern = (result.get("writing_style") or {}).get("pattern", "unknown")
+        pattern = result.get("writing_style", {}).get("pattern", "unknown")
         stats["patterns"][pattern] = stats["patterns"].get(pattern, 0) + 1
 
         # 打印摘要
         tqdm.write(f"\n  [{pattern}] {post_name}")
         for p in punchlines[:2]:
-            s = p.get("structure") or {}
-            e = p.get("emotion") or {}
-            l = p.get("language") or {}
-            x = p.get("expression") or {}
-            tqdm.write(f"    笑点: {(s.get('punchline_text') or '')[:50]}")
+            s = p.get("structure", {})
+            e = p.get("emotion", {})
+            l = p.get("language", {})
+            x = p.get("expression", {})
+            tqdm.write(f"    笑点: {s.get('punchline_text', '')[:50]}")
             tqdm.write(f"    结构: {s.get('mechanism', '?')} | 冲突: {s.get('conflict_pair', [])}")
-            tqdm.write(f"    情绪: {(e.get('pain_point') or '')[:50]}")
-            tqdm.write(f"    语言: {l.get('key_technique', '?')} | {(l.get('why_better') or '')[:50]}")
-            tqdm.write(f"    表达: {x.get('delivery', '?')} | 潜台词: {(x.get('unsaid') or '')[:50]}")
+            tqdm.write(f"    情绪: {e.get('pain_point', '')[:50]}")
+            tqdm.write(f"    语言: {l.get('key_technique', '?')} | {l.get('why_better', '')[:50]}")
+            tqdm.write(f"    表达: {x.get('delivery', '?')} | 潜台词: {x.get('unsaid', '')[:50]}")
 
         time.sleep(1)
 

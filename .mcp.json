@@ -9,7 +9,7 @@
     },
     "google_photos": {
       "command": "node",
-      "args": ["/tmp/google-photos-mcp/dist/index.js", "--stdio"],
+      "args": ["/tmp/google-photos-mcp/src/index.js", "--stdio"],
       "cwd": "/tmp/google-photos-mcp"
     }
   }
