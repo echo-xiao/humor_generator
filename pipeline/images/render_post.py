@@ -38,6 +38,8 @@ FONT_REG_PATH = "/System/Library/Fonts/Hiragino Sans GB.ttc"
 FONT_REG_IDX = 0
 
 STYLE_EXAMPLES_DIR = "/tmp/mama_sample/all_imgs"
+COVER_EXAMPLES_DIR = "/tmp/mama_sample/covers2"
+DESIGN_GUIDE_PATH = os.path.join(_PROJECT_ROOT, "data", "design_guide.json")
 
 
 def _font(size, bold=True):
@@ -152,12 +154,23 @@ def _get_layout(photo_path, main_text, sub_text, is_cover=False, max_retries=3):
     with open(photo_path, "rb") as f:
         img_b64 = base64.b64encode(f.read()).decode()
 
+    # 读取设计规范
+    design_guide = ""
+    if os.path.exists(DESIGN_GUIDE_PATH):
+        with open(DESIGN_GUIDE_PATH, "r") as f:
+            guide = json.load(f)
+        if is_cover:
+            design_guide = json.dumps(guide.get("封面图（第1张）", {}), ensure_ascii=False)
+        else:
+            design_guide = json.dumps(guide.get("内页图（第2-N张）", {}), ensure_ascii=False)
+            design_guide += "\n文字层级：" + json.dumps(guide.get("文字层级", {}), ensure_ascii=False)
+
     if is_cover:
         prompt = (
-            '为这张照片设计封面排版。封面要视觉冲击强，在信息流里抓眼球。\n\n'
+            '为这张照片设计封面排版。像素级模仿以下设计规范和参考图。\n\n'
             f'文案：{main_text}\n\n'
-            '封面风格参考：大黑色不透明方块+超大白字，或者超大白字直接叠在暗处。\n'
-            '关键词要特别大(100-140px)。\n\n'
+            f'## 设计规范\n{design_guide}\n\n'
+            '输出1-2个element：一个大black_bar包含主文字，可选一个溢出的shadow文字。\n\n'
         )
     else:
         prompt = (
@@ -193,14 +206,20 @@ def _get_layout(photo_path, main_text, sub_text, is_cover=False, max_retries=3):
 
     contents = [prompt]
 
-    # 传入风格参考图（如果存在）
-    ref_files = ["orig_09.jpg", "orig_11.jpg", "orig_18.jpg", "orig_28.jpg", "orig_32.jpg"]
+    # 传入风格参考图
+    if is_cover:
+        ref_dir = COVER_EXAMPLES_DIR
+        ref_files = ["cover_2.jpg", "cover_3.jpg", "cover_4.jpg", "cover_5.jpg", "cover_6.jpg"]
+    else:
+        ref_dir = STYLE_EXAMPLES_DIR
+        ref_files = ["orig_09.jpg", "orig_11.jpg", "orig_18.jpg", "orig_28.jpg", "orig_32.jpg"]
+
     refs_added = 0
     for ref in ref_files:
-        ref_path = os.path.join(STYLE_EXAMPLES_DIR, ref)
+        ref_path = os.path.join(ref_dir, ref)
         if os.path.exists(ref_path) and refs_added < 3:
             if refs_added == 0:
-                contents.append("以下是风格参考图：")
+                contents.append("以下是风格参考图，请像素级模仿这个排版风格：")
             with open(ref_path, "rb") as f:
                 contents.append({"inline_data": {"mime_type": "image/jpeg", "data": base64.b64encode(f.read()).decode()}})
             refs_added += 1
