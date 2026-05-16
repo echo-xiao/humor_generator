@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "humor_generator": {
+      "command": "/opt/miniconda3/bin/python3",
+      "args": ["/Users/echoooooo/Desktop/code/humor_generator/mcp_server.py"],
+      "env": {
+        "PYTHONPATH": "/Users/echoooooo/Desktop/code/humor_generator"
+      }
+    },
+    "google_photos": {
+      "command": "node",
+      "args": ["/tmp/google-photos-mcp/dist/index.js", "--stdio"],
+      "cwd": "/tmp/google-photos-mcp"
+    }
+  }
+}

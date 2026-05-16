@@ -67,20 +67,32 @@ YOUTUBE_RAW_PREFIX = "data/raw_data/youtube_脱口秀/"
 
 # ==================== 常量 ====================
 
-HIGH_VALUE_RELATIONS = {
-    "对立于", "反讽", "讽刺", "本质是", "实际是", "现实是", "期待是", "期待是人生",
-    "原因是", "目的是", "目的", "真实目的", "导致", "象征", "被视为", "被认为是",
-    "等同于", "等于", "感觉像", "伴随着", "实现条件是", "现代处理方式", "失去",
-    "成为", "具有特质", "和老师一样", "的特征是", "冲突于", "矛盾于", "反而",
-    "却是", "意味着", "暗示", "讽刺地",
-    # ConceptNet 导入的
-    "引起渴望", "被阻碍于", "不想要", "特征是", "方式是", "类似于", "渴望",
-    "前提是", "首先", "最终",
-    # 歇后语
-    "歇后语",
-    # 谐音
-    "谐音于",
+# 冲突性 relation（最高幽默价值，+5 分）
+CONFLICT_RELATIONS = {
+    "对立于", "反讽", "讽刺", "本质是", "实际是", "现实是", "冲突于", "矛盾于",
+    "反而", "却是", "讽刺地", "被视为", "被认为是", "等同于", "等于",
 }
+
+# 因果/目的 relation（高幽默价值，+3 分）
+CAUSAL_RELATIONS_SET = {
+    "期待是", "期待是人生", "目的是", "目的", "真实目的", "导致",
+    "原因是", "象征", "意味着", "暗示", "感觉像", "失去",
+    "引起渴望", "被阻碍于", "不想要", "渴望",
+}
+
+# 结构性 relation（歇后语/谐音，+3 分）
+STRUCTURAL_RELATIONS = {
+    "歇后语", "谐音于",
+}
+
+# 低价值 relation（ConceptNet 废话边，降到 0 分）
+LOW_VALUE_RELATIONS = {
+    "能够", "是一种", "用于", "属于", "方式是", "类似于",
+    "前提是", "首先", "最终", "成语含义", "成语出处",
+}
+
+# 合并 HIGH_VALUE（向后兼容，用于 is_high_value 判断）
+HIGH_VALUE_RELATIONS = CONFLICT_RELATIONS | CAUSAL_RELATIONS_SET | STRUCTURAL_RELATIONS
 
 NOISE_NODES = {"我", "你", "他", "她", "它", "我们", "你们", "他们", "这", "那", "的", "了", "是"}
 
@@ -480,9 +492,12 @@ def build_networkx_graph(all_triples):
 
     G = nx.DiGraph()
     for t in all_triples:
-        subj = t["subject"].strip()
-        rel = t["relation"].strip()
-        obj = t["object"].strip()
+        if "subject" not in t or "object" not in t:
+            continue
+        rel_key = "relation" if "relation" in t else "relations"
+        subj = str(t["subject"]).strip()
+        rel = str(t.get(rel_key, "related")).strip()
+        obj = str(t["object"]).strip()
         source_type = t.get("source_type", "unknown")
 
         if subj in NOISE_NODES or obj in NOISE_NODES:
@@ -577,11 +592,26 @@ def calc_humor_weights(G):
         node_a = G.nodes[u]
         node_b = G.nodes[v]
 
-        # 1. relation 类型分
-        if data.get("high_value"):
-            w += 3.0
-        else:
-            w += 0.5
+        # 1. relation 类型分（三级：冲突 > 因果 > 结构 > 低价值）
+        rels = data.get("relations", [])
+        rel_score = 0
+        is_low_value = True
+        for rel in rels:
+            if rel in CONFLICT_RELATIONS:
+                rel_score = max(rel_score, 5.0)
+                is_low_value = False
+            elif rel in CAUSAL_RELATIONS_SET:
+                rel_score = max(rel_score, 3.0)
+                is_low_value = False
+            elif rel in STRUCTURAL_RELATIONS:
+                rel_score = max(rel_score, 3.0)
+                is_low_value = False
+            elif rel in LOW_VALUE_RELATIONS:
+                rel_score = max(rel_score, 0.0)  # 废话边：0 分
+            else:
+                rel_score = max(rel_score, 1.0)  # 未分类：1 分
+                is_low_value = False
+        w += rel_score
 
         # 2. 来源加分（分级权重，取最高来源）
         edge_sources = data.get("sources", set())
@@ -610,6 +640,21 @@ def calc_humor_weights(G):
         # 5. 度数加成（连接越多的节点越有价值）
         degree_bonus = min((G.degree(u) + G.degree(v)) * 0.05, 1.5)
         w += degree_bonus
+
+        # 低价值 relation 封顶
+        if is_low_value:
+            w = min(w, 2.0)
+
+        # ConceptNet-only 因果边降权（导致→下班 这种常识废话）
+        # 只有当边完全来自 conceptnet/成语/homophone 且没有幽默来源时才降
+        edge_sources = data.get("sources", set())
+        if isinstance(edge_sources, list):
+            edge_sources = set(edge_sources)
+        humor_srcs = {s for s, sw in SOURCE_WEIGHTS.items() if sw >= 3.0}
+        has_humor = bool(edge_sources & humor_srcs) or any(s.startswith("youtube_") for s in edge_sources)
+        if not has_humor and rel_score <= 3.0:
+            # 纯 ConceptNet 的非冲突边：封顶 4.0
+            w = min(w, 4.0)
 
         data["humor_weight"] = round(w, 2)
 
@@ -669,13 +714,38 @@ def print_stats(G, all_triples):
         marker = "*" if rel in HIGH_VALUE_RELATIONS else " "
         print(f"  {marker} {rel}: {cnt}")
 
-    # Top 节点
-    top_nodes = sorted(G.nodes(), key=lambda n: G.degree(n), reverse=True)[:10]
-    print(f"\nTop 10 节点:")
-    for n in top_nodes:
-        hw_edges = [(u, v, d.get("humor_weight", 0)) for u, v, d in G.edges(n, data=True)]
-        max_hw = max((w for _, _, w in hw_edges), default=0)
-        print(f"  {n}: degree={G.degree(n)}, max_humor_weight={max_hw}")
+    # Top 10 幽默节点（按最高 humor_weight 边排序，只选幽默来源的节点）
+    humor_srcs = {s for s, w in SOURCE_WEIGHTS.items() if w >= 3.0}
+    node_scores = []
+    for n in G.nodes():
+        srcs = G.nodes[n].get("sources", set())
+        if isinstance(srcs, list):
+            srcs = set(srcs)
+        has_humor = bool(srcs & humor_srcs) or any(s.startswith("youtube_") for s in srcs)
+        if not has_humor:
+            continue
+        hw_edges = [d.get("humor_weight", 0) for _, _, d in G.edges(n, data=True)]
+        max_hw = max(hw_edges, default=0)
+        if max_hw > 0:
+            # 找最强的边的详情
+            best_rel = ""
+            best_target = ""
+            for _, obj, d in G.out_edges(n, data=True):
+                if d.get("humor_weight", 0) == max_hw:
+                    best_rel = d.get("relations", ["?"])[0]
+                    best_target = obj
+                    break
+            if not best_target:
+                for subj, _, d in G.in_edges(n, data=True):
+                    if d.get("humor_weight", 0) == max_hw:
+                        best_rel = d.get("relations", ["?"])[0]
+                        best_target = subj
+                        break
+            node_scores.append((max_hw, n, best_rel, best_target, ",".join(srcs)))
+    node_scores.sort(key=lambda x: -x[0])
+    print(f"\nTop 10 Humor 节点:")
+    for hw, n, rel, target, src in node_scores[:10]:
+        print(f"  {n} --{rel}-> {target}  (hw={hw:.1f}, src={src})")
 
 
 # ==================== 查询函数（供其他模块 import） ====================
