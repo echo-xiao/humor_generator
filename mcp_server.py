@@ -431,6 +431,59 @@ def list_all_posts() -> str:
 
 
 @mcp.tool()
+def save_draft(title: str, post_text: str) -> str:
+    """
+    保存文案草稿到本地，方便后续修改和渲染。
+
+    每次生成或修改文案后调用，保存到 output/drafts/ 目录。
+
+    Args:
+        title: 帖子标题（用作文件名）
+        post_text: 完整文案（===图1=== 格式）
+    """
+    import time
+    drafts_dir = os.path.join(_PROJECT_ROOT, "output", "drafts")
+    os.makedirs(drafts_dir, exist_ok=True)
+
+    # 文件名：标题 + 时间戳
+    safe_title = re.sub(r'[^\w\u4e00-\u9fff]', '_', title)[:30]
+    timestamp = time.strftime("%m%d_%H%M")
+    filename = f"{safe_title}_{timestamp}.txt"
+    filepath = os.path.join(drafts_dir, filename)
+
+    with open(filepath, "w", encoding="utf-8") as f:
+        f.write(f"# {title}\n\n{post_text}")
+
+    # 同时保存一个 latest.txt 方便快速访问
+    latest_path = os.path.join(drafts_dir, "latest.txt")
+    with open(latest_path, "w", encoding="utf-8") as f:
+        f.write(f"# {title}\n\n{post_text}")
+
+    return f"已保存到 {filepath}\n\n可在 output/drafts/ 目录找到并修改，修改后用 render_and_preview 渲染。"
+
+
+@mcp.tool()
+def list_drafts() -> str:
+    """列出所有已保存的文案草稿。"""
+    drafts_dir = os.path.join(_PROJECT_ROOT, "output", "drafts")
+    if not os.path.exists(drafts_dir):
+        return "还没有保存的草稿"
+
+    files = sorted([f for f in os.listdir(drafts_dir) if f.endswith('.txt') and f != 'latest.txt'])
+    if not files:
+        return "还没有保存的草稿"
+
+    lines = [f"共 {len(files)} 篇草稿：\n"]
+    for f in files:
+        filepath = os.path.join(drafts_dir, f)
+        with open(filepath, "r", encoding="utf-8") as fp:
+            first_line = fp.readline().strip()
+        lines.append(f"- {f}: {first_line}")
+
+    return "\n".join(lines)
+
+
+@mcp.tool()
 def match_images(post_text: str) -> str:
     """
     为确认后的帖子文案匹配 Google Photos 图片。
