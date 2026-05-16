@@ -31,6 +31,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(message)s")
 
 PREVIEW_DIR = os.path.join(_PROJECT_ROOT, "output", "preview")
 PUBLISH_DIR = os.path.join(_PROJECT_ROOT, "output", "publish")
+PHOTO_CACHE_DIR = os.path.join(_PROJECT_ROOT, "output", "photo_cache")
 
 
 def parse_slides(post_text):
@@ -64,13 +65,60 @@ def split_slide_text(text):
     return "\n".join(main), "\n".join(sub)
 
 
+def _auto_match_photos(post_text, slides):
+    """自动从 Google Photos 匹配配图并下载到本地"""
+    try:
+        from pipeline.images.match_images import match_images_for_post
+        from pipeline.images.photo_index import get_drive_creds
+        import requests as _req
+
+        results = match_images_for_post(post_text)
+        if not results:
+            return {}
+
+        creds = get_drive_creds()
+        os.makedirs(PHOTO_CACHE_DIR, exist_ok=True)
+
+        photo_paths = {}
+        for r in results:
+            slide_num = r["slide"]
+            rec = r.get("recommended")
+            if not rec or not rec.get("id"):
+                continue
+
+            # 下载照片到本地缓存
+            photo_id = rec["id"]
+            local_path = os.path.join(PHOTO_CACHE_DIR, f"{photo_id}.jpg")
+
+            if not os.path.exists(local_path):
+                resp = _req.get(
+                    f"https://www.googleapis.com/drive/v3/files/{photo_id}?alt=media",
+                    headers={"Authorization": f"Bearer {creds.token}"},
+                )
+                if resp.status_code == 200:
+                    with open(local_path, "wb") as f:
+                        f.write(resp.content)
+                    print(f"  图{slide_num}: 下载照片 {rec.get('name', photo_id)}")
+                else:
+                    continue
+
+            photo_paths[slide_num] = local_path
+
+        print(f"匹配了 {len(photo_paths)}/{len(slides)} 张配图")
+        return photo_paths
+
+    except Exception as e:
+        print(f"自动配图失败: {e}，将使用纯文字卡片")
+        return {}
+
+
 def preview_post(post_text, photo_paths=None):
     """
-    预览帖子：渲染所有图片并打开 Finder
+    预览帖子：自动匹配图片 + 渲染所有图片并打开 Finder
 
     Args:
         post_text: 帖子文案（===图1=== 格式）
-        photo_paths: dict {slide_num: photo_path}，None则用纯文字卡片
+        photo_paths: dict {slide_num: photo_path}，None则自动从Google Photos匹配
 
     Returns:
         list of rendered image paths
@@ -81,6 +129,10 @@ def preview_post(post_text, photo_paths=None):
     if not slides:
         print("无法解析文案，请确认格式：===图1===")
         return []
+
+    # 如果没有指定配图，自动从 Google Photos 匹配
+    if photo_paths is None:
+        photo_paths = _auto_match_photos(post_text, slides)
 
     # 清理预览目录
     if os.path.exists(PREVIEW_DIR):
@@ -98,7 +150,6 @@ def preview_post(post_text, photo_paths=None):
         if photo and os.path.exists(photo):
             path = render_slide(photo, main_text, sub_text, out_path, is_cover=is_cover)
         elif is_cover:
-            # 封面没配图也用纯文字封面风格
             path = render_text_card(main_text, sub_text, out_path)
         else:
             path = render_text_card(main_text, sub_text, out_path)
