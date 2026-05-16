@@ -149,82 +149,35 @@ def _draw_text_element(draw, elem):
             draw.text((lx, ly), line, font=font, fill=fill)
 
 
+def _get_photo_brightness(img):
+    """判断照片整体亮度"""
+    from PIL import ImageStat
+    stat = ImageStat.Stat(img.convert("L"))
+    return stat.mean[0]  # 0-255, >140 算亮
+
+
 def _get_layout(photo_path, main_text, sub_text, is_cover=False, max_retries=3):
-    """让 Gemini 看图+文案，输出排版指令"""
+    """Gemini 只决定文字放在哪（x,y坐标），style由代码决定"""
     with open(photo_path, "rb") as f:
         img_b64 = base64.b64encode(f.read()).decode()
 
-    # 读取设计规范
-    design_guide = ""
-    if os.path.exists(DESIGN_GUIDE_PATH):
-        with open(DESIGN_GUIDE_PATH, "r") as f:
-            guide = json.load(f)
-        if is_cover:
-            design_guide = json.dumps(guide.get("封面图（第1张）", {}), ensure_ascii=False)
-        else:
-            design_guide = json.dumps(guide.get("内页图（第2-N张）", {}), ensure_ascii=False)
-            design_guide += "\n文字层级：" + json.dumps(guide.get("文字层级", {}), ensure_ascii=False)
-
-    if is_cover:
-        prompt = (
-            '为这张照片设计封面排版。像素级模仿以下设计规范和参考图。\n\n'
-            f'文案：{main_text}\n\n'
-            f'## 设计规范\n{design_guide}\n\n'
-            '输出1-2个element：一个大black_bar包含主文字，可选一个溢出的shadow文字。\n\n'
-        )
-    else:
-        prompt = (
-            '为这张照片设计文字排版，风格参考"妈的欧洲账本"。\n\n'
-            f'大标题：{main_text}\n'
-            f'小字注释：{sub_text}\n\n'
-            '## 博主的排版规律（你必须学习并灵活运用）\n'
-            '1. 文字放在照片空白/暗处/纯色区域，可以稍微挡一点主体没关系\n'
-            '2. 如果有人脸，文字必须覆盖脸部\n'
-            '3. 同一张图里字号差异很大：关键词可以80-120px，注释30-38px\n'
-            '4. style类型（优先用shadow，效果最好）：\n'
-            '   - shadow: 白字+黑色描边阴影，直接叠在照片上（首选！大多数情况用这个）\n'
-            '   - white_bar: 白色背景条+黑字（照片特别亮/白色区域时用）\n'
-            '   - black_bar: 黑色背景条+白字（封面或需要强烈冲击时用）\n'
-            '   - plain: 纯色文字无效果（已有高对比度时用）\n'
-            '5. 金额用红色(color="red")或白色，字号要大(90-120px)\n'
-            '6. 小字注释通常右对齐放右下角，或放在不影响主体的角落\n'
-            '7. 大标题偏左对齐居多，但也可以居中或右对齐\n'
-            '8. 有时关键词占半个屏幕（"哥本哈根。""那就嫁了吧。"），句号也是设计元素\n'
-            '9. 颜色有时跟照片配合（金色产品配gold文字）\n'
-            '10. 不要所有元素都用同一种style，要混搭\n\n'
-        )
-
-    prompt += (
-        '输出JSON，每个元素一个对象：\n'
-        '{"elements":[{"text":"文字","x":50,"y":300,"font_size":70,"bold":true,'
-        '"color":"white","style":"white_bar","max_width":800}]}\n\n'
-        'color: white/black/red/gold\n'
-        'style: shadow/white_bar/black_bar/plain\n'
-        'x范围0-1080, y范围0-1440\n'
-        '元素之间不能重叠。只输出JSON。'
+    prompt = (
+        '看这张照片（画布1080x1440），我要在上面放文字。\n\n'
+        f'大标题：{main_text}\n'
+        f'小字注释：{sub_text}\n\n'
+        '请告诉我每段文字应该放在什么位置（x,y坐标），以及合适的字号。\n'
+        '规则：\n'
+        '1. 文字放在空白/暗处/纯色区域\n'
+        '2. 可以稍微挡一点主体\n'
+        '3. 人脸必须被文字覆盖\n'
+        '4. 大标题偏左，注释放右下角\n'
+        '5. 元素不能重叠\n\n'
+        '输出JSON：\n'
+        '{"elements":[{"text":"文字","x":50,"y":300,"font_size":70,"max_width":800}]}\n'
+        '只输出JSON。'
     )
 
     contents = [prompt]
-
-    # 传入风格参考图
-    if is_cover:
-        ref_dir = COVER_EXAMPLES_DIR
-        ref_files = ["cover_2.jpg", "cover_3.jpg", "cover_4.jpg", "cover_5.jpg", "cover_6.jpg"]
-    else:
-        ref_dir = STYLE_EXAMPLES_DIR
-        ref_files = ["orig_09.jpg", "orig_11.jpg", "orig_18.jpg", "orig_28.jpg", "orig_32.jpg"]
-
-    refs_added = 0
-    for ref in ref_files:
-        ref_path = os.path.join(ref_dir, ref)
-        if os.path.exists(ref_path) and refs_added < 3:
-            if refs_added == 0:
-                contents.append("以下是风格参考图，请像素级模仿这个排版风格：")
-            with open(ref_path, "rb") as f:
-                contents.append({"inline_data": {"mime_type": "image/jpeg", "data": base64.b64encode(f.read()).decode()}})
-            refs_added += 1
-
-    contents.append("以下是需要排版的照片：")
     contents.append({"inline_data": {"mime_type": "image/jpeg", "data": img_b64}})
 
     for attempt in range(max_retries):
@@ -404,17 +357,37 @@ def render_slide(photo_path, main_text, sub_text="", output_path=None, is_cover=
     if is_cover:
         return _render_cover_fixed(photo_path, main_text, output_path)
 
-    # 1. Gemini 分析排版
-    layout = _get_layout(photo_path, main_text, sub_text, is_cover)
-
-    # 2. 加载照片
+    # 1. 加载照片 + 判断亮度
     img = Image.open(photo_path).convert("RGBA")
     img = _crop34(img)
+    brightness = _get_photo_brightness(img)
+    is_bright = brightness > 140
+
+    # 亮图用白底黑字条，暗图用白字+描边阴影
+    auto_style = "white_bar" if is_bright else "shadow"
+    auto_color = "black" if is_bright else "white"
+
+    # 2. Gemini 决定位置
+    layout = _get_layout(photo_path, main_text, sub_text, is_cover)
+
     layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     draw = ImageDraw.Draw(layer)
 
-    # 3. 绘制每个元素
+    # 3. 绘制每个元素（位置来自Gemini，style来自代码）
     for elem in layout.get("elements", []):
+        elem["style"] = elem.get("style", auto_style)
+        elem["color"] = elem.get("color", auto_color)
+        # 强制覆盖style：代码决定，不听Gemini的
+        if "style" not in elem or elem["style"] not in ("shadow", "white_bar", "black_bar", "plain"):
+            elem["style"] = auto_style
+        # 金额保持红色
+        text = elem.get("text", "")
+        if re.search(r'[¥$￥]\d', text):
+            elem["color"] = "red"
+            elem["style"] = "shadow"
+        else:
+            elem["style"] = auto_style
+            elem["color"] = auto_color
         _draw_text_element(draw, elem)
 
     # 4. 合成输出
