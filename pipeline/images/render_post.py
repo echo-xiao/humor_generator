@@ -149,6 +149,9 @@ def _draw_text_element(draw, elem):
             draw.text((lx, ly), line, font=font, fill=fill)
 
 
+STYLE_DB_PATH = os.path.join(_PROJECT_ROOT, "data", "style_database.json")
+
+
 def _get_photo_brightness(img):
     """判断照片整体亮度"""
     from PIL import ImageStat
@@ -156,8 +159,110 @@ def _get_photo_brightness(img):
     return stat.mean[0]  # 0-255, >140 算亮
 
 
+def _load_style_templates():
+    """从样式数据库加载模板"""
+    if not os.path.exists(STYLE_DB_PATH):
+        return []
+    with open(STYLE_DB_PATH, "r") as f:
+        return json.load(f)
+
+
+def _find_matching_template(brightness, num_title_chars, num_sub_chars, has_price):
+    """根据照片特征从样式数据库中找最匹配的模板"""
+    db = _load_style_templates()
+    if not db:
+        return None
+
+    is_bright = brightness > 140
+
+    best = None
+    best_score = -1
+
+    for entry in db:
+        if entry.get("is_cover"):
+            continue  # 封面用固定模板
+
+        elems = entry.get("text_elements", entry.get("elements", []))
+        if not elems:
+            continue
+
+        photo_bright = entry.get("photo_brightness", "") == "亮"
+        score = 0
+
+        # 亮度匹配
+        if photo_bright == is_bright:
+            score += 5
+
+        # 文字数量匹配
+        title_elems = [e for e in elems if e.get("role") in ("title", "keyword", "subtitle")]
+        sub_elems = [e for e in elems if e.get("role") in ("annotation",)]
+        if len(title_elems) > 0 and num_title_chars > 0:
+            score += 2
+        if len(sub_elems) > 0 and num_sub_chars > 0:
+            score += 2
+        if not sub_elems and not num_sub_chars:
+            score += 1
+
+        # 金额匹配
+        price_elems = [e for e in elems if e.get("role") == "price"]
+        if bool(price_elems) == has_price:
+            score += 3
+
+        if score > best_score:
+            best_score = score
+            best = entry
+
+    return best
+
+
+def _apply_template_style(elements, template, brightness):
+    """将模板的样式应用到Gemini返回的位置上"""
+    if not template:
+        # 无模板，用默认
+        is_bright = brightness > 140
+        default_style = "white_bar" if is_bright else "shadow"
+        default_color = "black" if is_bright else "white"
+        for elem in elements:
+            text = elem.get("text", "")
+            if re.search(r'[¥$￥]\d', text):
+                elem["style"] = "shadow"
+                elem["color"] = "red"
+            else:
+                elem["style"] = default_style
+                elem["color"] = default_color
+        return
+
+    template_elems = template.get("text_elements", template.get("elements", []))
+
+    # 按 role 分类模板元素的样式
+    role_styles = {}
+    for te in template_elems:
+        role = te.get("role", "title")
+        role_styles[role] = {
+            "style": te.get("style", "shadow"),
+            "color": te.get("color", "white"),
+        }
+
+    for elem in elements:
+        text = elem.get("text", "")
+        fs = elem.get("font_size", 60)
+
+        # 判断角色
+        if re.search(r'[¥$￥]\d', text):
+            elem["style"] = "shadow"
+            elem["color"] = "red"
+        elif fs >= 70:
+            rs = role_styles.get("title", role_styles.get("keyword", {"style": "shadow", "color": "white"}))
+            elem["style"] = rs["style"]
+            elem["color"] = rs["color"]
+        else:
+            rs = role_styles.get("annotation", {"style": "shadow", "color": "white"})
+            elem["style"] = rs["style"]
+            elem["color"] = rs["color"]
+
+
 def _get_layout(photo_path, main_text, sub_text, is_cover=False, max_retries=3):
-    """Gemini 只决定文字放在哪（x,y坐标），style由代码决定"""
+    """Gemini 决定位置，样式数据库决定风格"""
     with open(photo_path, "rb") as f:
         img_b64 = base64.b64encode(f.read()).decode()
 
@@ -361,33 +466,21 @@ def render_slide(photo_path, main_text, sub_text="", output_path=None, is_cover=
     img = Image.open(photo_path).convert("RGBA")
     img = _crop34(img)
     brightness = _get_photo_brightness(img)
-    is_bright = brightness > 140
-
-    # 亮图用白底黑字条，暗图用白字+描边阴影
-    auto_style = "white_bar" if is_bright else "shadow"
-    auto_color = "black" if is_bright else "white"
 
     # 2. Gemini 决定位置
     layout = _get_layout(photo_path, main_text, sub_text, is_cover)
+    elements = layout.get("elements", [])
+
+    # 3. 从样式数据库匹配模板，应用风格
+    has_price = bool(re.search(r'[¥$￥]\d', main_text))
+    template = _find_matching_template(brightness, len(main_text), len(sub_text), has_price)
+    _apply_template_style(elements, template, brightness)
 
     layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     draw = ImageDraw.Draw(layer)
 
-    # 3. 绘制每个元素（位置来自Gemini，style来自代码）
-    for elem in layout.get("elements", []):
-        elem["style"] = elem.get("style", auto_style)
-        elem["color"] = elem.get("color", auto_color)
-        # 强制覆盖style：代码决定，不听Gemini的
-        if "style" not in elem or elem["style"] not in ("shadow", "white_bar", "black_bar", "plain"):
-            elem["style"] = auto_style
-        # 金额保持红色
-        text = elem.get("text", "")
-        if re.search(r'[¥$￥]\d', text):
-            elem["color"] = "red"
-            elem["style"] = "shadow"
-        else:
-            elem["style"] = auto_style
-            elem["color"] = auto_color
+    # 4. 绘制每个元素
+    for elem in elements:
         _draw_text_element(draw, elem)
 
     # 4. 合成输出

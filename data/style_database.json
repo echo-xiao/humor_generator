@@ -1,0 +1,2675 @@
+[
+  {
+    "text_elements": [
+      {
+        "text": "今天，你踏上了一个人的北欧旅行",
+        "role": "title",
+        "font_size_estimate": "大",
+        "color": "white",
+        "style": "shadow",
+        "position": "中左",
+        "char_count": 16
+      },
+      {
+        "text": "试过在冰天雪地中等车吗",
+        "role": "annotation",
+        "font_size_estimate": "中",
+        "color": "white",
+        "style": "shadow",
+        "position": "中右",
+        "char_count": 13
+      },
+      {
+        "text": "那感觉就像",
+        "role": "annotation",
+        "font_size_estimate": "中",
+        "color": "white",
+        "style": "shadow",
+        "position": "中右",
+        "char_count": 5
+      },
+      {
+        "text": "在机场等一艘船",
+        "role": "annotation",
+        "font_size_estimate": "中",
+        "color": "white",
+        "style": "shadow",
+        "position": "中右",
+        "char_count": 7
+      },
+      {
+        "text": "站牌显示还有8分钟",
+        "role": "annotation",
+        "font_size_estimate": "中",
+        "color": "white",
+        "style": "shadow",
+        "position": "右下",
+        "char_count": 10
+      },
+      {
+        "text": "这是北欧第一次对你说谎",
+        "role": "annotation",
+        "font_size_estimate": "中",
+        "color": "white",
+        "style": "shadow",
+        "position": "右下",
+        "char_count": 13
+      },
+      {
+        "text": "这不是最后一次",
+        "role": "annotation",
+        "font_size_estimate": "中",
+        "color": "white",
+        "style": "shadow",
+        "position": "右下",
+        "char_count": 7
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "混合",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_00.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "终于，你到达了民宿楼下",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "black",
+        "style": "white_bar",
+        "position": "中左",
+        "char_count": 13
+      },
+      {
+        "text": "看见眼前的天梯",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 7
+      },
+      {
+        "text": "你和你23公斤的行李箱",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 12
+      },
+      {
+        "text": "都陷入了沉默",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 6
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "暗",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_01.jpg"
+  },
+  {
+    "is_cover": true,
+    "photo_brightness": "亮",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "text_elements": [
+      {
+        "text": "¥4500/四晚",
+        "role": "price",
+        "font_size_estimate": "中",
+        "color": "black",
+        "style": "white_bar",
+        "position": "中右",
+        "char_count": 8
+      },
+      {
+        "text": "恭喜！你订到了绝美民宿",
+        "role": "title",
+        "font_size_estimate": "大",
+        "color": "black",
+        "style": "white_bar",
+        "position": "居中",
+        "char_count": 12
+      },
+      {
+        "text": "但房主远在东南亚",
+        "role": "annotation",
+        "font_size_estimate": "小",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中右",
+        "char_count": 8
+      },
+      {
+        "text": "她使用了easy pick",
+        "role": "annotation",
+        "font_size_estimate": "小",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中右",
+        "char_count": 12
+      },
+      {
+        "text": "你必须前往一公里外的711领取钥匙",
+        "role": "annotation",
+        "font_size_estimate": "小",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中右",
+        "char_count": 21
+      },
+      {
+        "text": "拖着你",
+        "role": "annotation",
+        "font_size_estimate": "小",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中左",
+        "char_count": 3
+      },
+      {
+        "text": "23公斤的行李箱",
+        "role": "annotation",
+        "font_size_estimate": "小",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中左",
+        "char_count": 8
+      }
+    ],
+    "_source_file": "orig_02.jpg"
+  },
+  {
+    "is_cover": true,
+    "photo_brightness": "混合",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "text_elements": [
+      {
+        "text": "你拖着行李箱跋涉过漫漫雪路",
+        "role": "title",
+        "font_size_estimate": "大",
+        "color": "black",
+        "style": "white_bar",
+        "position": "中左",
+        "char_count": 12
+      },
+      {
+        "text": "没有相同经历的人",
+        "role": "subtitle",
+        "font_size_estimate": "中",
+        "color": "black",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 8
+      },
+      {
+        "text": "不配和你谈人生的重量",
+        "role": "subtitle",
+        "font_size_estimate": "中",
+        "color": "black",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 10
+      }
+    ],
+    "_source_file": "orig_03.jpg"
+  },
+  {
+    "is_cover": true,
+    "photo_brightness": "亮",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "text_elements": [
+      {
+        "text": "¥50",
+        "role": "price",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "shadow",
+        "position": "右上",
+        "char_count": 3
+      },
+      {
+        "text": "这玩意到底熟了吗",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "shadow",
+        "position": "中右",
+        "char_count": 8
+      },
+      {
+        "text": "睁眼来吃个xhs天花板",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "black_bar",
+        "position": "居中",
+        "char_count": 13
+      },
+      {
+        "text": "你又把眼睛闭上了",
+        "role": "subtitle",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "plain",
+        "position": "居中",
+        "char_count": 9
+      }
+    ],
+    "_source_file": "orig_04.jpg"
+  },
+  {
+    "is_cover": false,
+    "photo_brightness": "混合",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "text_elements": [
+      {
+        "text": "你花费¥270购买了三日交通卡",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "shadow",
+        "position": "中左",
+        "char_count": 13
+      },
+      {
+        "text": "20岁以下 65岁以上享有折扣",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "shadow",
+        "position": "中右",
+        "char_count": 14
+      },
+      {
+        "text": "你试图说服售票员你已年逾七旬",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "shadow",
+        "position": "中右",
+        "char_count": 16
+      },
+      {
+        "text": "但你失败了",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "shadow",
+        "position": "中右",
+        "char_count": 5
+      }
+    ],
+    "_source_file": "orig_05.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "你前往收藏已久的景点打卡",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "shadow",
+        "position": "中上",
+        "char_count": 13
+      },
+      {
+        "text": "发现过半数 节假日并不开门",
+        "role": "subtitle",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "shadow",
+        "position": "居中",
+        "char_count": 14
+      },
+      {
+        "text": "你放假吗",
+        "role": "keyword",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "white_bar",
+        "position": "中右",
+        "char_count": 4
+      },
+      {
+        "text": "我也是",
+        "role": "keyword",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "white_bar",
+        "position": "中右",
+        "char_count": 3
+      },
+      {
+        "text": "嘿嘿",
+        "role": "keyword",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "white_bar",
+        "position": "中右",
+        "char_count": 2
+      },
+      {
+        "text": "Dalagatan",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "左上",
+        "char_count": 9
+      },
+      {
+        "text": "Rodebjer Revisited",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中上",
+        "char_count": 18
+      },
+      {
+        "text": "Fältöversten",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "右上",
+        "char_count": 12
+      },
+      {
+        "text": "ÖSTERMA",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "右上",
+        "char_count": 8
+      },
+      {
+        "text": "Junibacken",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 10
+      },
+      {
+        "text": "Ringvägen",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中下",
+        "char_count": 9
+      },
+      {
+        "text": "Katarina-Sofia",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "右下",
+        "char_count": 14
+      },
+      {
+        "text": "Restaurant Pel",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "右下",
+        "char_count": 14
+      },
+      {
+        "text": "Google",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "plain",
+        "position": "左下",
+        "char_count": 6
+      },
+      {
+        "text": "222",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中右",
+        "char_count": 3
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "亮",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_06.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "你并不气馁",
+        "role": "title",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "居中",
+        "char_count": 5
+      },
+      {
+        "text": "邀请欧洲人为你你在关门的景点前拍照留念",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "居中",
+        "char_count": 18
+      },
+      {
+        "text": "#在北欧拍到人生照片#",
+        "role": "keyword",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "shadow",
+        "position": "居中",
+        "char_count": 12
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "混合",
+    "has_face": true,
+    "face_covered": true,
+    "_source_file": "orig_07.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "你决定还是求助于你的好兄弟",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "black",
+        "style": "white_bar",
+        "position": "居中",
+        "char_count": 13
+      },
+      {
+        "text": "但你在雪地里摔了一跤\n把好兄弟摔骨折了",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "plain",
+        "position": "居中",
+        "char_count": 18
+      },
+      {
+        "text": "—¥200",
+        "role": "price",
+        "font_size_estimate": "大80-120",
+        "color": "red",
+        "style": "plain",
+        "position": "中左",
+        "char_count": 5
+      },
+      {
+        "text": "从此你就只剩一个人了",
+        "role": "annotation",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "shadow",
+        "position": "左下",
+        "char_count": 11
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "亮",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_08.jpg"
+  },
+  {
+    "is_cover": true,
+    "photo_brightness": "亮",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "text_elements": [
+      {
+        "text": "是你的错",
+        "role": "title",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "左上",
+        "char_count": 4
+      },
+      {
+        "text": "你没准备好一双防水防滑的鞋就来了",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "中左",
+        "char_count": 18
+      },
+      {
+        "text": "你从此迈着缠足女子的步伐",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中左",
+        "char_count": 13
+      },
+      {
+        "text": "只觉每一步比刘诗诗还要步步惊心",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中左",
+        "char_count": 16
+      }
+    ],
+    "_source_file": "orig_09.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "你又累又渴，走进最近的711",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "shadow",
+        "position": "居中",
+        "char_count": 14
+      },
+      {
+        "text": "但最便宜的水",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "shadow",
+        "position": "居中",
+        "char_count": 6
+      },
+      {
+        "text": "也要¥20",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "shadow",
+        "position": "居中",
+        "char_count": 5
+      },
+      {
+        "text": "31 DKK",
+        "role": "price",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中左",
+        "char_count": 6
+      },
+      {
+        "text": "31 DKK",
+        "role": "price",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "居中",
+        "char_count": 6
+      },
+      {
+        "text": "31 DKK",
+        "role": "price",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 6
+      },
+      {
+        "text": "20 DKK",
+        "role": "price",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中左",
+        "char_count": 6
+      },
+      {
+        "text": "30 DKK",
+        "role": "price",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "居中",
+        "char_count": 6
+      },
+      {
+        "text": "25 DKK",
+        "role": "price",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 6
+      },
+      {
+        "text": "28.50 DKK",
+        "role": "price",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中左",
+        "char_count": 9
+      },
+      {
+        "text": "28.50 DKK",
+        "role": "price",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 9
+      },
+      {
+        "text": "28.50 DKK",
+        "role": "price",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中左",
+        "char_count": 9
+      },
+      {
+        "text": "28.50 DKK",
+        "role": "price",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 9
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "混合",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_10.jpg"
+  },
+  {
+    "is_cover": true,
+    "photo_brightness": "亮",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "text_elements": [
+      {
+        "text": "该花就花",
+        "role": "annotation",
+        "font_size_estimate": "小",
+        "color": "white",
+        "style": "shadow",
+        "position": "中左",
+        "char_count": 4
+      },
+      {
+        "text": "此处鸣谢中餐馆、韩餐馆和西班牙餐馆\n拉高了北欧整体餐饮水准",
+        "role": "annotation",
+        "font_size_estimate": "小",
+        "color": "white",
+        "style": "shadow",
+        "position": "中右",
+        "char_count": 27
+      },
+      {
+        "text": "买完了水，你决定吃顿好的",
+        "role": "title",
+        "font_size_estimate": "大",
+        "color": "black",
+        "style": "white_bar",
+        "position": "居中",
+        "char_count": 14
+      },
+      {
+        "text": "但海鲜饭2人起点",
+        "role": "subtitle",
+        "font_size_estimate": "中",
+        "color": "white",
+        "style": "black_bar",
+        "position": "左下",
+        "char_count": 9
+      },
+      {
+        "text": "你咬咬牙",
+        "role": "subtitle",
+        "font_size_estimate": "中",
+        "color": "white",
+        "style": "black_bar",
+        "position": "左下",
+        "char_count": 4
+      },
+      {
+        "text": "一个人吃了两人份",
+        "role": "subtitle",
+        "font_size_estimate": "中",
+        "color": "white",
+        "style": "black_bar",
+        "position": "左下",
+        "char_count": 8
+      },
+      {
+        "text": "¥560",
+        "role": "price",
+        "font_size_estimate": "超大",
+        "color": "black",
+        "style": "plain",
+        "position": "右下",
+        "char_count": 4
+      }
+    ],
+    "_source_file": "orig_11.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "回到家，你惊诧地发现一整天",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "black",
+        "style": "white_bar",
+        "position": "中左",
+        "char_count": 16
+      },
+      {
+        "text": "门都没锁",
+        "role": "subtitle",
+        "font_size_estimate": "超大120-160",
+        "color": "white",
+        "style": "plain",
+        "position": "居中",
+        "char_count": 4
+      },
+      {
+        "text": "原来这里的门关上并不是关上了",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "左下",
+        "char_count": 15
+      },
+      {
+        "text": "得手动上锁",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "左下",
+        "char_count": 5
+      },
+      {
+        "text": "好在无人侵入",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "右下",
+        "char_count": 6
+      },
+      {
+        "text": "你不禁感叹",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "右下",
+        "char_count": 5
+      },
+      {
+        "text": "北欧果然路不拾遗",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "右下",
+        "char_count": 7
+      },
+      {
+        "text": "夜不闭户",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "右下",
+        "char_count": 4
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "混合",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_12.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "终于要回家了",
+        "role": "title",
+        "font_size_estimate": "大",
+        "color": "white",
+        "style": "black_bar",
+        "position": "center",
+        "char_count": 6
+      },
+      {
+        "text": "你在机场购入免税品",
+        "role": "subtitle",
+        "font_size_estimate": "中",
+        "color": "white",
+        "style": "black_bar",
+        "position": "center",
+        "char_count": 9
+      },
+      {
+        "text": "并为柜员送的小样沾沾自喜",
+        "role": "subtitle",
+        "font_size_estimate": "中",
+        "color": "white",
+        "style": "black_bar",
+        "position": "center",
+        "char_count": 14
+      },
+      {
+        "text": "From Lancome with happiness",
+        "role": "annotation",
+        "font_size_estimate": "小",
+        "color": "black",
+        "style": "plain",
+        "position": "right_top",
+        "char_count": 27
+      },
+      {
+        "text": "—¥2400",
+        "role": "price",
+        "font_size_estimate": "大",
+        "color": "red",
+        "style": "plain",
+        "position": "mid_right",
+        "char_count": 6
+      },
+      {
+        "text": "打开淘宝一看",
+        "role": "subtitle",
+        "font_size_estimate": "大",
+        "color": "white",
+        "style": "black_bar",
+        "position": "left_bottom",
+        "char_count": 6
+      },
+      {
+        "text": "代购竟然便宜了一半",
+        "role": "subtitle",
+        "font_size_estimate": "大",
+        "color": "white",
+        "style": "black_bar",
+        "position": "left_bottom",
+        "char_count": 10
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "mixed",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_13.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "真是不错！",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "black",
+        "style": "white_bar",
+        "position": "居中",
+        "char_count": 5
+      },
+      {
+        "text": "下次还来",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "plain",
+        "position": "居中",
+        "char_count": 4
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "混合",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_14.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "比拼、",
+        "role": "title",
+        "font_size_estimate": "超大120-160",
+        "color": "white",
+        "style": "black_bar",
+        "position": "居中",
+        "char_count": 3
+      },
+      {
+        "text": "欧洲最强",
+        "role": "title",
+        "font_size_estimate": "超大120-160",
+        "color": "white",
+        "style": "black_bar",
+        "position": "居中",
+        "char_count": 4
+      },
+      {
+        "text": "蜜月地",
+        "role": "title",
+        "font_size_estimate": "超大120-160",
+        "color": "white",
+        "style": "black_bar",
+        "position": "居中",
+        "char_count": 3
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "混合",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_15.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "2026年了",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "black",
+        "style": "white_bar",
+        "position": "左上",
+        "char_count": 6
+      },
+      {
+        "text": "还有人结婚吗",
+        "role": "subtitle",
+        "font_size_estimate": "大80-120",
+        "color": "black",
+        "style": "white_bar",
+        "position": "左上",
+        "char_count": 7
+      },
+      {
+        "text": "有的话我要推荐几个蜜月地了",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "shadow",
+        "position": "左下",
+        "char_count": 14
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "亮",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_16.jpg"
+  },
+  {
+    "is_cover": true,
+    "photo_brightness": "亮",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "text_elements": [
+      {
+        "text": "为防死后不能一起上天堂",
+        "role": "subtitle",
+        "font_size_estimate": "小",
+        "color": "white",
+        "style": "black_bar",
+        "position": "左上",
+        "char_count": 12
+      },
+      {
+        "text": "死前我想跟你去一次",
+        "role": "subtitle",
+        "font_size_estimate": "小",
+        "color": "white",
+        "style": "black_bar",
+        "position": "左上",
+        "char_count": 9
+      },
+      {
+        "text": "因特拉肯。",
+        "role": "title",
+        "font_size_estimate": "超大",
+        "color": "white",
+        "style": "shadow",
+        "position": "居中",
+        "char_count": 5
+      },
+      {
+        "text": "只是上天堂只需要做善事就行了",
+        "role": "annotation",
+        "font_size_estimate": "中",
+        "color": "black",
+        "style": "white_bar",
+        "position": "左下",
+        "char_count": 15
+      },
+      {
+        "text": "去瑞士却要很多钱啊",
+        "role": "annotation",
+        "font_size_estimate": "中",
+        "color": "black",
+        "style": "white_bar",
+        "position": "左下",
+        "char_count": 9
+      }
+    ],
+    "_source_file": "orig_17.jpg"
+  },
+  {
+    "is_cover": true,
+    "photo_brightness": "混合",
+    "has_face": true,
+    "face_covered": false,
+    "text_elements": [
+      {
+        "text": "愿意结婚的人",
+        "role": "title",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "左上",
+        "char_count": 6
+      },
+      {
+        "text": "或多或少还相信童话吧",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "左上",
+        "char_count": 9
+      },
+      {
+        "text": "哥本哈根。",
+        "role": "keyword",
+        "font_size_estimate": "超大120-160",
+        "color": "white",
+        "style": "plain",
+        "position": "居中",
+        "char_count": 5
+      },
+      {
+        "text": "只是此地最著名的童话是美人鱼",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "black_bar",
+        "position": "居中",
+        "char_count": 16
+      },
+      {
+        "text": "它说的是陷入爱河的女人",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "black_bar",
+        "position": "居中",
+        "char_count": 12
+      },
+      {
+        "text": "最后会变成泡沫",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "black_bar",
+        "position": "居中",
+        "char_count": 7
+      }
+    ],
+    "_source_file": "orig_18.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "自由派夫妻首选",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "white_bar",
+        "position": "左上",
+        "char_count": 7
+      },
+      {
+        "text": "阿姆斯特丹。",
+        "role": "title",
+        "font_size_estimate": "超大120-160",
+        "color": "white",
+        "style": "shadow",
+        "position": "中左",
+        "char_count": 6
+      },
+      {
+        "text": "虽然保证过生老病死",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "居中",
+        "char_count": 9
+      },
+      {
+        "text": "不一定能保证经过\n红灯区时\n目不斜视",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "右下",
+        "char_count": 17
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "亮",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_19.jpg"
+  },
+  {
+    "is_cover": true,
+    "photo_brightness": "亮",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "text_elements": [
+      {
+        "text": "蜜月绕不开意大利",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "左上",
+        "char_count": 8
+      },
+      {
+        "text": "那不勒斯。",
+        "role": "title",
+        "font_size_estimate": "超大120-160",
+        "color": "white",
+        "style": "plain",
+        "position": "中左",
+        "char_count": 5
+      },
+      {
+        "text": "可能因为只有在意大利",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中右",
+        "char_count": 10
+      },
+      {
+        "text": "人们可以热情洋溢地说爱你",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中右",
+        "char_count": 13
+      },
+      {
+        "text": "也可以热情洋溢地抢你钱",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中右",
+        "char_count": 12
+      },
+      {
+        "text": "这本质上很像婚姻",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "black_bar",
+        "position": "右下",
+        "char_count": 8
+      }
+    ],
+    "_source_file": "orig_20.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "托斯卡纳。",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "plain",
+        "position": "居中",
+        "char_count": 5
+      },
+      {
+        "text": "开车驶过丝柏树",
+        "role": "subtitle",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "white_bar",
+        "position": "中左",
+        "char_count": 7
+      },
+      {
+        "text": "总觉得在驶向一个大团圆结局",
+        "role": "subtitle",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "white_bar",
+        "position": "中左",
+        "char_count": 13
+      },
+      {
+        "text": "蜜月的意义",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "black_bar",
+        "position": "右下",
+        "char_count": 5
+      },
+      {
+        "text": "谁也不知道",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "black_bar",
+        "position": "右下",
+        "char_count": 5
+      },
+      {
+        "text": "这婚姻的结局",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "black_bar",
+        "position": "右下",
+        "char_count": 6
+      },
+      {
+        "text": "但至少开头",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "black_bar",
+        "position": "右下",
+        "char_count": 5
+      },
+      {
+        "text": "可以很甜蜜",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "black_bar",
+        "position": "右下",
+        "char_count": 5
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "亮",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_21.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "以上本该两个人去的地方 不小心一个人全去完了",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "white_bar",
+        "position": "右上",
+        "char_count": 21
+      },
+      {
+        "text": "一个人的蜜月期",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 7
+      },
+      {
+        "text": "+娇兰",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "gold",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 3
+      },
+      {
+        "text": "复原蜜",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "gold",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 3
+      },
+      {
+        "text": "一个人也 甜蜜蜜",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "左下",
+        "char_count": 7
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "亮",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_22.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "护肤界万金油",
+        "role": "title",
+        "font_size_estimate": "超大120-160",
+        "color": "white",
+        "style": "shadow",
+        "position": "居中",
+        "char_count": 6
+      },
+      {
+        "text": ">屏障修护",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中左",
+        "char_count": 5
+      },
+      {
+        "text": ">妆前打底",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中左",
+        "char_count": 5
+      },
+      {
+        "text": ">兼职身体油",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中左",
+        "char_count": 6
+      },
+      {
+        "text": "黑蜂蜜炸弹",
+        "role": "keyword",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中右",
+        "char_count": 5
+      },
+      {
+        "text": "粒粒炸开",
+        "role": "keyword",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中右",
+        "char_count": 4
+      },
+      {
+        "text": "滴滴深修护",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "右下",
+        "char_count": 5
+      },
+      {
+        "text": "一抹快修纹",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "右下",
+        "char_count": 5
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "亮",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_23.jpg"
+  },
+  {
+    "is_cover": true,
+    "photo_brightness": "混合",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "text_elements": [
+      {
+        "text": "一个人食大餐",
+        "role": "title",
+        "font_size_estimate": "超大120-160",
+        "color": "white",
+        "style": "shadow",
+        "position": "居中",
+        "char_count": 6
+      },
+      {
+        "text": "收获服务员珍藏的软糖",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "中左",
+        "char_count": 10
+      },
+      {
+        "text": "说是只给我一个",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "中右",
+        "char_count": 7
+      },
+      {
+        "text": "转头又给了隔壁桌",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "black_bar",
+        "position": "中左",
+        "char_count": 8
+      },
+      {
+        "text": "*就这样被",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "右下",
+        "char_count": 5
+      },
+      {
+        "text": "仨女骗",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "右下",
+        "char_count": 3
+      }
+    ],
+    "_source_file": "orig_24.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "一个人行路",
+        "role": "title",
+        "font_size_estimate": "超大120-160",
+        "color": "white",
+        "style": "plain",
+        "position": "居中",
+        "char_count": 5
+      },
+      {
+        "text": "一个人给浮冰加油",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "居中",
+        "char_count": 8
+      },
+      {
+        "text": "加油",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 2
+      },
+      {
+        "text": "不要被他们融化",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 6
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "混合",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_25.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "一个人被路人抓去拍照。",
+        "role": "title",
+        "font_size_estimate": "超大120-160",
+        "color": "white",
+        "style": "shadow",
+        "position": "居中",
+        "char_count": 12
+      },
+      {
+        "text": "小心！",
+        "role": "keyword",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "shadow",
+        "position": "中右",
+        "char_count": 3
+      },
+      {
+        "text": "亚洲人会拍照这件事\n已经被欧洲人知道了",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "右下",
+        "char_count": 20
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "亮",
+    "has_face": true,
+    "face_covered": false,
+    "_source_file": "orig_26.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "总有人说",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "左上",
+        "char_count": 4
+      },
+      {
+        "text": "“",
+        "role": "annotation",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "plain",
+        "position": "中左",
+        "char_count": 1
+      },
+      {
+        "text": "一个人真勇敢啊！",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "plain",
+        "position": "居中",
+        "char_count": 8
+      },
+      {
+        "text": "”",
+        "role": "annotation",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 1
+      },
+      {
+        "text": "但对于一个人而言",
+        "role": "subtitle",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "black_bar",
+        "position": "右下",
+        "char_count": 8
+      },
+      {
+        "text": "两个人",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "black_bar",
+        "position": "右下",
+        "char_count": 3
+      },
+      {
+        "text": "更需要勇气",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "右下",
+        "char_count": 5
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "混合",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_27.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "如果两个人能一起",
+        "role": "title",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中左",
+        "char_count": 8
+      },
+      {
+        "text": "经历欧洲",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "black_bar",
+        "position": "居中",
+        "char_count": 4
+      },
+      {
+        "text": "还不吵架",
+        "role": "title",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中右",
+        "char_count": 4
+      },
+      {
+        "text": "那就嫁了吧。",
+        "role": "subtitle",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "shadow",
+        "position": "左下",
+        "char_count": 6
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "混合",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_28.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "我花费0秒",
+        "role": "subtitle",
+        "font_size_estimate": 60,
+        "color": "white",
+        "style": "black_bar",
+        "position": "中上",
+        "char_count": 5
+      },
+      {
+        "text": "决定",
+        "role": "title",
+        "font_size_estimate": 140,
+        "color": "white",
+        "style": "black_bar",
+        "position": "居中",
+        "char_count": 2
+      },
+      {
+        "text": "当她女朋友",
+        "role": "subtitle",
+        "font_size_estimate": 50,
+        "color": "white",
+        "style": "black_bar",
+        "position": "中下",
+        "char_count": 5
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "混合",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_29.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "如果爱是一门学科",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "plain",
+        "position": "中左",
+        "char_count": 8
+      },
+      {
+        "text": "东林应该已经修到了博士",
+        "role": "subtitle",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "plain",
+        "position": "中左",
+        "char_count": 12
+      },
+      {
+        "text": "东林是我认识的一个女孩子",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "左下",
+        "char_count": 13
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "混合",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_30.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "东林喜欢投递礼物",
+        "role": "title",
+        "font_size_estimate": "超大",
+        "color": "white",
+        "style": "plain",
+        "position": "左上",
+        "char_count": 8
+      },
+      {
+        "text": "小零食",
+        "role": "keyword",
+        "font_size_estimate": "中",
+        "color": "black",
+        "style": "white_bar",
+        "position": "中左",
+        "char_count": 3
+      },
+      {
+        "text": "暖宫的棉裤",
+        "role": "keyword",
+        "font_size_estimate": "中",
+        "color": "black",
+        "style": "white_bar",
+        "position": "中右",
+        "char_count": 5
+      },
+      {
+        "text": "居然是咖啡味的",
+        "role": "annotation",
+        "font_size_estimate": "小",
+        "color": "black",
+        "style": "white_bar",
+        "position": "左下",
+        "char_count": 7
+      },
+      {
+        "text": "沐浴露",
+        "role": "keyword",
+        "font_size_estimate": "大",
+        "color": "black",
+        "style": "white_bar",
+        "position": "左下",
+        "char_count": 3
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "混合",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_31.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "怎么21世纪还有人",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "shadow",
+        "position": "右上",
+        "char_count": 9
+      },
+      {
+        "text": "在送音乐盒",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "shadow",
+        "position": "右上",
+        "char_count": 5
+      },
+      {
+        "text": "圣诞节她在我家留下了一个音乐盒",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中左",
+        "char_count": 17
+      },
+      {
+        "text": "没有爬烟囱",
+        "role": "subtitle",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "shadow",
+        "position": "中右",
+        "char_count": 5
+      },
+      {
+        "text": "因为这个圣诞老人",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "shadow",
+        "position": "右下",
+        "char_count": 8
+      },
+      {
+        "text": "知道我家密码",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "shadow",
+        "position": "右下",
+        "char_count": 6
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "暗",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_32.jpg"
+  },
+  {
+    "is_cover": false,
+    "photo_brightness": "亮",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "text_elements": [
+      {
+        "text": "有时候我觉得自己是被她关爱的流浪猫",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中上",
+        "char_count": 19
+      },
+      {
+        "text": "这样的流浪猫她养了三只",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "居中",
+        "char_count": 13
+      },
+      {
+        "text": "三只都从街头走进她的怀中",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "左下",
+        "char_count": 15
+      },
+      {
+        "text": "猫闻得到自己该和怎样的人度过余生",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "左下",
+        "char_count": 19
+      }
+    ],
+    "_source_file": "orig_33.jpg"
+  },
+  {
+    "is_cover": true,
+    "photo_brightness": "混合",
+    "has_face": true,
+    "face_covered": false,
+    "text_elements": [
+      {
+        "text": "因为无力收养更多 这个冬天她在小区里",
+        "role": "subtitle",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "shadow",
+        "position": "右上",
+        "char_count": 20
+      },
+      {
+        "text": "搭建了",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中右",
+        "char_count": 3
+      },
+      {
+        "text": "流浪猫屋",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中右",
+        "char_count": 4
+      },
+      {
+        "text": "请勿拿走 谢谢支持",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中左",
+        "char_count": 8
+      },
+      {
+        "text": "从此生活在屋子会被人清走的恐惧中",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "左下",
+        "char_count": 17
+      }
+    ],
+    "_source_file": "orig_34.jpg"
+  },
+  {
+    "is_cover": true,
+    "photo_brightness": "亮",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "text_elements": [
+      {
+        "text": "屋子没被清走",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "shadow",
+        "position": "中左",
+        "char_count": 7
+      },
+      {
+        "text": "这一天她在猫屋里发现一封来信",
+        "role": "title",
+        "font_size_estimate": "超大120-160",
+        "color": "white",
+        "style": "shadow",
+        "position": "中左",
+        "char_count": 16
+      },
+      {
+        "text": "来自小区里的",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中右",
+        "char_count": 6
+      },
+      {
+        "text": "奶奶春华",
+        "role": "subtitle",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "black_bar",
+        "position": "右下",
+        "char_count": 4
+      },
+      {
+        "text": "流浪猫保护计划",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "左上",
+        "char_count": 7
+      },
+      {
+        "text": "温暖猫窝，爱不流浪",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "white_bar",
+        "position": "左上",
+        "char_count": 8
+      },
+      {
+        "text": "猫窝里的小生命有一个避风港，让温暖在这里。",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "white_bar",
+        "position": "左上",
+        "char_count": 21
+      },
+      {
+        "text": "请勿拿走 谢谢支持",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "red",
+        "style": "white_bar",
+        "position": "左下",
+        "char_count": 9
+      },
+      {
+        "text": "感谢信。\n爱心人您好！您好！这猫常常\n放的猫食。希望您有一个猫世\n界手机号给我。附进有1号10.4室。\n我是小区喂了二十多年流浪猫的\n张阿姨，我刚学会上网。想感谢\n我看到您的爱心，那猫窝我们\n昨晚想感谢给您。我真心想和\n您交个朋友。",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "居中",
+        "char_count": 137
+      }
+    ],
+    "_source_file": "orig_35.jpg"
+  },
+  {
+    "is_cover": true,
+    "photo_brightness": "混合",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "text_elements": [
+      {
+        "text": "奶奶春华在小区里设了23个喂猫点",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "black",
+        "style": "white_bar",
+        "position": "左上",
+        "char_count": 15
+      },
+      {
+        "text": "她每天起床",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "中右",
+        "char_count": 5
+      },
+      {
+        "text": "加水加粮",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "中右",
+        "char_count": 4
+      },
+      {
+        "text": "每天只做这一件事",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "中右",
+        "char_count": 8
+      },
+      {
+        "text": "这样做做了二十年",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "中右",
+        "char_count": 8
+      },
+      {
+        "text": "直到有一天",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "右下",
+        "char_count": 5
+      },
+      {
+        "text": "她发现小区里出现陌生的猫屋",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "左下",
+        "char_count": 13
+      }
+    ],
+    "_source_file": "orig_36.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "她们见面",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "右上",
+        "char_count": 4
+      },
+      {
+        "text": "奶奶春华",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "右上",
+        "char_count": 4
+      },
+      {
+        "text": "握住东林的手",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "右上",
+        "char_count": 6
+      },
+      {
+        "text": "不停说",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "右上",
+        "char_count": 3
+      },
+      {
+        "text": "老天保佑这个好人",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "左下",
+        "char_count": 8
+      },
+      {
+        "text": "一生顺遂",
+        "role": "subtitle",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "black_bar",
+        "position": "左下",
+        "char_count": 4
+      },
+      {
+        "text": "平平安安",
+        "role": "subtitle",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "black_bar",
+        "position": "左下",
+        "char_count": 4
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "混合",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_37.jpg"
+  },
+  {
+    "is_cover": true,
+    "photo_brightness": "亮",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "text_elements": [
+      {
+        "text": "奶奶春华没有手机",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中左",
+        "char_count": 8
+      },
+      {
+        "text": "她们会把猫屋作为信箱",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中左",
+        "char_count": 10
+      },
+      {
+        "text": "给彼此写信",
+        "role": "title",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中左",
+        "char_count": 6
+      },
+      {
+        "text": "流浪猫保护计划：\n温暖猫窝 感谢投喂\n请勿随意搬走猫窝",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "white_bar",
+        "position": "居中",
+        "char_count": 25
+      },
+      {
+        "text": "如此现代的上海",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "右下",
+        "char_count": 7
+      },
+      {
+        "text": "如此寒冷的冬天",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "右下",
+        "char_count": 7
+      },
+      {
+        "text": "发生了如此古典又温暖的友情",
+        "role": "subtitle",
+        "font_size_estimate": "大80-120",
+        "color": "black",
+        "style": "plain",
+        "position": "左下",
+        "char_count": 14
+      }
+    ],
+    "_source_file": "orig_38.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "舒肤佳买走了这个故事",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "中左",
+        "char_count": 9
+      },
+      {
+        "text": "因为这故事散发",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "white_bar",
+        "position": "中左",
+        "char_count": 7
+      },
+      {
+        "text": "古典又温暖",
+        "role": "subtitle",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "plain",
+        "position": "中左",
+        "char_count": 5
+      },
+      {
+        "text": "的香气",
+        "role": "subtitle",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "plain",
+        "position": "中左",
+        "char_count": 3
+      },
+      {
+        "text": "就像他们新出的沐浴露一样。",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "左下",
+        "char_count": 13
+      },
+      {
+        "text": "Safeguard",
+        "role": "keyword",
+        "font_size_estimate": "小30-40",
+        "color": "white",
+        "style": "plain",
+        "position": "右上",
+        "char_count": 9
+      },
+      {
+        "text": "香",
+        "role": "keyword",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 1
+      },
+      {
+        "text": "果酸",
+        "role": "keyword",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 2
+      },
+      {
+        "text": "麦醇",
+        "role": "keyword",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 2
+      },
+      {
+        "text": "栗香",
+        "role": "keyword",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 2
+      },
+      {
+        "text": "奶",
+        "role": "keyword",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 1
+      },
+      {
+        "text": "咖",
+        "role": "keyword",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 1
+      },
+      {
+        "text": "毛孔净澈+焕活",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 6
+      },
+      {
+        "text": "舒肤佳",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 3
+      },
+      {
+        "text": "焕新浴",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 3
+      },
+      {
+        "text": "露",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 1
+      },
+      {
+        "text": "©仅针对文字及图案",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "中右",
+        "char_count": 8
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "亮",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_39.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "一到冬天人就呼喊",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中上",
+        "char_count": 8
+      },
+      {
+        "text": "心软的神",
+        "role": "annotation",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中上",
+        "char_count": 4
+      },
+      {
+        "text": "但对于小猫而言",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中下",
+        "char_count": 8
+      },
+      {
+        "text": "心软的人类",
+        "role": "annotation",
+        "font_size_estimate": "大80-120",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中下",
+        "char_count": 5
+      },
+      {
+        "text": "就是最容易遇到的神",
+        "role": "annotation",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "中下",
+        "char_count": 9
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "混合",
+    "has_face": false,
+    "face_covered": "无人脸",
+    "_source_file": "orig_40.jpg"
+  },
+  {
+    "text_elements": [
+      {
+        "text": "东林总说自己笨",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "plain",
+        "position": "右上",
+        "char_count": 7
+      },
+      {
+        "text": "从幼儿园就被怀疑是弱智",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "plain",
+        "position": "右上",
+        "char_count": 10
+      },
+      {
+        "text": "考试总是不及格",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "plain",
+        "position": "右上",
+        "char_count": 7
+      },
+      {
+        "text": "流浪猫狗保护计划",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "左上",
+        "char_count": 8
+      },
+      {
+        "text": "温暖猫窝 喂食 不流浪",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "左上",
+        "char_count": 9
+      },
+      {
+        "text": "给流浪的小生命一个温暖的家",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "black",
+        "style": "plain",
+        "position": "左上",
+        "char_count": 12
+      },
+      {
+        "text": "请勿拿走,谢谢",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "red",
+        "style": "plain",
+        "position": "左上",
+        "char_count": 6
+      },
+      {
+        "text": "爱心支持",
+        "role": "annotation",
+        "font_size_estimate": "小30-40",
+        "color": "red",
+        "style": "plain",
+        "position": "左上",
+        "char_count": 4
+      },
+      {
+        "text": "东林是挺笨的",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "plain",
+        "position": "中左",
+        "char_count": 6
+      },
+      {
+        "text": "笨到不知道",
+        "role": "subtitle",
+        "font_size_estimate": "中50-70",
+        "color": "black",
+        "style": "plain",
+        "position": "中左",
+        "char_count": 5
+      },
+      {
+        "text": "爱是人能拥有的",
+        "role": "title",
+        "font_size_estimate": "中50-70",
+        "color": "white",
+        "style": "black_bar",
+        "position": "左下",
+        "char_count": 7
+      },
+      {
+        "text": "最大的",
+        "role": "title",
+        "font_size_estimate": "超大120-160",
+        "color": "white",
+        "style": "black_bar",
+        "position": "左下",
+        "char_count": 3
+      },
+      {
+        "text": "才能",
+        "role": "title",
+        "font_size_estimate": "超大120-160",
+        "color": "white",
+        "style": "black_bar",
+        "position": "左下",
+        "char_count": 2
+      }
+    ],
+    "is_cover": true,
+    "photo_brightness": "亮",
+    "has_face": true,
+    "face_covered": false,
+    "_source_file": "orig_41.jpg"
+  }
+]
