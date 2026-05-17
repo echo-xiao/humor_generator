@@ -100,6 +100,88 @@ def get_persona() -> str:
 
 
 @mcp.tool()
+def get_topics(category: str = "") -> str:
+    """
+    浏览话题池,寻找灵感。
+
+    返回按分类组织的话题列表,每个话题有标题、hooks(切入角度)、痛点。
+    可以指定分类筛选,也可以不传参看全部。
+
+    Args:
+        category: 可选,按分类筛选(如"出行""租房""吃饭""社交""天气与灾难""职场""身份与文化")
+    """
+    topics_path = os.path.join(_PROJECT_ROOT, "data", "topics.json")
+    if not os.path.exists(topics_path):
+        return "话题池未创建,请先创建 data/topics.json"
+
+    with open(topics_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    categories = data.get("categories", [])
+    if category:
+        categories = [c for c in categories if category in c["name"]]
+        if not categories:
+            all_names = [c["name"] for c in data.get("categories", [])]
+            return f"未找到分类「{category}」,可选: {', '.join(all_names)}"
+
+    lines = []
+    for cat in categories:
+        lines.append(f"\n## {cat['name']}")
+        for t in cat["topics"]:
+            status = f" [{t['status']}]" if t.get("status") else ""
+            lines.append(f"\n### {t['title']}{status}")
+            lines.append(f"痛点: {t['pain_point']}")
+            lines.append(f"切入角度:")
+            for h in t["hooks"]:
+                lines.append(f"  - {h}")
+            lines.append(f"参考策略: {t['ref_strategy']}")
+
+    return "\n".join(lines)
+
+
+@mcp.tool()
+def add_topic(category: str, title: str, hooks: str, pain_point: str) -> str:
+    """
+    往话题池添加新话题。
+
+    Args:
+        category: 分类名(如"出行""社交",不存在会新建)
+        title: 话题标题
+        hooks: 切入角度,用|分隔多个(如"角度1|角度2|角度3")
+        pain_point: 核心痛点
+    """
+    topics_path = os.path.join(_PROJECT_ROOT, "data", "topics.json")
+    with open(topics_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    hook_list = [h.strip() for h in hooks.split("|") if h.strip()]
+    new_topic = {
+        "title": title,
+        "hooks": hook_list,
+        "pain_point": pain_point,
+        "ref_strategy": "",
+    }
+
+    # 找到或创建分类
+    target = None
+    for cat in data.get("categories", []):
+        if cat["name"] == category:
+            target = cat
+            break
+
+    if not target:
+        target = {"name": category, "icon": "", "topics": []}
+        data.setdefault("categories", []).append(target)
+
+    target["topics"].append(new_topic)
+
+    with open(topics_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+    return f"已添加话题「{title}」到分类「{category}」(共{len(hook_list)}个切入角度)"
+
+
+@mcp.tool()
 def list_all_posts() -> str:
     """列出所有195篇范文的标题和话题标签。"""
     return list_posts() or "范文库未就绪"

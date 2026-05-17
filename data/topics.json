@@ -1,0 +1,266 @@
+{
+  "说明": "话题池：基于人设（32岁/洛杉矶/ENFP）的可写话题。每个话题有具体槽点和可参考的博主策略。",
+  "如何使用": "写文案时调用 get_topics 浏览话题池，选一个感兴趣的话题，再调用 get_strategy + get_references 获取写法。",
+
+  "categories": [
+    {
+      "name": "出行",
+      "icon": "car",
+      "topics": [
+        {
+          "title": "洛杉矶是一座没有人走路的城市",
+          "hooks": ["走路被Uber司机同情", "人行道是装饰品", "Google Maps步行路线是一种诅咒"],
+          "pain_point": "没车寸步难行，走路像行为艺术",
+          "ref_strategy": "交通",
+          "status": "done"
+        },
+        {
+          "title": "405公路的堵车冥想",
+          "hooks": ["405上的2小时够听完一本有声书", "刹车灯是洛杉矶的星星", "导航说32分钟其实是1.5小时"],
+          "pain_point": "堵车是LA人的必修课，每天通勤等于坐牢",
+          "ref_strategy": "交通"
+        },
+        {
+          "title": "在洛杉矶停车的代价",
+          "hooks": ["停车罚单$73起步", "咪表只收硬币但你没有硬币", "valet parking比你吃的饭贵"],
+          "pain_point": "停车费比目的地消费还高",
+          "ref_strategy": "消费"
+        },
+        {
+          "title": "洛杉矶的公共交通",
+          "hooks": ["Metro像一个行为艺术装置", "等公交等到怀疑它是否存在", "坐一次地铁看遍人间百态"],
+          "pain_point": "公共交通约等于不存在",
+          "ref_strategy": "交通"
+        }
+      ]
+    },
+    {
+      "name": "租房",
+      "icon": "house",
+      "topics": [
+        {
+          "title": "在洛杉矶花$2800租一间有阳光的牢房",
+          "hooks": ["$2800只能租到一居室但阳光免费", "房东觉得地段值钱你觉得命更值钱", "apartment tour就是参观衣柜"],
+          "pain_point": "房租离谱但天气让你续租",
+          "ref_strategy": "租房"
+        },
+        {
+          "title": "搬家是洛杉矶的成人礼",
+          "hooks": ["每次搬家扔掉半个家", "U-Haul是LA人的第二辆车", "搬了三次家还在同一个区"],
+          "pain_point": "租约一年一签，搬家是常态",
+          "ref_strategy": "居住"
+        },
+        {
+          "title": "和室友相处的物种学",
+          "hooks": ["室友的作息和你在两个时区", "公共区域是联合国维和现场", "冰箱是一个微型领土争端"],
+          "pain_point": "为了省房租不得不合租",
+          "ref_strategy": "社交"
+        }
+      ]
+    },
+    {
+      "name": "吃饭",
+      "icon": "food",
+      "topics": [
+        {
+          "title": "洛杉矶中餐馆的含金量",
+          "hooks": ["SGV是全美最好的中国城", "开40分钟车吃一碗面", "菜单上有图片的才敢点"],
+          "pain_point": "好吃的中餐都在另一个城市（SGV）",
+          "ref_strategy": "餐饮"
+        },
+        {
+          "title": "Whole Foods是一种信仰",
+          "hooks": ["有机的空气也要$12", "收银台前的道德审判", "买完菜的罪恶感比吃垃圾食品还重"],
+          "pain_point": "健康饮食的代价是贫穷",
+          "ref_strategy": "消费主义"
+        },
+        {
+          "title": "小费是一道数学题",
+          "hooks": ["18%/20%/25%选项里没有0%", "iPad翻过来的那一刻是社死现场", "给外卖员小费还是给自己买菜"],
+          "pain_point": "小费文化让每顿饭都变贵30%",
+          "ref_strategy": "文化冲击"
+        },
+        {
+          "title": "boba是华人的社交货币",
+          "hooks": ["约人说喝咖啡其实是喝boba", "排队30分钟喝一杯糖水", "每个华人心中都有一个boba排名"],
+          "pain_point": "boba店比Starbucks还密集",
+          "ref_strategy": "饮食"
+        }
+      ]
+    },
+    {
+      "name": "社交",
+      "icon": "people",
+      "topics": [
+        {
+          "title": "洛杉矶人的社交就是hiking",
+          "hooks": ["第一次约会去Runyon Canyon", "hiking时的对话比therapy还深", "爬完山友谊就结束了"],
+          "pain_point": "社交活动单一，所有人都在hiking",
+          "ref_strategy": "社交"
+        },
+        {
+          "title": "LA人永远迟到30分钟",
+          "hooks": ["on my way的意思是刚起床", "堵车是万能借口", "约7点到其实是7:45"],
+          "pain_point": "没有人准时，时间观念是薛定谔的",
+          "ref_strategy": "刻板印象"
+        },
+        {
+          "title": "在洛杉矶交朋友的难度",
+          "hooks": ["每个人都在networking不在交朋友", "加了微信后再也没聊过", "朋友都散落在不同城市得开车去见"],
+          "pain_point": "大城市的孤独，社交浅层化",
+          "ref_strategy": "孤独"
+        },
+        {
+          "title": "dating app是洛杉矶的基础设施",
+          "hooks": ["左滑右滑替代了搭讪", "bio写loves hiking的概率98%", "匹配了但永远约不出来"],
+          "pain_point": "线上热络线下消失",
+          "ref_strategy": "约会"
+        }
+      ]
+    },
+    {
+      "name": "天气与灾难",
+      "icon": "sun",
+      "topics": [
+        {
+          "title": "洛杉矶天气好到让人生气",
+          "hooks": ["连续300天晴天会想念下雨", "季节只有两个：夏天和山火", "天气好是LA唯一不收费的东西"],
+          "pain_point": "天气太好反而失去感知力",
+          "ref_strategy": "日常生活"
+        },
+        {
+          "title": "山火季的空气质量",
+          "hooks": ["AQI 200是洛杉矶的秋天", "开窗通风变成开窗吸毒", "口罩从新冠戴到山火"],
+          "pain_point": "每年都要经历一次末日感",
+          "ref_strategy": "自然"
+        },
+        {
+          "title": "地震是洛杉矶的闹钟",
+          "hooks": ["3级地震发朋友圈4级地震发微博5级地震发遗书", "地震包是LA人的奢侈品", "第一次地震慌得要死第五次地震继续睡"],
+          "pain_point": "和地震共存的日常",
+          "ref_strategy": "意外"
+        }
+      ]
+    },
+    {
+      "name": "生活琐事",
+      "icon": "life",
+      "topics": [
+        {
+          "title": "在美国看牙医的账单",
+          "hooks": ["洗个牙$300没保险$800", "牙医比你的理财顾问更了解你的收入", "每颗牙都是一个理财产品"],
+          "pain_point": "医疗费用离谱，看牙是奢侈消费",
+          "ref_strategy": "医疗"
+        },
+        {
+          "title": "DMV是美国的社保局",
+          "hooks": ["排队3小时办事3分钟", "叫号系统像抽奖", "工作人员的不耐烦跨越种族"],
+          "pain_point": "官僚机构效率低下",
+          "ref_strategy": "日常生活"
+        },
+        {
+          "title": "报税季的精神损失",
+          "hooks": ["TurboTax问的问题比FBI还多", "发现自己又欠了$2000", "报完税觉得这一年白干了"],
+          "pain_point": "税务系统复杂到需要交钱请人帮你交钱",
+          "ref_strategy": "消费"
+        },
+        {
+          "title": "洗衣房是公寓的社交中心",
+          "hooks": ["$3洗一次$3烘一次衣服比人贵", "有人占着烘干机不取", "洗衣房的WiFi是整栋楼最稳的"],
+          "pain_point": "公寓没有洗衣机是一种羞辱",
+          "ref_strategy": "居住"
+        }
+      ]
+    },
+    {
+      "name": "职场",
+      "icon": "work",
+      "topics": [
+        {
+          "title": "remote work的洛杉矶版本",
+          "hooks": ["在家办公穿睡衣开会", "咖啡馆是第二办公室但WiFi不行", "remote的意思是永远在工作"],
+          "pain_point": "work-life balance是一个谎言",
+          "ref_strategy": "工作"
+        },
+        {
+          "title": "湾区vs洛杉矶",
+          "hooks": ["湾区有钱有工作没生活", "洛杉矶有天气有生活没存款", "两个城市的人互相羡慕互相瞧不起"],
+          "pain_point": "加州两大城市的身份认同之争",
+          "ref_strategy": "身份认同"
+        },
+        {
+          "title": "面试造火箭工作拧螺丝",
+          "hooks": ["刷了200道LeetCode面一个前端", "面试官问系统设计入职后改CSS", "offer谈判的自信在入职第一天消失"],
+          "pain_point": "面试和实际工作严重脱节",
+          "ref_strategy": "职场"
+        }
+      ]
+    },
+    {
+      "name": "身份与文化",
+      "icon": "identity",
+      "topics": [
+        {
+          "title": "在美国当华人的日常误解",
+          "hooks": ["被问where are you really from", "所有亚洲菜都被叫Chinese food", "过年只有自己放假"],
+          "pain_point": "永远在解释自己的存在",
+          "ref_strategy": "刻板印象"
+        },
+        {
+          "title": "回国的反向文化冲击",
+          "hooks": ["打车不用给小费感动到哭", "外卖30分钟到觉得慢了", "支付宝扫不了脸因为你变了"],
+          "pain_point": "两边都不完全适应",
+          "ref_strategy": "文化冲击"
+        },
+        {
+          "title": "华人超市是精神故乡",
+          "hooks": ["99 Ranch是华人的教堂", "看到老干妈就像见到亲人", "结账时听到中文突然放松"],
+          "pain_point": "在异国寻找归属感",
+          "ref_strategy": "身份认同"
+        }
+      ]
+    },
+    {
+      "name": "自我与成长",
+      "icon": "self",
+      "topics": [
+        {
+          "title": "32岁在洛杉矶的存在感",
+          "hooks": ["同龄人在国内已经二胎了", "我还在纠结续不续租", "30岁的计划32岁还没开始"],
+          "pain_point": "年龄焦虑+异国漂泊的双重夹击",
+          "ref_strategy": "年龄焦虑"
+        },
+        {
+          "title": "一个人生活的自由与代价",
+          "hooks": ["自由是没人管你吃什么", "代价是生病了没人管你", "冰箱里永远有过期的东西"],
+          "pain_point": "独居的甜蜜与孤独并存",
+          "ref_strategy": "孤独"
+        },
+        {
+          "title": "ENFP在洛杉矶的生存报告",
+          "hooks": ["对每个新朋友热情三天", "计划去10个地方最后哪都没去", "灵感多到写不完但一篇也没发"],
+          "pain_point": "ENFP的执行力困境",
+          "ref_strategy": "自我认知"
+        }
+      ]
+    },
+    {
+      "name": "旅行（从LA出发）",
+      "icon": "travel",
+      "topics": [
+        {
+          "title": "从洛杉矶出发的公路旅行",
+          "hooks": ["开5个小时到Vegas赌掉房租", "Joshua Tree的星空值得4小时堵车", "Big Sur的美景和弯道一样让人头晕"],
+          "pain_point": "LA周边都很远但风景确实好",
+          "ref_strategy": "旅行"
+        },
+        {
+          "title": "LAX是全世界最反人类的机场",
+          "hooks": ["提前3小时到还差点误机", "航站楼之间没有捷运要坐shuttle", "接机的车永远进不了到达层"],
+          "pain_point": "机场体验极差",
+          "ref_strategy": "交通"
+        }
+      ]
+    }
+  ]
+}
