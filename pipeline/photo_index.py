@@ -22,7 +22,7 @@ import argparse
 
 from dotenv import load_dotenv
 
-_PROJECT_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
+_PROJECT_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 sys.path.insert(0, _PROJECT_ROOT)
 load_dotenv(os.path.join(_PROJECT_ROOT, ".env"))
 
@@ -35,7 +35,7 @@ from tqdm import tqdm
 logging.basicConfig(level=logging.WARNING, format="%(asctime)s - %(message)s")
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-TOKEN_PATH = os.path.join(_PROJECT_ROOT, "google_photos_token.json")
+TOKEN_PATH = os.path.join(_PROJECT_ROOT, "data", "google_photos_token.json")
 INDEX_PATH = os.path.join(_PROJECT_ROOT, "data", "photo_index.json")
 
 gemini_client = genai.Client(api_key=GEMINI_API_KEY)

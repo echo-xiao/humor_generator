@@ -1,0 +1,6386 @@
+{
+  "strategies": [
+    {
+      "scene": "旅行",
+      "frequency": 22,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "事物并不像社交媒体上看起来那样完美，光鲜背后总有难言之隐。",
+          "在旅途中，一个看似能解决问题的方案（有电梯）却成了新的、更令人失望的问题（电梯是坏的）。",
+          "将历史文化强行与个人事业/格局进行类比，以抬高自身价值的装X行为。",
+          "在异国他乡被诬陷和敲诈，且维权困难，陷入有理说不清的无力境地。",
+          "在亲密关系中，爱与伤害、索取与付出常常相伴相生，令人又爱又恨。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 12,
+          "情绪共鸣": 6,
+          "身份共鸣": 3
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 11,
+          "把苦说甜": 5,
+          "自降身段": 3
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "这顿昂贵的早餐，连最基本的番茄都如此失败，可想而知其他东西有多糟糕。",
+          "婚姻就是一场合法的情感与财产的交换，有时甚至是掠夺。",
+          "旅行的意义不在于'玩得好'，而在于体验和自我满足。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "对比": 1,
+          "引用反证": 1,
+          "平行结构、类比": 1,
+          "悖论陈述": 1,
+          "跨时空类比": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 8,
+          "expectation_violation": 4,
+          "deflation": 3,
+          "understated_irony": 3,
+          "precise_absurdity": 3
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "为防死后不能一起上天堂\n死前我想跟你去一次\n因特拉肯。",
+          "punchline": "只是上天堂只需要做善事就行了\n去瑞士却要很多钱啊",
+          "source": "为了去欧洲决定结个婚"
+        },
+        {
+          "setup": "愿意结婚的人\n或多或少还相信童话吧\n\n哥本哈根。",
+          "punchline": "只是此地最著名的童话是美人鱼\n它说的是陷入爱河的女人\n最后会变成泡沫",
+          "source": "为了去欧洲决定结个婚"
+        },
+        {
+          "setup": "蜜月绕不开意大利\n那不勒斯。\n可能因为只有在意大利\n人们可以热情洋溢地说爱你",
+          "punchline": "也可以热情洋溢地抢你钱\n这本质上很像婚姻",
+          "source": "为了去欧洲决定结个婚"
+        }
+      ]
+    },
+    {
+      "scene": "刻板印象",
+      "frequency": 13,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "在约会中，自己的身份/外表/气质不符合对方的刻板印象而遭到否定或羞辱。",
+          "为了迎合他人的期待，强行改变自己，结果把自己变成了一个滑稽、失败的模仿者。",
+          "自己的一个无心之举，在别人眼里可能被解读成一出大戏，引发哭笑不得的误会。",
+          "对某种群体“话多”的刻板印象的幽默化应用。",
+          "中国社会普遍的职业焦虑和对“成功”的单一想象，以及对欧洲“慢生活”的浪漫化想象。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 5,
+          "身份共鸣": 5,
+          "泛化共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 6,
+          "自降身段": 2,
+          "伪客观 / 暴论": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "所谓的“亚文化”身份，本质上是一种充满矛盾和不确定性的自我探索。",
+          "婚姻就是一场合法的情感与财产的交换，有时甚至是掠夺。",
+          "中国的消费升级已经渗透到了你意想不到的角落。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "拟人化": 2,
+          "归因反转": 1,
+          "平行结构、类比": 1,
+          "先抑后扬": 1,
+          "情景再现": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "understated_irony": 4,
+          "expectation_violation": 4,
+          "redefinition": 3,
+          "dual_frame": 1,
+          "precise_absurdity": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "不差钱的房东\n说会负责到底\n真的找来保洁军团\n...掏出一个月的房租来装修\n除霉除虫\n洗浴换新\n墙暖保修\n灯具安装",
+          "punchline": "房东如此尽心竭力的原因\n可能是我租房时\n上报的职业\n是作家\n他企图打造一个\n名人故居",
+          "source": "业主直租的含金量还在上升"
+        },
+        {
+          "setup": "蜜月绕不开意大利\n那不勒斯。\n可能因为只有在意大利\n人们可以热情洋溢地说爱你",
+          "punchline": "也可以热情洋溢地抢你钱\n这本质上很像婚姻",
+          "source": "为了去欧洲决定结个婚"
+        },
+        {
+          "setup": "女孩子适合去首尔\n男孩也适合去首尔\n\n看看韩男",
+          "punchline": "貌丑\n也能通过\n会穿\n来力挽狂澜",
+          "source": "人不该在太年轻的时候去首尔"
+        }
+      ]
+    },
+    {
+      "scene": "住宿",
+      "frequency": 12,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "花高价预订的“景观房”名不副实，是旅行中非常扫兴的常见问题。",
+          "对旅行住宿的美好期待，被一个微小但无法忽略的缺陷打破。",
+          "旅行一天后身心俱疲，却还要面对复杂的入住流程，找不到钥匙进不了门。",
+          "独自旅行时，在看似美好的环境中遭遇意外的惊吓或窘境。",
+          "在旅途中，一个看似能解决问题的方案（有电梯）却成了新的、更令人失望的问题（电梯是坏的）。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 7,
+          "情绪共鸣": 4,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 4,
+          "把苦说甜": 4,
+          "自降身段": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "小镇夜晚的寂静和独处时的胡思乱想。",
+          "这个看似完美的文艺空间，终究不是为完美睡眠设计的。",
+          "旅行中处处是文化陷阱，一不小心就可能'社死'甚至'真死'（象征意义上）。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "限定范围的精确化": 1,
+          "递进式否定 / 矛盾并置": 1,
+          "陡然转折": 1,
+          "精确数字": 1,
+          "拟人化 / 括号补充": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 3,
+          "expectation_violation": 2,
+          "escalation": 2,
+          "understated_irony": 2,
+          "self_deprecation / redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "在云南住了个酒店\n被中国的服务业震撼",
+          "punchline": "这里的云南指的是\n云南大理市\n里的一个村子",
+          "source": "公主病是一种福报"
+        },
+        {
+          "setup": "（前面14张图都在描述无微不至、超乎想象的服务和奢华体验， culminating in）我最感动的还是\n气喘吁吁送来卸妆油的管家\n后来得知她是\n跑回家拿了自用的",
+          "punchline": "让人原谅了海景房的view\n是海和建筑工地\n且主要是建筑工地。",
+          "source": "公主病是一种福报"
+        },
+        {
+          "setup": "系统提醒\n穿浴衣时\n左边领需盖在右边领上",
+          "punchline": "反过来则是\n入殓的穿法",
+          "source": "动森照进现实"
+        }
+      ]
+    },
+    {
+      "scene": "社交",
+      "frequency": 7,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "在不合理的消费后，通过“比下有余”的方式来强行自我安慰的阿Q精神。",
+          "在意外貌变化后，如何面对他人的评价和揣测。",
+          "独自一人时，渴望与外界产生一点点特别的连结，却发现只是自己的一厢情愿。",
+          "满怀期待地去社交，结果发现唯一的互动是纯粹的消费，连人际关系的门槛都没摸到。",
+          "在陌生环境中的孤独感，以至于开始和动物进行社交。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 3,
+          "情绪共鸣": 2,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自嘲 / 戏剧化": 1,
+          "一本正经地胡说八道": 1,
+          "重新定义": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我不在乎你怎么看整容，对我来说，你说我整容了，就是承认我花钱变美这件事做对了。",
+          "一个人旅行时，会不自觉地放大任何来自外界的微小善意，并因此更容易感到失望。",
+          "初到新城市的孤独感和融入一个圈子的困难。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "夸张、古语化": 1,
+          "拟人化": 1,
+          "断行，反差": 1,
+          "价值观重塑": 1,
+          "断句、词语降格": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 3,
+          "redefinition": 2,
+          "expectation_violation": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "一个人食大餐\n收获服务员珍藏的软糖\n说是只给我一个",
+          "punchline": "转头又给了隔壁桌\n*就这样被\n侍女骗",
+          "source": "为了去欧洲决定结个婚"
+        },
+        {
+          "setup": "散步到家对面\n探访我沉默寡言的邻居",
+          "punchline": "大约是\n一只骡子\n*\n闻一闻这个\n穿浴袍的女人\n怎么个事儿",
+          "source": "人在法国，想要养猪"
+        },
+        {
+          "setup": "北欧人的童话之处在于\n他们那么\n有钱",
+          "punchline": "却只希望\n一个人呆着",
+          "source": "推荐六个地方适合躺着等死"
+        }
+      ]
+    },
+    {
+      "scene": "宠物",
+      "frequency": 7,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "对心爱宠物和自己生命终结的深层恐惧。",
+          "宠物在一个人的生活中扮演的多面、甚至矛盾的角色：它们既是依赖者也是稳定剂，既是快乐源泉也是甜蜜负担。",
+          "宠物主人将复杂人类情感和智识投射到宠物身上的普遍行为。",
+          "对逝去宠物的思念无法释怀，会在不经意的瞬间被触发。",
+          "成为宠物全部世界的甜蜜与沉重——这既是巨大的责任，也是无上的慰藉。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 4,
+          "经验共鸣": 2,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "把苦说甜": 2,
+          "伪客观": 2,
+          "自降身段": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我无法理解怎么会有人放弃如此完美的你。他们的损失是我的幸运，但我依然为你感到愤怒。",
+          "我的生活与这个小生命紧密相连。它对我的全然依赖和爱，既美好，也沉重。",
+          "我的身份认同，有一部分是由我与这只猫的关系所定义的。他不是我生活的附属品，而是我生活结构与意义的基石。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "比喻": 1,
+          "拟人化": 1,
+          "反转": 1,
+          "语气突变": 1,
+          "夸张": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 3,
+          "understated_irony": 1,
+          "expectation_violation": 1,
+          "deflation": 1,
+          "precise_absurdity": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "抱了抱这一只\n手感像我",
+          "punchline": "逝去的德文",
+          "source": "人在法国，想要养猪"
+        },
+        {
+          "setup": "你好, 叔本华",
+          "punchline": "一只因为长得无聊而痛苦而有此名的猫咪",
+          "source": "假如给猫写一封情书"
+        },
+        {
+          "setup": "见面第一天,\n我就怀疑你有问题",
+          "punchline": "原来你最大的问题\n就是\n爱我",
+          "source": "假如给猫写一封情书"
+        }
+      ]
+    },
+    {
+      "scene": "历史",
+      "frequency": 7,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "现代城市快速发展带来的千城一面，以及人们对“原真性”和历史感的向往。",
+          "对权威和宏大叙事的解构。人们厌倦了官方的、一本正经的解释，更喜欢“接地气”的、人性化的解读。",
+          "将历史文化强行与个人事业/格局进行类比，以抬高自身价值的装X行为。",
+          "当代年轻人普遍存在的、带点戏谑的自我认知——觉得自己算不上一个“好人”，有很多小毛病。",
+          "作为拥有悠久历史国家的公民，对于国宝流失海外的共同历史记忆和民族情感。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 3,
+          "情绪共鸣": 2,
+          "泛化共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 3,
+          "自降身段（伪）": 1,
+          "自降身段": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我们都知道这是一段不光彩的历史，无需多言，这个事实本身就是一种控诉。",
+          "历史充满了我们无法想象的荒诞和残酷，而人类可以对这些事表现得习以为常。",
+          "我们一路抱怨的，或许正是我们不远万里追寻的东西——那些在时间中不变的、真实的东西。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "跨时空类比": 1,
+          "口语化": 1,
+          "deflation": 1,
+          "省略和视觉排版": 1,
+          "夸张 / 升华": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "precise_absurdity": 2,
+          "redefinition": 2,
+          "self_deprecation": 1,
+          "understated_irony": 1,
+          "self_deprecation / redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "站在乌菲兹\n明白了美第奇家族的高段位",
+          "punchline": "他们资助米开朗基罗大概\n和我现在投天使轮差不多\n不为赚钱\n只为定义下一个时代的审美!",
+          "source": "你最讨厌的朋友圈TOP3"
+        },
+        {
+          "setup": "科普古埃及神话：人死后心脏要和羽毛比重量，如果更重（是坏逼），心就会被吃掉。",
+          "punchline": "我的大概率要被吃掉",
+          "source": "嘴都没亲到一个，夏天就要过去了"
+        },
+        {
+          "setup": "比如最爱买木乃伊的是欧洲人\n欧洲人: 又有我事?",
+          "punchline": "买来做成咖啡色的\n颜料\n成色特别好",
+          "source": "嘴都没亲到一个，夏天就要过去了"
+        }
+      ]
+    },
+    {
+      "scene": "居住",
+      "frequency": 6,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "老房子隔音差，被邻居噪音（尤其是清晨）打扰的痛苦经历。",
+          "理想与现实的差距；人们对“作家”生活方式的浪漫化想象与作家本人实际状态（可能只是想睡觉）的落差。",
+          "南方城市（尤其上海）梅雨季节的潮湿和霉变问题，是当地人共有的生活经验。",
+          "人们在社交媒体上对“凡尔赛”行为的普遍感知和嘲讽心态。",
+          "物质财富无法填补内心的空虚和孤独。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 3,
+          "泛化共鸣": 2,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2,
+          "苦中作乐": 2,
+          "自降身段": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "这破房子潮湿到没法住了。",
+          "这房子的隔音约等于没有，我每天都被迫早起。",
+          "这不仅仅是一只猫的独白，也是对现代人生活状态的一种影射。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "拟人化": 1,
+          "重新定义": 1,
+          "平行结构": 1,
+          "精确数字": 1,
+          "断行": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 2,
+          "redefinition": 2,
+          "expectation_violation": 1,
+          "escalation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "接手了来自\n1935年的沙发\n*接手了价值\n100w的壁柜\n和西洋镜",
+          "punchline": "也接手了霉菌\n以及与蟑螂\n为邻",
+          "source": "业主直租的含金量还在上升"
+        },
+        {
+          "setup": "当你真正了解一座城市的时候\n是不需要看天气预报的",
+          "punchline": "镜子长这样\n就说明\n要下雨了",
+          "source": "业主直租的含金量还在上升"
+        },
+        {
+          "setup": "也不需要看时钟",
+          "punchline": "当你听见邻居们的闲话家常\n就说明是早上5点钟了",
+          "source": "业主直租的含金量还在上升"
+        }
+      ]
+    },
+    {
+      "scene": "博物馆",
+      "frequency": 6,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "在旅行中满怀期待去参观一个著名景点/展品，结果因为客观原因（如人多、排队、关闭）而失望的经历。",
+          "对权威和宏大叙事的解构。人们厌倦了官方的、一本正经的解释，更喜欢“接地气”的、人性化的解读。",
+          "暗恋初期，想和对方有身体接触但羞于直接表达，需要一个完美的借口。",
+          "将历史文化强行与个人事业/格局进行类比，以抬高自身价值的装X行为。",
+          "当代年轻人普遍存在的、带点戏谑的自我认知——觉得自己算不上一个“好人”，有很多小毛病。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 2,
+          "经验共鸣": 2,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 2,
+          "伪客观": 2,
+          "自降身段（伪）": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我们都知道这是一段不光彩的历史，无需多言，这个事实本身就是一种控诉。",
+          "有时候你做了万全的准备，但现实就是会给你一些小小的、无法克服的障碍。",
+          "所有你奉为圭臬的宏大概念，其背后可能都只是因为一些非常草率和偶然的原因。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "跨时空类比": 1,
+          "口语化语气词": 1,
+          "口语化": 1,
+          "省略和视觉排版": 1,
+          "括号旁白": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "precise_absurdity": 1,
+          "expectation_violation": 1,
+          "self_deprecation": 1,
+          "understated_irony": 1,
+          "deflation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "站在乌菲兹\n明白了美第奇家族的高段位",
+          "punchline": "他们资助米开朗基罗大概\n和我现在投天使轮差不多\n不为赚钱\n只为定义下一个时代的审美!",
+          "source": "你最讨厌的朋友圈TOP3"
+        },
+        {
+          "setup": "铺垫了一个漫长、有文化追求的约会计划，并指出博物馆即便凌晨也人满为患。",
+          "punchline": "这样就可以和crush\n紧紧贴在一起啦",
+          "source": "嘴都没亲到一个，夏天就要过去了"
+        },
+        {
+          "setup": "科普古埃及神话：人死后心脏要和羽毛比重量，如果更重（是坏逼），心就会被吃掉。",
+          "punchline": "我的大概率要被吃掉",
+          "source": "嘴都没亲到一个，夏天就要过去了"
+        }
+      ]
+    },
+    {
+      "scene": "消费",
+      "frequency": 6,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "旅行中长时间等待的无聊，以及欧洲高昂的基础服务消费（如付费厕所）带来的憋屈感。",
+          "美妆博主推荐贵妇产品时，为了合理化价格而无形中透露出的更高消费水平，形成“凡尔赛”闭环。",
+          "为一项服务付费后，却发现不仅没得到服务，反而要自己加倍付出。",
+          "向往一个地方，却被高昂的物价/门槛劝退的无力感。",
+          "当代年轻人的财务焦虑，感觉钱总是不够花、工资刚到手就没了的'月光'状态。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 5,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪分享/伪客观": 1,
+          "自降身段": 1,
+          "伪客观": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "旅行的真相，就是由这些一点也不酷的、狼狈琐碎的瞬间组成的。",
+          "这种机构就是把消费者当傻子，还好我脑子清醒。",
+          "全文对'老钱'的细致观察，看似疏离，实则是为了最后一句'我是老没钱'的身份认同做铺垫。它暗示了我们之所以如此着迷于观察'老钱'，正是因为我们身处其对立面。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "反向辩护": 1,
+          "夸张化用词、领域错配": 1,
+          "拟人化": 1,
+          "反问 / 夸张": 1,
+          "语义重构": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "escalation": 2,
+          "understated_irony": 2,
+          "deflation": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "有人觉得太贵",
+          "punchline": "可是每个月几万块护理的皮肤\n当然要抹最好的粉底了",
+          "source": "你最讨厌的朋友圈TOP3"
+        },
+        {
+          "setup": "坐在车站\n痴等一班\n5小时后的火车",
+          "punchline": "拉个巨额的屎",
+          "source": "在欧洲不会开车的下场"
+        },
+        {
+          "setup": "而丹麦人用物价",
+          "punchline": "来抵抗这件事的发生",
+          "source": "推荐六个地方适合躺着等死"
+        }
+      ]
+    },
+    {
+      "scene": "工作",
+      "frequency": 6,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "自己的辛苦不被看见、不被在乎，尤其是被自己服务的对象所无视。",
+          "中国社会普遍的职业焦虑和对“成功”的单一想象，以及对欧洲“慢生活”的浪漫化想象。",
+          "付出努力却得不到直接回报，只能寄希望于一个渺茫的机会。这是所有行业“乙方”或求职者的共同痛点。",
+          "“野路子”出身的人在专业场合的心虚和自我怀疑，以及“学的东西用不上”的窘境。",
+          "现代“打工人”对工作的厌倦和对宠物式“躺平”生活的向往。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 3,
+          "身份共鸣": 2,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 2,
+          "伪客观": 2,
+          "自降身段 (通过扮演一个刻薄的角色)": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "能这么开店，要么是真爱，要么是真的不在乎赚钱。",
+          "在内容行业，很多看起来光鲜的合作其实是资源置换，甚至是单向的“示好”。",
+          "你以为我在家躺着很轻松吗？维持这份优雅和哲学思考也是很累的。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "括号补充": 1,
+          "省略": 1,
+          "极端归纳": 1,
+          "精确数字": 1,
+          "平行句式": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "understated_irony": 2,
+          "self_deprecation": 1,
+          "precise_absurdity": 1,
+          "dual_frame": 1,
+          "deflation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "拍摄盛典物料4 (品牌权益)",
+          "punchline": "(不收钱)\n\n但指望品牌看到后觉得满意\n真的掏钱请你代言",
+          "source": "假装女明星直到成为女明星"
+        },
+        {
+          "setup": "听说工作人员还在\n加班\n加点",
+          "punchline": "但那不重要。",
+          "source": "假装女明星直到成为女明星"
+        },
+        {
+          "setup": "彻夜准备采访提纲\n由于韩语是看韩剧学的",
+          "punchline": "所以基本上只擅长\n骂人和\n调情",
+          "source": "当你放一只老鼠人进名利场"
+        }
+      ]
+    },
+    {
+      "scene": "职场",
+      "frequency": 6,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "自己的专业技能和创造力在官僚化的环境中被无视，最终被简化为一种政治正确的、讨好领导的琐碎要求。",
+          "自己的辛苦不被看见、不被在乎，尤其是被自己服务的对象所无视。",
+          "从事着一份看似重要、有意义，实则毫无影响力、无人关注的“空转”工作，产生的价值虚无感。",
+          "在压抑的办公室文化中，无所事事是被默许的，但任何形式的快乐或情感表露却可能成为被攻击的“罪证”。",
+          "在超一线城市，拥有一份听起来体面、稳定但薪水微薄的工作，无法覆盖基本生活成本的窘境。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 5,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 3,
+          "自嘲独白": 2,
+          "自降身段 (通过扮演一个刻薄的角色)": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "这种环境对人的异化，让“为领导服务”凌驾于一切工作原则之上。",
+          "这份工作不仅薪水低，还消耗着人的才华和热情，提供不了任何专业成就感。",
+          "在这个环境里，专业能力一文不值，只有对权力的领悟和服从才是生存之道。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "对比": 2,
+          "省略": 1,
+          "精确数字": 1,
+          "夸张": 1,
+          "反差": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "understated_irony": 3,
+          "expectation_violation": 1,
+          "deflation": 1,
+          "precise_absurdity": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "听说工作人员还在\n加班\n加点",
+          "punchline": "但那不重要。",
+          "source": "假装女明星直到成为女明星"
+        },
+        {
+          "setup": "抱的是铁饭碗",
+          "punchline": "但在北京 可能 吃不饱饭",
+          "source": "此GQ非彼GQ……"
+        },
+        {
+          "setup": "你的日常工作是 外宣 *撰写歌颂政府先进工作的英文稿件",
+          "punchline": "*点阅量偶尔 能上十位数的",
+          "source": "此GQ非彼GQ……"
+        }
+      ]
+    },
+    {
+      "scene": "餐饮",
+      "frequency": 6,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "面对一碗油腻到无法下口的食物时的无奈和不知所措。",
+          "花了不菲的价钱，却吃到味道诡异、挑战认知底线的食物。",
+          "一道菜不仅难吃，还油腻到令人产生生理不适。",
+          "在旅游景点被高价低量的食物“割韭菜”的经历。",
+          "在美食荒漠里，努力寻找一个“尚可下咽”的食物时的卑微心态。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 3,
+          "情绪共鸣": 2,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2,
+          "一本正经地胡说八道": 1,
+          "把无奈戏剧化": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "这顿昂贵的早餐，连最基本的番茄都如此失败，可想而知其他东西有多糟糕。",
+          "这顿饭吃得我很肉疼。",
+          "这种美味带来的惊喜和复杂感受，已经无法用常规的语言来形容了。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "重复": 1,
+          "感官错位": 1,
+          "恶意揣测": 1,
+          "拟人化": 1,
+          "反向赞美": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "understated_irony": 2,
+          "expectation_violation": 1,
+          "redefinition": 1,
+          "precise_absurdity": 1,
+          "dual_frame": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "饮食上唯韩牛尊贵\n¥150/片",
+          "punchline": "吃了好几个¥150才吃饱。",
+          "source": "如果有钱到哪里都可以去的地步"
+        },
+        {
+          "setup": "推荐这个番茄",
+          "punchline": "可以让大家知道\n蔬菜里也能尝到\n鱼腥味",
+          "source": "英国美食图鉴"
+        },
+        {
+          "setup": "盘中有一块贴心的空地",
+          "punchline": "可能是方便你吐在这",
+          "source": "英国美食图鉴"
+        }
+      ]
+    },
+    {
+      "scene": "消费主义",
+      "frequency": 6,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "被生活琐事逼到极限时，想要彻底逃离、不管不顾的冲动。",
+          "对所谓高端、昂贵体验的盲目崇拜，最终发现其背后可能是骗局甚至是恶心真相时的幻灭感。",
+          "历经千辛万苦终于找到了问题的根源，以为看到了曙光，却被最后一个、最 mundane（日常）的现实问题（断货）给击败了，功亏一篑的无力感。",
+          "医疗（尤其是牙科、医美）费用高昂，消费者常常感到自己被当作“待宰的羔羊”，治疗方案的选择似乎更多取决于支付能力而非实际需求。",
+          "现代消费主义的异化：人们购买昂贵的商品或体验，很多时候不是为了使用价值，而是为了其附带的社交资本和身份标签。"
+        ],
+        "resonance_types": {
+          "泛化共鸣": 3,
+          "身份共鸣": 1,
+          "经验共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "把苦说甜": 2,
+          "伪客观": 2,
+          "愤世嫉俗的洞察": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我寻求科学诊断的严肃旅程，最终被一种类似消费主义潮流的荒诞现实所终结。",
+          "我已经筋疲力尽了，解决不了眼前的问题，那就先逃离它。",
+          "所有对旧建筑的改造再利用，本质上都是一种新的商业叙事，其目的依然是“杀猪”。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "夸张/比喻 (Hyperbole/Metaphor)": 1,
+          "虚构内心独白": 1,
+          "引用，场景再现": 1,
+          "一语双关 (Pun)": 1,
+          "新闻体叙事 (News-style narration)": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 3,
+          "deflation": 1,
+          "escalation": 1,
+          "expectation_violation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "好消息\n真的是ADHD",
+          "punchline": "坏消息\n药被上海人开光了\n已经断货",
+          "source": "宛平南路600号一日游"
+        },
+        {
+          "setup": "牙医是一类隐藏的\n鉴富行家\n\n掰开你的嘴\n就能知道你的收入水平",
+          "punchline": "“此人赤贫\n卖她金属牙套就可以了”",
+          "source": "我的收入水平，牙医全知道"
+        },
+        {
+          "setup": "你赚钱买的不是瑞士的人生",
+          "punchline": "而是不在瑞士的时候淡然的那一句\n唉, 人真多\n想回瑞士了",
+          "source": "推荐六个地方适合躺着等死"
+        }
+      ]
+    },
+    {
+      "scene": "身份认同",
+      "frequency": 6,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "在约会中，自己的身份/外表/气质不符合对方的刻板印象而遭到否定或羞辱。",
+          "人们习惯将复杂的人类情感和身份投射到宠物身上。",
+          "现代消费主义的异化：人们购买昂贵的商品或体验，很多时候不是为了使用价值，而是为了其附带的社交资本和身份标签。",
+          "成年人试图通过一些小动作（如改名、换头像）来逃避现实，活在自己构建的幻想世界里。",
+          "当代年轻人的财务焦虑，感觉钱总是不够花、工资刚到手就没了的'月光'状态。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 4,
+          "泛化共鸣": 1,
+          "经验共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 3,
+          "一针见血的洞察": 1,
+          "自降身段": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "所谓的“亚文化”身份，本质上是一种充满矛盾和不确定性的自我探索。",
+          "全文对'老钱'的细致观察，看似疏离，实则是为了最后一句'我是老没钱'的身份认同做铺垫。它暗示了我们之所以如此着迷于观察'老钱'，正是因为我们身处其对立面。",
+          "我的所有行为和情绪，都应该用哲学家的标准来理解。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "引用，场景再现": 1,
+          "并列矛盾选项 (A or not-A)": 1,
+          "直接引语": 1,
+          "拟人化": 1,
+          "结构模仿 & 谐音梗": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 4,
+          "expectation_violation": 1,
+          "dual_frame": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "你赚钱买的不是瑞士的人生",
+          "punchline": "而是不在瑞士的时候淡然的那一句\n唉, 人真多\n想回瑞士了",
+          "source": "推荐六个地方适合躺着等死"
+        },
+        {
+          "setup": "亚比的特点",
+          "punchline": "穿搭追求all black / 或穷尽世上所有的色彩\n拥有至少一处纹身 / 或一处穿刺\n认为自己特别地痛苦 / 或痛苦得特别",
+          "source": "没有亚比会觉得自己是亚比"
+        },
+        {
+          "setup": "秋天。\n你刷到CRUSH2\n这次把对方约出来了\n兴高采烈穿着新裙子赴约",
+          "punchline": "结果被骂得很脏:\n你应该是侄女吧?",
+          "source": "沪上啦啦约会图鉴"
+        }
+      ]
+    },
+    {
+      "scene": "交通",
+      "frequency": 5,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "旅行中长时间等待的无聊，以及欧洲高昂的基础服务消费（如付费厕所）带来的憋屈感。",
+          "独自旅行时，沉重的行李在不便的道路上成为巨大负担的无助感。",
+          "旅行中因低级失误导致的时间和金钱双重损失，以及随之而来的挫败感。",
+          "乘坐新手司机的车时，那种将生命交于他人之手又无能为力的恐惧感。",
+          "赶交通工具时的焦虑和自责感。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 5
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 2,
+          "引用他人智慧": 1,
+          "伪客观": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我之前讲的所有关于我的故事，其实是每一个新手司机都可能带来的“灾难”。",
+          "旅行的真相，就是由这些一点也不酷的、狼狈琐碎的瞬间组成的。",
+          "独自旅行的辛苦与强撑的独立。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "精确数字": 2,
+          "第二人称“你”": 1,
+          "夸张化用词、领域错配": 1,
+          "拟人化": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 2,
+          "deflation": 1,
+          "precise_absurdity": 1,
+          "expectation_violation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "請問這是幹嘛用的 (汽车顶部的拉手)",
+          "punchline": "你朋友剛考到駕照載你出門時\n你可以握著這個東西禱告",
+          "source": "32岁当天坐上法庭"
+        },
+        {
+          "setup": "坐在车站\n痴等一班\n5小时后的火车",
+          "punchline": "拉个巨额的屎",
+          "source": "在欧洲不会开车的下场"
+        },
+        {
+          "setup": "从巴黎\n自驾的话4小时\n坐火车的话3小时",
+          "punchline": "坐错火车的话\n8个小时\n\n-¥1526\n/8小时的交通花费",
+          "source": "在法国租了一棵树，睡了几天"
+        }
+      ]
+    },
+    {
+      "scene": "孤独",
+      "frequency": 5,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "独自旅行时，沉重的行李箱是无法摆脱的累赘，时刻提醒着自己的游客身份和孤独处境。",
+          "独自一人时，渴望与外界产生一点点特别的连结，却发现只是自己的一厢情愿。",
+          "独自旅行时，在看似热闹或适合社交的场合里，实际却无人陪伴的孤独感。",
+          "在陌生环境中的孤独感，以至于开始和动物进行社交。",
+          "单身时对爱情的渴望，常常会幻想和计划与未来伴侣的种种，但现实是连对象都还没有。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 3,
+          "经验共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "把苦说甜": 2,
+          "自嘲 / 戏剧化": 1,
+          "一本正经地胡说八道": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "一个人旅行时，会不自觉地放大任何来自外界的微小善意，并因此更容易感到失望。",
+          "我在这里很孤独，没什么人可以交流，只好把动物当成邻居来聊天。",
+          "表面上是富贵闲人的尊贵生活，实际上连个能一起喝酒的人都没有。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "拟人化": 2,
+          "夸张、古语化": 1,
+          "反问": 1,
+          "拟人化、精确数字": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 3,
+          "deflation": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "一个人食大餐\n收获服务员珍藏的软糖\n说是只给我一个",
+          "punchline": "转头又给了隔壁桌\n*就这样被\n侍女骗",
+          "source": "为了去欧洲决定结个婚"
+        },
+        {
+          "setup": "散步到家对面\n探访我沉默寡言的邻居",
+          "punchline": "大约是\n一只骡子\n*\n闻一闻这个\n穿浴袍的女人\n怎么个事儿",
+          "source": "人在法国，想要养猪"
+        },
+        {
+          "setup": "整篇帖子都在以一个“约会攻略推荐者”的身份，详细规划了一条夜间约会路线。",
+          "punchline": "谁推荐我约会对象",
+          "source": "嘴都没亲到一个，夏天就要过去了"
+        }
+      ]
+    },
+    {
+      "scene": "上海",
+      "frequency": 4,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "在大城市打拼的年轻人对于“归属感”的渴望和迷茫。",
+          "在庞大、冷漠的医疗体系中感到迷失和非人化，觉得自己的诊断像是在挑选商品一样随意。",
+          "租到的老房子看起来光鲜，实际居住体验充满各种卫生和设施问题。",
+          "历经千辛万苦终于找到了问题的根源，以为看到了曙光，却被最后一个、最 mundane（日常）的现实问题（断货）给击败了，功亏一篑的无力感。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 2,
+          "经验共鸣": 1,
+          "泛化共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 3,
+          "把苦说甜": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "真正的融入，不是住在多好的房子里，而是接受并参与这种最本土、最真实、甚至有点不体面的生活方式。",
+          "医疗系统的非人化和诊断过程中的偶然性，让人感到无力。",
+          "我寻求科学诊断的严肃旅程，最终被一种类似消费主义潮流的荒诞现实所终结。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "拟人化": 1,
+          "意象并置": 1,
+          "比喻 (Metaphor)": 1,
+          "夸张/比喻 (Hyperbole/Metaphor)": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 2,
+          "redefinition": 2
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "接手了来自\n1935年的沙发\n*接手了价值\n100w的壁柜\n和西洋镜",
+          "punchline": "也接手了霉菌\n以及与蟑螂\n为邻",
+          "source": "业主直租的含金量还在上升"
+        },
+        {
+          "setup": "（整篇文章描述的在上海老弄堂租房的种种不便与荒诞经历）",
+          "punchline": "当你的裤衩挂在弄堂\n迎风飘荡\n你就正式成为上海的一员。",
+          "source": "业主直租的含金量还在上升"
+        },
+        {
+          "setup": "精神病院",
+          "punchline": "就像一家\n超市\n\n带走哪种病\n取决于我走近了\n哪个货架",
+          "source": "宛平南路600号一日游"
+        }
+      ]
+    },
+    {
+      "scene": "财富",
+      "frequency": 4,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "现代消费主义的异化：人们购买昂贵的商品或体验，很多时候不是为了使用价值，而是为了其附带的社交资本和身份标签。",
+          "物质财富无法填补内心的空虚和孤独。",
+          "对社交媒体时代新型富人（网红、币圈新贵等）的普遍困惑和微妙的嫉妒心理。",
+          "当代年轻人对拥有稳定资产、过上富足退休生活的向往和焦虑。"
+        ],
+        "resonance_types": {
+          "泛化共鸣": 2,
+          "情绪共鸣": 1,
+          "经验共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2,
+          "把苦说甜": 1,
+          "一针见血的洞察": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我们拼命赚钱，最终可能只是为了买一个幻觉，一个能让自己在鄙视链中处于更有利位置的幻觉。",
+          "这个光鲜的世界背后，可能并不像看起来那么真实和值得向往。",
+          "与其指望遇到一个好房东（靠运气），不如努力让自己成为那个阶层的人（靠自己）。这才是最终极的解决方案。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "视角转换": 1,
+          "注解式吐槽": 1,
+          "引用，场景再现": 1,
+          "断行": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 2,
+          "dual_frame": 1,
+          "expectation_violation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "祝福大家都遇上这样的房东",
+          "punchline": "或至少度过\n这样的\n晚年",
+          "source": "业主直租的含金量还在上升"
+        },
+        {
+          "setup": "这里每个人看上去都是盖茨比*",
+          "punchline": "*不知道在从事\n什么工作\n*但是莫名其妙地\n很有钱",
+          "source": "当你放一只老鼠人进名利场"
+        },
+        {
+          "setup": "你赚钱买的不是瑞士的人生",
+          "punchline": "而是不在瑞士的时候淡然的那一句\n唉, 人真多\n想回瑞士了",
+          "source": "推荐六个地方适合躺着等死"
+        }
+      ]
+    },
+    {
+      "scene": "农场",
+      "frequency": 4,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "对逝去宠物的思念无法释怀，会在不经意的瞬间被触发。",
+          "在陌生环境中的孤独感，以至于开始和动物进行社交。",
+          "我们习惯用人类的情感和道德标准去套用在动物身上，结果常常是自作多情。",
+          "在与宠物的互动中，自以为是掌控者，但实际上可能只是满足了对方的需求，陷入一种“谁服务谁”的哲学困惑。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 2,
+          "经验共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "把苦说甜": 1,
+          "伪客观": 1,
+          "自降身段": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我在这里很孤独，没什么人可以交流，只好把动物当成邻居来聊天。",
+          "人类社会所谓的“天伦之乐”和“家庭责任”，在大自然里可能毫无意义。这是一种对人类中心主义的温和嘲讽。",
+          "表面在说小羊，其实在表达对逝去宠物的深切怀念和无法言说的孤独。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "比喻": 1,
+          "拟人化再解构": 1,
+          "反思性提问": 1,
+          "拟人化": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 2,
+          "understated_irony": 1,
+          "dual_frame": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "抱了抱这一只\n手感像我",
+          "punchline": "逝去的德文",
+          "source": "人在法国，想要养猪"
+        },
+        {
+          "setup": "我问孩子的父亲呢\n怎么不来\n陪床",
+          "punchline": "父亲在忙着吃草。\n并不知自己有了两个孩子",
+          "source": "人在法国，想要养猪"
+        },
+        {
+          "setup": "和狗玩有一个问题",
+          "punchline": "玩到最后总是分不清\n是我玩了狗\n还是\n被狗玩了",
+          "source": "人在法国，想要养猪"
+        }
+      ]
+    },
+    {
+      "scene": "日常生活",
+      "frequency": 4,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "在异国他乡生活时，那种既想融入当地、又感到文化隔阂和力不从心的疲惫感。",
+          "宠物主人将复杂人类情感和智识投射到宠物身上的普遍行为。",
+          "成年人在社会规范下压抑自我，渴望偶尔能不顾他人眼光、释放内心“小恶魔”的冲动。",
+          "人前一套背后一套的“人设党”行为，以及理想与现实的巨大差距。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2,
+          "身份共鸣": 1,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2,
+          "自降身段": 1,
+          "伪客观/自嘲": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "“我花了17个小时”不仅指飞行时间，也暗指为了来到这里所付出的所有沉没成本。和孩子争夺的不是滑梯，而是一种“我已经付出了这么多，理应得到一点补偿”的任性权利。",
+          "我女儿不仅懒，还虚伪。",
+          "看似在吐槽垃圾分类，实则在表达一种更深层的文化疏离感——我能为这个社会做的最大贡献，不过是勉强遵守它最基本的规则而已。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "拟人化": 1,
+          "精确数字": 1,
+          "荒诞推理/细节列举": 1,
+          "夸张/反讽": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 1,
+          "expectation_violation": 1,
+          "precise_absurdity": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "你好, 叔本华",
+          "punchline": "一只因为长得无聊而痛苦而有此名的猫咪",
+          "source": "假如给猫写一封情书"
+        },
+        {
+          "setup": "她说她可以不吃饭",
+          "punchline": "实际情况是她一天要吃8顿饭",
+          "source": "这篇交给我妈来写"
+        },
+        {
+          "setup": "人在欧洲比较方便\n当个混蛋",
+          "punchline": "和小孩争夺滑梯使用权\n你从家到这花了多久\n十分钟?\n我花了17个小时\n所以你走开",
+          "source": "问世间谁与我同频"
+        }
+      ]
+    },
+    {
+      "scene": "文化冲击",
+      "frequency": 4,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "在异国他乡生活时，那种既想融入当地、又感到文化隔阂和力不从心的疲惫感。",
+          "理想中的异国风情与现实中本土化魔改的落差。",
+          "对海外食物（特别是刻板印象中的'白人饭'）的吐槽，以及生活中那些'人算不如天算'的微小崩溃瞬间。",
+          "试图理解和尊重异国文化时，遇到的尴尬或令人啼笑皆非的误解。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 4
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2,
+          "自降身段": 1,
+          "伪客观/自嘲": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "这些所谓的“高端异域体验”，其文化内核可能非常直白和原始。",
+          "这个圣诞节从根上就有点不对劲。",
+          "看似在吐槽垃圾分类，实则在表达一种更深层的文化疏离感——我能为这个社会做的最大贡献，不过是勉强遵守它最基本的规则而已。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "脚注式补充 (Asterisked addendum)": 1,
+          "拟人化": 1,
+          "一本正经地胡说八道": 1,
+          "夸张/反讽": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "understated_irony": 2,
+          "redefinition": 1,
+          "expectation_violation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "副作用是失去咀嚼功能\n好在面对白人饭\n这也算不上什么损失",
+          "punchline": "*还是被夹生饭\n硌到了牙齿",
+          "source": "再一次回到意大利"
+        },
+        {
+          "setup": "澳洲的圣诞节",
+          "punchline": "袋鼠抢了麋鹿的工作",
+          "source": "在南半球过圣诞的下场"
+        },
+        {
+          "setup": "迎宾员玛给\n名字在布朗族语言里",
+          "punchline": "是浦西的意思\n体现当地人的\n生殖崇拜",
+          "source": "有点小钱且有点品味的挨宰生活"
+        }
+      ]
+    },
+    {
+      "scene": "约会",
+      "frequency": 4,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "暗恋初期，想和对方有身体接触但羞于直接表达，需要一个完美的借口。",
+          "在约会中，自己的身份/外表/气质不符合对方的刻板印象而遭到否定或羞辱。",
+          "单身时对爱情的渴望，常常会幻想和计划与未来伴侣的种种，但现实是连对象都还没有。",
+          "和约会对象有共同爱好，但关系却卡在“同好/朋友”阶段，无法升级到恋人关系。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2,
+          "情绪共鸣": 1,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 2,
+          "把苦说甜": 1,
+          "understated_irony": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "精心打扮赴约却被当头一盆冷水的失落和委屈。",
+          "我规划了这么多，其实只是因为我太孤独，太渴望爱情了。这一切都是我的纸上谈兵。",
+          "我非常渴望和crush有进展，但又胆小，只能靠这些精心设计的“意外”。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "口语化语气词": 1,
+          "反问": 1,
+          "直接引语": 1,
+          "学术化/术语化": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "expectation_violation": 2,
+          "redefinition": 2
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "铺垫了一个漫长、有文化追求的约会计划，并指出博物馆即便凌晨也人满为患。",
+          "punchline": "这样就可以和crush\n紧紧贴在一起啦",
+          "source": "嘴都没亲到一个，夏天就要过去了"
+        },
+        {
+          "setup": "整篇帖子都在以一个“约会攻略推荐者”的身份，详细规划了一条夜间约会路线。",
+          "punchline": "谁推荐我约会对象",
+          "source": "嘴都没亲到一个，夏天就要过去了"
+        },
+        {
+          "setup": "秋天。\n你刷到CRUSH2\n这次把对方约出来了\n兴高采烈穿着新裙子赴约",
+          "punchline": "结果被骂得很脏:\n你应该是侄女吧?",
+          "source": "沪上啦啦约会图鉴"
+        }
+      ]
+    },
+    {
+      "scene": "商业化",
+      "frequency": 4,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "对某种体验抱有崇高期待，却发现其背后是廉价的商业运作。",
+          "在寻求宁静和本真时，发现一切都已被现代商业逻辑渗透和表演化。",
+          "最初的理想在现实（和金钱）面前妥协，并用一种自嘲的方式将其合理化。",
+          "在商业场所看到被滥用的宗教或文化符号，并感受到其背后压迫性的商业意图。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 2,
+          "经验共鸣": 1,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2,
+          "先自黑再输出观点": 1,
+          "自降身段 (用'比较纳闷'的无知口吻)": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "作为内容创作者，用市场认可（商业成功）来弥补未能实现艺术追求（严肃创作）的失落感。",
+          "我花2280元，就是来体验这个的？",
+          "这个酒店的一切设计都是为了让你感觉到“贵”和“你消费不起”，从而心甘情愿地付钱。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "概念偷换、自嘲式凡尔赛": 1,
+          "口语化推测": 1,
+          "行为动词细节": 1,
+          "递进转折": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 2,
+          "deflation": 1,
+          "expectation_violation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "没能 [ ] 完成万字短篇创作",
+          "punchline": "但是\n完成万字xhs废话输出\n\n共计骗到了100个品牌\n实现了年薪百万",
+          "source": "当你回顾2025的10个小目标"
+        },
+        {
+          "setup": "练功服*1",
+          "punchline": "疑似tb批发款",
+          "source": "我在茅山当道士的一周"
+        },
+        {
+          "setup": "道士的基本素养\n早晨6点起床练功\n* 面朝旭日升起的方向\n* 练金刚功",
+          "punchline": "师父要架好一个直播机位",
+          "source": "我在茅山当道士的一周"
+        }
+      ]
+    },
+    {
+      "scene": "医美",
+      "frequency": 4,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "医美恢复期的尴尬、丑陋和自我嫌弃。",
+          "在投入巨大成本后，情况反而变得更糟的绝望感（植发后脱落期）。",
+          "为变美而承受的超乎想象的漫长痛苦。",
+          "消费主义陷阱：医疗/美容机构中那些价格离谱的附加服务。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2,
+          "情绪共鸣": 1,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 2,
+          "把苦说甜": 1,
+          "自降身段 (以一个普通消费者的身份吐槽)": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "为了变美，我愿意承受比出生更漫长的折磨。这是一种对自我意志的极端肯定。",
+          "我即将变成一个武侠小说里最丑的女魔头，怕了吗？",
+          "我坦然接受自己恢复期最丑的样子，并能从中找到乐子。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "极端类比": 1,
+          "精准比喻": 1,
+          "文化符号引用": 1,
+          "反问 / 夸张": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "expectation_violation": 1,
+          "precise_absurdity": 1,
+          "redefinition": 1,
+          "escalation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "植发中\n历时16小时",
+          "punchline": "我妈生我也没用\n这么久",
+          "source": "有钱了就要按照P图把自己整一遍"
+        },
+        {
+          "setup": "植发后1天\n肿成了",
+          "punchline": "40w人看过的\n托马斯小火车",
+          "source": "有钱了就要按照P图把自己整一遍"
+        },
+        {
+          "setup": "植发后1个月\n搬来的头发\n开始脱落",
+          "punchline": "会脱成一位裘千尺",
+          "source": "有钱了就要按照P图把自己整一遍"
+        }
+      ]
+    },
+    {
+      "scene": "家庭关系",
+      "frequency": 4,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "传统家庭观念（尤其在体制内家庭）对私企工作稳定性的不信任和偏见。",
+          "在家庭关系中，情感付出与金钱回报之间复杂的、有时甚至有点尴尬的动态。",
+          "家人用给钱的方式表达爱，感觉自己的情感需求被误解或忽视。",
+          "成年后与母亲之间复杂、充满摩擦又无法割舍的爱恨交织的关系。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 3,
+          "经验共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 2,
+          "伪客观": 1,
+          "伪客观 / 哲学化概括": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我们家就是用这种奇特的方式来表达爱和感激，虽然听起来很怪，但这背后是深厚的情感联系。",
+          "我的选择不被理解，但我还是要走这条路，只好用幽默来化解这份压力。",
+          "我理解他们爱我的方式，也感激这份物质支持，但内心深处依然有一丝失落和对情感连接的渴望。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "省略/断句": 1,
+          "反讽/并置": 1,
+          "情景错配": 1,
+          "旧词新用/概念挪用": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 2,
+          "expectation_violation": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "我要的是爱",
+          "punchline": "怎么来的是\n钱。",
+          "source": "福建家庭相爱模式一览"
+        },
+        {
+          "setup": "我给他爱\n他给我钱\n\n+¥10000",
+          "punchline": "/孝子的劳务费",
+          "source": "福建家庭相爱模式一览"
+        },
+        {
+          "setup": "妈妈对不起",
+          "punchline": "我进了\n私企",
+          "source": "老鼠人职场回忆录（私企篇）"
+        }
+      ]
+    },
+    {
+      "scene": "价值观",
+      "frequency": 4,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "面对世俗标准的成功（伴侣、事业、房车），感到压力巨大，甚至产生逃避心理，质疑这些标准是否适合自己。",
+          "公司用冠冕堂皇的价值观和企业文化来包装和合理化其冷酷无情的商业决策（如裁员），语言和行为的巨大分裂让人感到虚伪和被背叛。",
+          "东亚文化中对“吃苦”的过度推崇和内化，导致了普遍的集体焦虑和自我PUA。",
+          "对于“人生的意义在于贡献”这一宏大叙事的反叛，渴望一种更关注个体感受和体验的、自洽的人生评价体系。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 2,
+          "经验共鸣": 1,
+          "价值观共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 1,
+          "先自黑再输出观点": 1,
+          "坦诚自剖": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "你为之奋斗和痛苦的一切，在这个体系里毫无价值。你只是一个需要“被变化”掉的成本。",
+          "选择“独自生活”并非没有代价，它伴随着对传统生活路径的舍弃和对存在意义的持续追问。这种选择是一种主动的“减轻负重”。",
+          "我们这代人被这种价值观捆绑了一辈子，我既希望你别像我，又为你不上进着急，我内心也很矛盾。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "引用与重新语境化": 1,
+          "悖论": 1,
+          "类比/排比/反问": 1,
+          "口语化/反高潮": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "understated_irony": 1,
+          "redefinition": 1,
+          "self_deprecation": 1,
+          "deflation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "如果最后你还是不幸成为被淘汰的10%",
+          "punchline": "安慰你的话\n成为一家早已写在了公司的价值观里\n\n“拥抱变化”",
+          "source": "老鼠人职场回忆录（私企篇）"
+        },
+        {
+          "setup": "我们中国人的美德是 吃苦耐劳",
+          "punchline": "没苦吃都要为 吃不到苦 感到痛苦",
+          "source": "这篇交给我妈来写"
+        },
+        {
+          "setup": "独自生活的第三十年\n还是不知道我的人生该装点什么呢",
+          "punchline": "一个伴侣?\n一份事业?\n一个房子?\n一辆车?\n好像都太重了。",
+          "source": "问世间谁与我同频"
+        }
+      ]
+    },
+    {
+      "scene": "英国菜",
+      "frequency": 4,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "面对一碗油腻到无法下口的食物时的无奈和不知所措。",
+          "在美食荒漠里，努力寻找一个“尚可下咽”的食物时的卑微心态。",
+          "花了不菲的价钱，却吃到味道诡异、挑战认知底线的食物。",
+          "一道菜不仅难吃，还油腻到令人产生生理不适。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2,
+          "情绪共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 1,
+          "一本正经地胡说八道": 1,
+          "把无奈戏剧化": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "这顿昂贵的早餐，连最基本的番茄都如此失败，可想而知其他东西有多糟糕。",
+          "英国菜的下限，比你想象的还要低。",
+          "这道菜的难吃程度，已经超出了“口味”的范畴，进入了“对人生理造成挑战”的层面。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "感官错位": 1,
+          "恶意揣测": 1,
+          "拟人化": 1,
+          "反向赞美": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "expectation_violation": 1,
+          "redefinition": 1,
+          "precise_absurdity": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "推荐这个番茄",
+          "punchline": "可以让大家知道\n蔬菜里也能尝到\n鱼腥味",
+          "source": "英国美食图鉴"
+        },
+        {
+          "setup": "盘中有一块贴心的空地",
+          "punchline": "可能是方便你吐在这",
+          "source": "英国美食图鉴"
+        },
+        {
+          "setup": "吃到这里时\n同碗底的\n一池油",
+          "punchline": "面面相觑",
+          "source": "英国美食图鉴"
+        }
+      ]
+    },
+    {
+      "scene": "学车",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "成年后学习新技能（如开车）的笨拙和挫败感，以及对现代科技的依赖。",
+          "在学习一项新技能（尤其是成年后）时，因暴露自己的无知而感到羞耻。",
+          "被他人用客气、尊敬的方式指出低级错误，尴尬感加倍。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 3
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 2,
+          "伪客观": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我为这次自驾游做了准备，但我的基础差到准备本身都像个笑话。",
+          "我在教练眼中就是一个麻烦制造者，他叫我'老大'可能只是一种无奈的调侃。",
+          "承认自己在某些方面的无能，并选择一种现代的方式“躺平”。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "直接引语": 1,
+          "重复": 1,
+          "谐音梗/概念替换": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "expectation_violation": 1,
+          "understated_irony": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "为了去云南自驾 雇佣私教一名 -¥1200/10小时",
+          "punchline": "上车第一个问题 前进档是 哪个字母来着？",
+          "source": "32岁当天坐上法庭"
+        },
+        {
+          "setup": "教练很尊重我 都称呼我为 老大",
+          "punchline": "老大, 这是油门 不是刹车\n老大, 红灯!\n老大, 我的分要被你扣光了",
+          "source": "32岁当天坐上法庭"
+        },
+        {
+          "setup": "练车到可以自驾的程度\n练习停车\n练习高速\n练习山路\n然后在城市道路收获事故认定书一张",
+          "punchline": "练车到可以智驾的程度",
+          "source": "当你回顾2025的10个小目标"
+        }
+      ]
+    },
+    {
+      "scene": "租房",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "遇到不负责任、推诿扯皮的房东是租房族的普遍痛点。反向操作，一个“好得过分”的房东同样会引发好奇和猜疑。",
+          "租房时被房东临时变卦，导致无家可归的窘境和愤怒。",
+          "租到的老房子看起来光鲜，实际居住体验充满各种卫生和设施问题。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2,
+          "泛化共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2,
+          "自降身段": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我的房东是个奇葩。以及，别太高看作家这个职业了。",
+          "住老洋房根本没有想象中那么浪漫，光鲜背后全是麻烦。",
+          "我真是个傻子，当初还以为自己遇到了好人。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "拟人化": 1,
+          "归因反转": 1,
+          "反讽": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 1,
+          "redefinition": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "接手了来自\n1935年的沙发\n*接手了价值\n100w的壁柜\n和西洋镜",
+          "punchline": "也接手了霉菌\n以及与蟑螂\n为邻",
+          "source": "业主直租的含金量还在上升"
+        },
+        {
+          "setup": "不差钱的房东\n说会负责到底\n真的找来保洁军团\n...掏出一个月的房租来装修\n除霉除虫\n洗浴换新\n墙暖保修\n灯具安装",
+          "punchline": "房东如此尽心竭力的原因\n可能是我租房时\n上报的职业\n是作家\n他企图打造一个\n名人故居",
+          "source": "业主直租的含金量还在上升"
+        },
+        {
+          "setup": "房主是个\n大善人\n连定金都不收",
+          "punchline": "*没收定金\n跳票也跳得举重若轻",
+          "source": "沪上租房倒霉buff叠满是什么样"
+        }
+      ]
+    },
+    {
+      "scene": "自我认知",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "理想与现实的差距；人们对“作家”生活方式的浪漫化想象与作家本人实际状态（可能只是想睡觉）的落差。",
+          "感觉自己复杂、有攻击性、不讨人喜欢，与理想中安静、美好的事物格格不入。",
+          "自我认知失调，发现自己并非想象中那样的人，即“我是个冒牌货”的冒充者综合症。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 3
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 2,
+          "自黑再输出观点": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "这次旅行虽然不完美，但让我对自己有了更清醒的认识，这或许比享受宁静更有价值。",
+          "房东的宏伟蓝图对我来说毫无意义，我只是个想好好睡觉的普通人。",
+          "我欣赏和向往那些安静美好的事物，但这不代表我自己就是那样的人。我接纳我自己的复杂和不完美。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "精确数字": 1,
+          "标签化": 1,
+          "拟人/拟物、清单对比": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "self_deprecation": 2,
+          "deflation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "他企图打造一个\n名人故居",
+          "punchline": "但这房子比起写作\n更适合\n睡觉\n光线总是幽微\n一天能睡15小时",
+          "source": "业主直租的含金量还在上升"
+        },
+        {
+          "setup": "人在城里\n还能昧着灵魂生活\n\n人在大自然里\n却得看清\n自己是个\n什么货色",
+          "punchline": "一个会被羊吓醒\n的伪自然主义者",
+          "source": "在法国租了一棵树，睡了几天"
+        },
+        {
+          "setup": "书作为一个人\n*沉默\n*故事很多\n*永远在一个地方等我",
+          "punchline": "我作为一本书\n悬疑*\n用词露骨*\n大概率被远洋捕捞*",
+          "source": "当文青梦照进现实"
+        }
+      ]
+    },
+    {
+      "scene": "金钱观",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "用浪漫的理想逃避现实，却被现实的残酷（金钱）一巴掌打醒。",
+          "当代年轻人的财务焦虑，感觉钱总是不够花、工资刚到手就没了的'月光'状态。",
+          "家人用给钱的方式表达爱，感觉自己的情感需求被误解或忽视。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2,
+          "先自黑再输出观点": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我们追求的所谓浪漫，本质上都是消费主义的产物。",
+          "我理解他们爱我的方式，也感激这份物质支持，但内心深处依然有一丝失落和对情感连接的渴望。",
+          "全文对'老钱'的细致观察，看似疏离，实则是为了最后一句'我是老没钱'的身份认同做铺垫。它暗示了我们之所以如此着迷于观察'老钱'，正是因为我们身处其对立面。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "对比": 1,
+          "省略/断句": 1,
+          "结构模仿 & 谐音梗": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 1,
+          "expectation_violation": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "为防死后不能一起上天堂\n死前我想跟你去一次\n因特拉肯。",
+          "punchline": "只是上天堂只需要做善事就行了\n去瑞士却要很多钱啊",
+          "source": "为了去欧洲决定结个婚"
+        },
+        {
+          "setup": "我要的是爱",
+          "punchline": "怎么来的是\n钱。",
+          "source": "福建家庭相爱模式一览"
+        },
+        {
+          "setup": "金洙元说有钱人和普通人的差别是\n有钱人不知道自己账户上有多少钱\n因为每分每秒都在变多",
+          "punchline": "我也不知道自己账户上有多少钱\n因为每分每秒都在变少\n\n我是老钱的表亲\n老没钱",
+          "source": "老钱是个伤人的动词"
+        }
+      ]
+    },
+    {
+      "scene": "首尔",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "年轻时对偶像的狂热崇拜，最终发现他们也是普通人甚至有缺点，从而感到幻灭。",
+          "对年龄增长的焦虑，以及对'颜值即正义'这一社会潜规则的无奈又暗爽的复杂情绪。",
+          "在社交场合想放开玩但又有点不好意思或想保持'酷'的矛盾心态。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2,
+          "自降身段": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "韩国社会那种卷到极致、连玩乐都像在做任务的社会氛围。",
+          "追星是青春必经的徒劳，但这份徒劳本身就是青春的一部分。",
+          "社会对女性年龄和外貌的苛刻标准，以及在这种标准下寻求自我肯定的挣扎。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "因果关系重构": 1,
+          "概念偷换": 1,
+          "逻辑飞跃": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 1,
+          "redefinition": 1,
+          "expectation_violation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "18岁适合去首尔。\n适合去蚕室追一次星",
+          "punchline": "早点追星\n也就早点对明星死心",
+          "source": "人不该在太年轻的时候去首尔"
+        },
+        {
+          "setup": "世界上只有这个国家的人\n真的在夜店里跳舞",
+          "punchline": "但他们不把这叫作跳舞\n而叫作活动筋骨",
+          "source": "人不该在太年轻的时候去首尔"
+        },
+        {
+          "setup": "30岁适合去首尔。\n适合去弘大的夜店\n如果安保看过护照上的年龄还是放行",
+          "punchline": "那就证明\n你是真的\n漂亮",
+          "source": "人不该在太年轻的时候去首尔"
+        }
+      ]
+    },
+    {
+      "scene": "夜生活",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "对年龄增长的焦虑，以及对'颜值即正义'这一社会潜规则的无奈又暗爽的复杂情绪。",
+          "在社交场合想放开玩但又有点不好意思或想保持'酷'的矛盾心态。",
+          "满怀期待地去社交，结果发现唯一的互动是纯粹的消费，连人际关系的门槛都没摸到。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2,
+          "自降身段": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "韩国社会那种卷到极致、连玩乐都像在做任务的社会氛围。",
+          "社会对女性年龄和外貌的苛刻标准，以及在这种标准下寻求自我肯定的挣扎。",
+          "初到新城市的孤独感和融入一个圈子的困难。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "概念偷换": 1,
+          "逻辑飞跃": 1,
+          "精确数字": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 1,
+          "expectation_violation": 1,
+          "deflation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "世界上只有这个国家的人\n真的在夜店里跳舞",
+          "punchline": "但他们不把这叫作跳舞\n而叫作活动筋骨",
+          "source": "人不该在太年轻的时候去首尔"
+        },
+        {
+          "setup": "30岁适合去首尔。\n适合去弘大的夜店\n如果安保看过护照上的年龄还是放行",
+          "punchline": "那就证明\n你是真的\n漂亮",
+          "source": "人不该在太年轻的时候去首尔"
+        },
+        {
+          "setup": "夏天。\n你搬到上海\n兴致勃勃闯荡著名拉吧\n当晚唯一主动搭讪你的人",
+          "punchline": "从你这赚走了68块钱",
+          "source": "沪上啦啦约会图鉴"
+        }
+      ]
+    },
+    {
+      "scene": "文化观察",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "节假日无处可去，最终发现只有最熟悉的“自己人”还在坚守岗位（为了赚钱）。",
+          "东亚文化中对“吃苦”的过度推崇和内化，导致了普遍的集体焦虑和自我PUA。",
+          "在社交场合想放开玩但又有点不好意思或想保持'酷'的矛盾心态。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 2,
+          "经验共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2,
+          "先自黑再输出观点": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "在异国他乡，最可靠的还是自己人，尽管这种可靠是建立在一种非常现实的逻辑之上。",
+          "韩国社会那种卷到极致、连玩乐都像在做任务的社会氛围。",
+          "我们这代人被这种价值观捆绑了一辈子，我既希望你别像我，又为你不上进着急，我内心也很矛盾。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "概念偷换": 1,
+          "对仗 / 格言体": 1,
+          "悖论": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 2,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "世界上只有这个国家的人\n真的在夜店里跳舞",
+          "punchline": "但他们不把这叫作跳舞\n而叫作活动筋骨",
+          "source": "人不该在太年轻的时候去首尔"
+        },
+        {
+          "setup": "唯一开张的只有\nCHINA TOWN\n拆尼斯永不打烊",
+          "punchline": "中国人不过洋节\n中国人只赚洋钱",
+          "source": "在南半球过圣诞的下场"
+        },
+        {
+          "setup": "我们中国人的美德是 吃苦耐劳",
+          "punchline": "没苦吃都要为 吃不到苦 感到痛苦",
+          "source": "这篇交给我妈来写"
+        }
+      ]
+    },
+    {
+      "scene": "家庭",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "旅行中的疲惫，渴望能随时随地休息的终极幻想。",
+          "宠物在一个人的生活中扮演的多面、甚至矛盾的角色：它们既是依赖者也是稳定剂，既是快乐源泉也是甜蜜负担。",
+          "女性的自我打扮和外貌选择受到来自保守派（尤其是家中男性长辈）的评判和不解。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "一本正经地胡说八道": 1,
+          "留白让读者悟": 1,
+          "伪客观": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "外婆这一生可能都在这种“保守男子”的审美评判下生活，这是她一次小小的、漂亮的为自己辩护的胜利。",
+          "东大门通宵批发的辛苦，那些'床铺'是给疲惫的商贩和顾客的喘息之地。作者用一种幽默的方式触及了这种城市底层的温情和辛酸。",
+          "我的身份认同，有一部分是由我与这只猫的关系所定义的。他不是我生活的附属品，而是我生活结构与意义的基石。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "夸张": 1,
+          "矛盾修辞": 1,
+          "口语化/引用对话": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "precise_absurdity": 1,
+          "redefinition": 1,
+          "dual_frame": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "寻常国家随地设置\n座椅\n这个国家随地设置\n床铺",
+          "punchline": "今年我就要邀请我妈\n去东大门躺着",
+          "source": "人不该在太年轻的时候去首尔"
+        },
+        {
+          "setup": "他们说你是猫咪\n但你不是的",
+          "punchline": "你是我的好孩子\n我的老父亲\n我无法被托运的行李\n我必须回到的家庭\n我的消遣\n我的意义",
+          "source": "假如给猫写一封情书"
+        },
+        {
+          "setup": "50后保守男子\n感到不满\n化这么白\n像什么?",
+          "punchline": "像个人啊!\n外婆说",
+          "source": "福建家庭相爱模式一览"
+        }
+      ]
+    },
+    {
+      "scene": "乡村生活",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "对某种群体“话多”的刻板印象的幽默化应用。",
+          "在陌生环境中的孤独感，以至于开始和动物进行社交。",
+          "理想化的期待与现实体验之间的巨大落差，一种“我被骗了”的感觉。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 1,
+          "身份共鸣": 1,
+          "经验共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2,
+          "一本正经地胡说八道": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我在这里很孤独，没什么人可以交流，只好把动物当成邻居来聊天。",
+          "在无聊的乡下，我已经开始把动物当人来研究了。",
+          "我千辛万苦逃离了城市的喧嚣，结果换来了另一种喧嚣，真是白折腾了。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "拟人化": 2,
+          "反转": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 2,
+          "expectation_violation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "散步到家对面\n探访我沉默寡言的邻居",
+          "punchline": "大约是\n一只骡子\n*\n闻一闻这个\n穿浴袍的女人\n怎么个事儿",
+          "source": "人在法国，想要养猪"
+        },
+        {
+          "setup": "不太搭理我\n但一天到晚\n嘴里叭叭叭叭的\n话很多",
+          "punchline": "疑似\n上海人",
+          "source": "在法国租了一棵树，睡了几天"
+        },
+        {
+          "setup": "以为远离了人类社会\n就会获得宁静",
+          "punchline": "事实是大自然\n也可以\n很吵",
+          "source": "在法国租了一棵树，睡了几天"
+        }
+      ]
+    },
+    {
+      "scene": "人生感悟",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "面对青春逝去，需要一个仪式感的场合来确认自己的成长和变化，并与过去和解。",
+          "成年后希望回报父母，却发现无论如何也比不上父母当年付出的复杂情感，以及想要让父母为自己骄傲的深层愿望。",
+          "人际关系的复杂和伤害，远比自然界的困难更令人疲惫和心痛。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 2,
+          "泛化共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "先抑后扬（对动物），再转折（对人）": 1,
+          "以孩子气的方式表达深情": 1,
+          "先自黑再输出观点": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "青春回不去了，但能花钱买一张门票，来和青春的自己见一面，也算是一种慰藉。",
+          "我来到这个农场，是为了治愈在人类社会里受到的创伤。",
+          "我们之间的关系，是一场爱的竞赛，而我永远不想让你输。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "对比与升华": 1,
+          "反问 / 逻辑反转": 1,
+          "格言化/金句": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 1,
+          "expectation_violation": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "比如你总是会在动物那\n吃点苦头",
+          "punchline": "但那不会比\n在人身上吃到的苦头\n更痛。",
+          "source": "人在法国，想要养猪"
+        },
+        {
+          "setup": "小时候我们炫耀\n谁的妈妈更漂亮\n\n长大了妈妈们炫耀\n谁的女儿对自己更好\n\n小时候你让我赢过",
+          "punchline": "现在我要怎么让你输啊",
+          "source": "长大就是把妈妈再养一遍"
+        },
+        {
+          "setup": "（默认）演唱会是来听歌的",
+          "punchline": "那就是没有谁是\n真的来\n听歌的\n\n主要来看看自己\n走出青春\n已经多远了",
+          "source": "预算1w见得到周杰伦吗"
+        }
+      ]
+    },
+    {
+      "scene": "人群",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "暗恋初期，想和对方有身体接触但羞于直接表达，需要一个完美的借口。",
+          "在旅行中满怀期待去参观一个著名景点/展品，结果因为客观原因（如人多、排队、关闭）而失望的经历。",
+          "当你去一个“小众”景点逃避人群时，发现那里挤满了和你一样想逃避人群的人。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2,
+          "泛化共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "留白让读者悟 (presenting a paradox)": 1,
+          "把苦说甜": 1,
+          "自降身段": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我们这些自以为是的社恐，本质上也是一种趋同的、可预测的消费群体。我也在其中，我就是问题本身。",
+          "有时候你做了万全的准备，但现实就是会给你一些小小的、无法克服的障碍。",
+          "我非常渴望和crush有进展，但又胆小，只能靠这些精心设计的“意外”。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "悖论陈述": 1,
+          "口语化语气词": 1,
+          "括号旁白": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "understated_irony": 1,
+          "expectation_violation": 1,
+          "deflation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "在海上漂流\n最大的梦幻莫过于\n1. 远离尘世\n2. 远离人类",
+          "punchline": "而最大的问题在于\n全世界里这么想的人类\n全都来了",
+          "source": "但是被邮轮劝退"
+        },
+        {
+          "setup": "铺垫了一个漫长、有文化追求的约会计划，并指出博物馆即便凌晨也人满为患。",
+          "punchline": "这样就可以和crush\n紧紧贴在一起啦",
+          "source": "嘴都没亲到一个，夏天就要过去了"
+        },
+        {
+          "setup": "此处有条\n导游称是\n全馆最厉害的\n项链",
+          "punchline": "(人太多了)\n(没看着)",
+          "source": "嘴都没亲到一个，夏天就要过去了"
+        }
+      ]
+    },
+    {
+      "scene": "艺术",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "对历史的无知被打破时的震惊感，以及对殖民时期欧洲人一些匪夷所思行为的黑色幽默式理解。",
+          "将历史文化强行与个人事业/格局进行类比，以抬高自身价值的装X行为。",
+          "对权威和宏大叙事的解构。人们厌倦了官方的、一本正经的解释，更喜欢“接地气”的、人性化的解读。"
+        ],
+        "resonance_types": {
+          "泛化共鸣": 2,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2,
+          "自降身段（伪）": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "所有你奉为圭臬的宏大概念，其背后可能都只是因为一些非常草率和偶然的原因。",
+          "历史充满了我们无法想象的荒诞和残酷，而人类可以对这些事表现得习以为常。",
+          "讽刺那些试图通过消费历史文化符号来给自己“镀金”的行为。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "跨时空类比": 1,
+          "deflation": 1,
+          "拟人化": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "precise_absurdity": 2,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "站在乌菲兹\n明白了美第奇家族的高段位",
+          "punchline": "他们资助米开朗基罗大概\n和我现在投天使轮差不多\n不为赚钱\n只为定义下一个时代的审美!",
+          "source": "你最讨厌的朋友圈TOP3"
+        },
+        {
+          "setup": "比如最爱买木乃伊的是欧洲人\n欧洲人: 又有我事?",
+          "punchline": "买来做成咖啡色的\n颜料\n成色特别好",
+          "source": "嘴都没亲到一个，夏天就要过去了"
+        },
+        {
+          "setup": "百年的雕像们 懒得再建一个博物馆了\n就这么摆着吧",
+          "punchline": "就这么成为\n文艺复兴\n的象征",
+          "source": "欧洲其实很像GenZ"
+        }
+      ]
+    },
+    {
+      "scene": "凡尔赛",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "现代消费主义的异化：人们购买昂贵的商品或体验，很多时候不是为了使用价值，而是为了其附带的社交资本和身份标签。",
+          "美妆博主推荐贵妇产品时，为了合理化价格而无形中透露出的更高消费水平，形成“凡尔赛”闭环。",
+          "人们在社交媒体上对“凡尔赛”行为的普遍感知和嘲讽心态。"
+        ],
+        "resonance_types": {
+          "泛化共鸣": 2,
+          "经验共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪分享/伪客观": 1,
+          "一针见血的洞察": 1,
+          "自降身段 (以抱怨的形式)": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我们拼命赚钱，最终可能只是为了买一个幻觉，一个能让自己在鄙视链中处于更有利位置的幻觉。",
+          "我的消费水平决定了我的选择，你觉得贵是因为你没到这个层次。",
+          "财富并不能消除烦恼，只是将烦恼替换成另一种更奢侈、在外人看来更无病呻吟的形式。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "反向辩护": 1,
+          "引用，场景再现": 1,
+          "轻描淡写 (understatement) / 移情建议": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "escalation": 2,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "有人觉得太贵",
+          "punchline": "可是每个月几万块护理的皮肤\n当然要抹最好的粉底了",
+          "source": "你最讨厌的朋友圈TOP3"
+        },
+        {
+          "setup": "你赚钱买的不是瑞士的人生",
+          "punchline": "而是不在瑞士的时候淡然的那一句\n唉, 人真多\n想回瑞士了",
+          "source": "推荐六个地方适合躺着等死"
+        },
+        {
+          "setup": "4日间最大的烦恼",
+          "punchline": "每天爬上爬下蛮累的\n大家家里还是得装个电梯呀",
+          "source": "躺着花钱才是正经事"
+        }
+      ]
+    },
+    {
+      "scene": "怀旧",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "面对青春逝去，需要一个仪式感的场合来确认自己的成长和变化，并与过去和解。",
+          "人们在社交媒体上发布伤感内容时，背后真实的原因往往非常渺小和具体，与宏大的情感抒发形成反差。",
+          "偶像老去、实力下滑，粉丝在演唱会现场感受到的那种“货不对板”但又必须接受的复杂心情。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 2,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "先自黑再输出": 1,
+          "伪客观": 1,
+          "先自黑再输出观点": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "青春回不去了，但能花钱买一张门票，来和青春的自己见一面，也算是一种慰藉。",
+          "即使是过着如此“高段位”生活的人，其喜怒哀乐的根源也和普通人一样，是一些非常具体的小事。",
+          "虽然他划水了，但我还是爱他。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "自我否定": 1,
+          "排比/精确细节": 1,
+          "格言化/金句": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 2,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "来看演唱会啦\n哭得好伤心\n用的CPB光缎粉霜\n底妆没花\n不是因为青春",
+          "punchline": "是因为坐第一排都没点到歌",
+          "source": "你最讨厌的朋友圈TOP3"
+        },
+        {
+          "setup": "（期待）周杰伦唱歌",
+          "punchline": "或交给vocal老师*3唱\n或交给歌迷唱\n或者不唱\n整整弹了一曲古筝",
+          "source": "预算1w见得到周杰伦吗"
+        },
+        {
+          "setup": "（默认）演唱会是来听歌的",
+          "punchline": "那就是没有谁是\n真的来\n听歌的\n\n主要来看看自己\n走出青春\n已经多远了",
+          "source": "预算1w见得到周杰伦吗"
+        }
+      ]
+    },
+    {
+      "scene": "情绪",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "物质财富无法填补内心的空虚和孤独。",
+          "感觉生活无意义、充满疲惫，但又没有放弃一切的决心，卡在中间的无力感。",
+          "人们在社交媒体上发布伤感内容时，背后真实的原因往往非常渺小和具体，与宏大的情感抒发形成反差。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 2,
+          "泛化共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "先自黑再输出": 1,
+          "自降身段": 1,
+          "伪客观": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "这不仅仅是一只猫的独白，也是对现代人生活状态的一种影射。",
+          "即使是过着如此“高段位”生活的人，其喜怒哀乐的根源也和普通人一样，是一些非常具体的小事。",
+          "生活很累，但我还在坚持，这种坚持本身就有点黑色幽默。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "自我否定": 1,
+          "省略": 1,
+          "断行": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 1,
+          "understated_irony": 1,
+          "expectation_violation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "来看演唱会啦\n哭得好伤心\n用的CPB光缎粉霜\n底妆没花\n不是因为青春",
+          "punchline": "是因为坐第一排都没点到歌",
+          "source": "你最讨厌的朋友圈TOP3"
+        },
+        {
+          "setup": "懒得活了",
+          "punchline": "但还\n不想死",
+          "source": "欧洲其实很像GenZ"
+        },
+        {
+          "setup": "住在豪宅",
+          "punchline": "感到\n悲哀",
+          "source": "沪上豪宅老人留守日记"
+        }
+      ]
+    },
+    {
+      "scene": "饮食",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "离开熟悉环境和亲人前，那种告别仪式的沉重感和不舍。",
+          "在他人注视下无法放松做自己，尤其是吃饭这种本应享受的时刻。",
+          "人前一套背后一套的“人设党”行为，以及理想与现实的巨大差距。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 2,
+          "经验共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2,
+          "把苦说甜": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "表面是说一顿饭，潜台词是与过去生活方式的切割，以及对未来不确定性的不安。",
+          "女明星连“吃”的自由都没有，吃什么、怎么吃，都是表演的一部分，都要接受大众的评判。",
+          "我女儿不仅懒，还虚伪。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "精确数字": 2,
+          "借代/概念挪用": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "precise_absurdity": 1,
+          "expectation_violation": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "走完秀\n终于可以吃口饭了",
+          "punchline": "但有两个灯棒\n六台摄影机\n在拍\n你都吃了\n什么",
+          "source": "假装女明星直到成为女明星"
+        },
+        {
+          "setup": "她说她可以不吃饭",
+          "punchline": "实际情况是她一天要吃8顿饭",
+          "source": "这篇交给我妈来写"
+        },
+        {
+          "setup": "转机西安的好处是\n最后还能饱餐一顿",
+          "punchline": "断头饭",
+          "source": "问世间谁与我同频"
+        }
+      ]
+    },
+    {
+      "scene": "加班",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "互联网公司用“家庭文化”和各种福利设施包装过度加班的本质，模糊工作与生活的边界。",
+          "自己的辛苦不被看见、不被在乎，尤其是被自己服务的对象所无视。",
+          "无休止的会议、为了微不足道细节的反复修改，以及将时间压榨到极限的“卷文化”。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段 (通过扮演一个刻薄的角色)": 1,
+          "伪客观": 1,
+          "冷静陈述荒诞事实": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "如果一天有48小时，我们就会开48小时的会。我们的工作强度只受物理定律的限制，而不受人性的限制。",
+          "所有这些“福利”和“舒适”都不是免费的，它们是你用个人生活换来的。",
+          "在聚光灯下的世界里，幕后人员的付出往往被认为是理所应当的。这句话是对此现象的极端讽刺。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "省略": 1,
+          "因果关系反转": 1,
+          "同义反复 / 废话文学": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "understated_irony": 1,
+          "redefinition": 1,
+          "precise_absurdity": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "听说工作人员还在\n加班\n加点",
+          "punchline": "但那不重要。",
+          "source": "假装女明星直到成为女明星"
+        },
+        {
+          "setup": "所有的舒适都在打造一件事\n把公司当成你的家",
+          "punchline": "因为你是不可能从家里下班的",
+          "source": "老鼠人职场回忆录（私企篇）"
+        },
+        {
+          "setup": "你会一天开24小时的会\n只为了改一句文案",
+          "punchline": "一天开24小时\n是因为一天\n只有24小时",
+          "source": "老鼠人职场回忆录（私企篇）"
+        }
+      ]
+    },
+    {
+      "scene": "语言学习",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "“野路子”出身的人在专业场合的心虚和自我怀疑，以及“学的东西用不上”的窘境。",
+          "投入大量精力学习新技能（尤其是语言），最终收效甚微的挫败感。",
+          "花钱花时间学习新技能（尤其是语言），收效甚微的普遍挫败感。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 3
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "self_deprecation": 1,
+          "自嘲": 1,
+          "自降身段": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "在异国他乡，最先学会的不是如何沟通，而是如何为自己的不擅长而道歉。这是一种深刻的局外人心态。",
+          "对自身学习能力的怀疑和对知识付费效果的讽刺。",
+          "我为了这次机会真的拼了，尽管我的能力完全不够，但我还是要去抓住它。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "反差对比 (Juxtaposition)": 1,
+          "精确量化": 1,
+          "极端归纳": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 1,
+          "precise_absurdity": 1,
+          "self_deprecation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "回欧前三个月\n开始正式学意大利语\n\n¥10000\n/50节1v1\n...意大利人这么简单的头脑\n为什么会发明出\n这么复杂的语法",
+          "punchline": "刻苦三个月\n已经可以流利地说出\nMI\nDISPIACE\nPARLO SOLO UN PO' DI\nITALIANO\n(对不起,\n我只会说一滴滴的意大利语)",
+          "source": "再一次回到意大利"
+        },
+        {
+          "setup": "学会意大利语\n斥资1W报课50节\n水平上升至",
+          "punchline": "对话到第二句才问\nCAN YOU SPEAK\nENGLISH?",
+          "source": "当你回顾2025的10个小目标"
+        },
+        {
+          "setup": "彻夜准备采访提纲\n由于韩语是看韩剧学的",
+          "punchline": "所以基本上只擅长\n骂人和\n调情",
+          "source": "当你放一只老鼠人进名利场"
+        }
+      ]
+    },
+    {
+      "scene": "文化体验",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "为了虚无缥缈的'好处'（打卡、祈福、仪式）而付出实实在在的体力代价，事后觉得有点不值。",
+          "在旅行或新爱好中，尽管技能不足（玩得不好），但仍然希望通过外表（装备、服装）获得满足感和仪式感。",
+          "在旅行中满怀期待地尝试特色项目，却因为各种原因搞砸了，那种失望又好笑的感觉。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2,
+          "自降身段": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "这些所谓的仪式，对一个现代人来说，象征意义大于实际，身体的感受才是最真实的。",
+          "一个人在异国他乡，连煮个鸡蛋都失败了，背后有一丝孤独和无助，但用幽默化解了。",
+          "旅行的意义不在于'玩得好'，而在于体验和自我满足。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "使用游戏术语": 2,
+          "对比": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 1,
+          "deflation": 1,
+          "expectation_violation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "玩家上路第一件事\n购买\n新皮肤",
+          "punchline": "玩得很菜但是\n穿得很靓丽",
+          "source": "动森照进现实"
+        },
+        {
+          "setup": "相传走一圈就能\n延寿一年",
+          "punchline": "延了三年就累了",
+          "source": "动森照进现实"
+        },
+        {
+          "setup": "场面是\n夜晚的十字路口\n一个穿和服的女人\n在虔诚地\n煮蛋\n\n据说煮十分钟\n就能获得\n溏心蛋",
+          "punchline": "煮了两个十分钟\n一个也没熟\n任务失败",
+          "source": "动森照进现实"
+        }
+      ]
+    },
+    {
+      "scene": "日本",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "为了虚无缥缈的'好处'（打卡、祈福、仪式）而付出实实在在的体力代价，事后觉得有点不值。",
+          "在旅行或新爱好中，尽管技能不足（玩得不好），但仍然希望通过外表（装备、服装）获得满足感和仪式感。",
+          "害怕在异国文化中无意间犯下严重禁忌的焦虑感。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 1,
+          "经验共鸣": 1,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2,
+          "自降身段": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "这些所谓的仪式，对一个现代人来说，象征意义大于实际，身体的感受才是最真实的。",
+          "旅行中处处是文化陷阱，一不小心就可能'社死'甚至'真死'（象征意义上）。",
+          "旅行的意义不在于'玩得好'，而在于体验和自我满足。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "使用游戏术语": 1,
+          "对比": 1,
+          "陡然转折": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 1,
+          "deflation": 1,
+          "escalation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "玩家上路第一件事\n购买\n新皮肤",
+          "punchline": "玩得很菜但是\n穿得很靓丽",
+          "source": "动森照进现实"
+        },
+        {
+          "setup": "相传走一圈就能\n延寿一年",
+          "punchline": "延了三年就累了",
+          "source": "动森照进现实"
+        },
+        {
+          "setup": "系统提醒\n穿浴衣时\n左边领需盖在右边领上",
+          "punchline": "反过来则是\n入殓的穿法",
+          "source": "动森照进现实"
+        }
+      ]
+    },
+    {
+      "scene": "美食",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "在旅行中满怀期待地尝试特色项目，却因为各种原因搞砸了，那种失望又好笑的感觉。",
+          "对名不副实的“招牌菜”的失望。",
+          "在旅游景点吃到价格离谱、味道诡异的饭菜。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2,
+          "文化共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 1,
+          "把苦说甜": 1,
+          "伪客观 / 假装天真": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "一个人在异国他乡，连煮个鸡蛋都失败了，背后有一丝孤独和无助，但用幽默化解了。",
+          "这顿饭，我吃得很难受，但我的吐槽，会让你看得很开心。",
+          "连这么有来头的菜都能做得这么难吃，这家店真是烂到根了。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "使用游戏术语": 1,
+          "通感 / 跨界比喻": 1,
+          "反问": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "expectation_violation": 1,
+          "dual_frame": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "场面是\n夜晚的十字路口\n一个穿和服的女人\n在虔诚地\n煮蛋\n\n据说煮十分钟\n就能获得\n溏心蛋",
+          "punchline": "煮了两个十分钟\n一个也没熟\n任务失败",
+          "source": "动森照进现实"
+        },
+        {
+          "setup": "—¥123\n/一道豆腐",
+          "punchline": "比古早港片还咸湿",
+          "source": "在南半球过圣诞的下场"
+        },
+        {
+          "setup": "—¥168\n/毛式红烧肉",
+          "punchline": "姓毛怎么会不好吃呢",
+          "source": "在南半球过圣诞的下场"
+        }
+      ]
+    },
+    {
+      "scene": "失望",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "为昂贵服务付费后，却得到名不副实的体验，那种“花钱买罪受”的失望感。",
+          "付出巨大努力后，因为一个不可抗的外部原因，所有心血付诸东流的挫败感和无力感。",
+          "在旅行中满怀期待去参观一个著名景点/展品，结果因为客观原因（如人多、排队、关闭）而失望的经历。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2,
+          "自降身段": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我所有的冲动、努力和期待，在这一刻都变成了一个笑话。",
+          "有时候你做了万全的准备，但现实就是会给你一些小小的、无法克服的障碍。",
+          "对所谓“殖民地遗风”的虚伪性的揭露——它只剩下形式，没有服务的实质。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "括号旁白": 1,
+          "短句断行": 1,
+          "夸张 (hyperbole)": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 2,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "此处有条\n导游称是\n全馆最厉害的\n项链",
+          "punchline": "(人太多了)\n(没看着)",
+          "source": "嘴都没亲到一个，夏天就要过去了"
+        },
+        {
+          "setup": "（前面所有的铺垫）发挥超绝行动力\n取消回国机票-¥3534\n改定隔天去米兰的机票—¥1073\n...\n彻夜准备采访提纲",
+          "punchline": "得知噩耗\n我们艺人\n不便\n接受采访",
+          "source": "当你放一只老鼠人进名利场"
+        },
+        {
+          "setup": "服务上带点殖民地遗风\n\n“你只要摇响这个铃铛 我就会出现”",
+          "punchline": "*但后来摇烂了 也无人出现",
+          "source": "躺着花钱才是正经事"
+        }
+      ]
+    },
+    {
+      "scene": "幻想",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "对浪漫氛围的想象最终会落到非常具体、甚至有点粗俗的现实欲望上。",
+          "单身时对爱情的渴望，常常会幻想和计划与未来伴侣的种种，但现实是连对象都还没有。",
+          "现代“打工人”对工作的厌倦和对宠物式“躺平”生活的向往。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 2,
+          "经验共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 1,
+          "坦率的自我暴露": 1,
+          "自降身段 (作为猫) 来输出观点": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "你以为我在家躺着很轻松吗？维持这份优雅和哲学思考也是很累的。",
+          "我规划了这么多，其实只是因为我太孤独，太渴望爱情了。这一切都是我的纸上谈兵。",
+          "即使在如此“高雅”的环境中，人的基本欲望依然是真实且直接的。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "反问": 1,
+          "精确数字": 1,
+          "口语化": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 1,
+          "precise_absurdity": 1,
+          "deflation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "整篇帖子都在以一个“约会攻略推荐者”的身份，详细规划了一条夜间约会路线。",
+          "punchline": "谁推荐我约会对象",
+          "source": "嘴都没亲到一个，夏天就要过去了"
+        },
+        {
+          "setup": "我最喜欢\n床上挂的\n纱幔",
+          "punchline": "放下后感觉能颠鸾倒凤到凌晨四点半。",
+          "source": "有点小钱且有点品味的挨宰生活"
+        },
+        {
+          "setup": "有时候她会说\n要和我互换身份\n她在家里躺着\n我去上班",
+          "punchline": "u wish\n我会白她一眼\n你怎么可能这么命好?",
+          "source": "沪上豪宅老人留守日记"
+        }
+      ]
+    },
+    {
+      "scene": "节日",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "成年人世界里童话滤镜的破碎，以及用戏谑对抗虚伪的节日仪式感。",
+          "理想中的异国风情与现实中本土化魔改的落差。",
+          "节假日无处可去，最终发现只有最熟悉的“自己人”还在坚守岗位（为了赚钱）。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 1,
+          "情绪共鸣": 1,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2,
+          "自降身段": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "在异国他乡，最可靠的还是自己人，尽管这种可靠是建立在一种非常现实的逻辑之上。",
+          "这个圣诞节从根上就有点不对劲。",
+          "我对这些商业化的节日装置没什么耐心，不如找点乐子。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "拟人化": 1,
+          "直接引语": 1,
+          "对仗 / 格言体": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 1,
+          "expectation_violation": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "澳洲的圣诞节",
+          "punchline": "袋鼠抢了麋鹿的工作",
+          "source": "在南半球过圣诞的下场"
+        },
+        {
+          "setup": "是一个老头\n要听我的心愿",
+          "punchline": "我说我想看圣诞老人半裸",
+          "source": "在南半球过圣诞的下场"
+        },
+        {
+          "setup": "唯一开张的只有\nCHINA TOWN\n拆尼斯永不打烊",
+          "punchline": "中国人不过洋节\n中国人只赚洋钱",
+          "source": "在南半球过圣诞的下场"
+        }
+      ]
+    },
+    {
+      "scene": "意外",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "在绝望中抓住一根救命稻草，结果发现稻草也要淹死了。那种希望瞬间破灭，困境反而加倍的无力感。",
+          "赶交通工具时的焦虑和自责感。",
+          "独自旅行时，在看似美好的环境中遭遇意外的惊吓或窘境。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "把苦说甜": 2,
+          "伪客观（以文化观察者的口吻）": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我都这么惨了，再发生什么离谱的事我也不奇怪了。以及，连本地人都这样，我迷路也就情有可原了。",
+          "在这个混乱的系统里，连你的个人失败都显得微不足道，这本身就是一种解放。",
+          "所谓的诗与远方，也包含了蟑螂和各种不便。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "叙事反转、文化标签化": 1,
+          "拟人化 / 括号补充": 1,
+          "精确数字": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "expectation_violation": 3
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "晚间遇到个同样下错车的老太太\n她说要给我带路",
+          "punchline": "结果她也迷路。\n一个很法国的故事",
+          "source": "在欧洲不会开车的下场"
+        },
+        {
+          "setup": "偷成一个回忆的富人\n当晚富人家里\n迎来了客人",
+          "punchline": "(一只大王蟑螂)",
+          "source": "如果有钱到哪里都可以去的地步"
+        },
+        {
+          "setup": "在懒惰的地方有懒惰的快乐\n比如赶火车\n你迟到了10分钟",
+          "punchline": "而火车迟到了80分钟",
+          "source": "欧洲其实很像GenZ"
+        }
+      ]
+    },
+    {
+      "scene": "自然",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "拥有内在智慧或才华，却被外在的不修边幅或生理问题（如油头）所困扰。",
+          "理想化的期待与现实体验之间的巨大落差，一种“我被骗了”的感觉。",
+          "无处发泄的愤怒和最终被固化的无奈状态。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 1,
+          "情绪共鸣": 1,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 1,
+          "一本正经地胡说八道": 1,
+          "先扬后抑": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "对权威的解构，再伟大的人物也有普通人的烦恼。",
+          "用树的故事来投射人的情绪困境——愤怒之后无法挽回的后果。",
+          "我千辛万苦逃离了城市的喧嚣，结果换来了另一种喧嚣，真是白折腾了。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "反转": 1,
+          "拟人化/故事化": 1,
+          "比喻/反差": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "expectation_violation": 1,
+          "precise_absurdity": 1,
+          "dual_frame": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "以为远离了人类社会\n就会获得宁静",
+          "punchline": "事实是大自然\n也可以\n很吵",
+          "source": "在法国租了一棵树，睡了几天"
+        },
+        {
+          "setup": "这一棵比较暴躁\n有一次太过生气",
+          "punchline": "一巴掌呼在墙上\n没能再下来过",
+          "source": "过一种蓬松的生活"
+        },
+        {
+          "setup": "这一棵满腹经纶\n给它取名叫\n邓布利多",
+          "punchline": "就是好像不爱洗头。\n头发已经油\n得梳不开了",
+          "source": "过一种蓬松的生活"
+        }
+      ]
+    },
+    {
+      "scene": "医疗",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "感觉自己的问题没有被认真倾听，医生给出的诊断过于草率和随意，不被理解的无力感。",
+          "在庞大、冷漠的医疗体系中感到迷失和非人化，觉得自己的诊断像是在挑选商品一样随意。",
+          "历经千辛万苦终于找到了问题的根源，以为看到了曙光，却被最后一个、最 mundane（日常）的现实问题（断货）给击败了，功亏一篑的无力感。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 1,
+          "经验共鸣": 1,
+          "泛化共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 1,
+          "自降身段 / 伪客观": 1,
+          "把苦说甜": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "医疗系统的非人化和诊断过程中的偶然性，让人感到无力。",
+          "我可能并不信服这个诊断，但医生是权威，我只能接受。这个过程太快、太随意了。",
+          "我寻求科学诊断的严肃旅程，最终被一种类似消费主义潮流的荒诞现实所终结。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "比喻 (Metaphor)": 1,
+          "反讽性用词 (Ironic Diction)": 1,
+          "夸张/比喻 (Hyperbole/Metaphor)": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 1,
+          "expectation_violation": 1,
+          "deflation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "精神病院",
+          "punchline": "就像一家\n超市\n\n带走哪种病\n取决于我走近了\n哪个货架",
+          "source": "宛平南路600号一日游"
+        },
+        {
+          "setup": "于是在热聊半小时后",
+          "punchline": "确诊了我的\n双相情感障碍",
+          "source": "宛平南路600号一日游"
+        },
+        {
+          "setup": "好消息\n真的是ADHD",
+          "punchline": "坏消息\n药被上海人开光了\n已经断货",
+          "source": "宛平南路600号一日游"
+        }
+      ]
+    },
+    {
+      "scene": "写作",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "在现代高房价和消费主义背景下，女性对独立和创作空间的渴望被急剧放大了，从精神需求升级为具体的、量化的物质欲望。",
+          "感觉自己复杂、有攻击性、不讨人喜欢，与理想中安静、美好的事物格格不入。",
+          "最初的理想在现实（和金钱）面前妥协，并用一种自嘲的方式将其合理化。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 3
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "先自黑再输出观点": 1,
+          "自降身段": 1,
+          "伪客观 / 学术戏仿": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "现代社会对成功的定义越来越物质化，连曾经纯粹的精神追求（如写作）也被绑定了高昂的物质门槛。",
+          "作为内容创作者，用市场认可（商业成功）来弥补未能实现艺术追求（严肃创作）的失落感。",
+          "我欣赏和向往那些安静美好的事物，但这不代表我自己就是那样的人。我接纳我自己的复杂和不完美。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "概念偷换、自嘲式凡尔赛": 1,
+          "拟人/拟物、清单对比": 1,
+          "精确数字 / 引用和改编": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 2,
+          "self_deprecation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "没能 [ ] 完成万字短篇创作",
+          "punchline": "但是\n完成万字xhs废话输出\n\n共计骗到了100个品牌\n实现了年薪百万",
+          "source": "当你回顾2025的10个小目标"
+        },
+        {
+          "setup": "书作为一个人\n*沉默\n*故事很多\n*永远在一个地方等我",
+          "punchline": "我作为一本书\n悬疑*\n用词露骨*\n大概率被远洋捕捞*",
+          "source": "当文青梦照进现实"
+        },
+        {
+          "setup": "女人写作要有个房间\n是100年\n前的话了",
+          "punchline": "现代女人写作得有个房子。\n200平\n复式带阳台\n挑高7米以上",
+          "source": "躺着花钱才是正经事"
+        }
+      ]
+    },
+    {
+      "scene": "亚文化",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "试图通过外在标签定义自我，却发现内心充满矛盾的挣扎。",
+          "在现实中被禁锢，渴望通过某种方式（无论是精神还是药物）获得自由和超脱的体验。",
+          "“有心栽花花不开，无心插柳柳成荫”的讽刺：当你极力想变得“酷”和“与众不同”时，真正的酷却属于那些毫不在意这一切的人。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 2,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2,
+          "留白让读者悟": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "真正的“亚”（alternative）不是一种可以消费和表演的风格，而是一种不自觉的、与环境疏离的天然状态。",
+          "所谓的“亚文化”身份，本质上是一种充满矛盾和不确定性的自我探索。",
+          "真正的“躺平”不仅是身体上的，更是精神上的“出走”。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "委婉语，夸张": 1,
+          "并列矛盾选项 (A or not-A)": 1,
+          "反转列举": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 3
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "因为吸食过多草本植物\n只是躺在家中",
+          "punchline": "也像畅游了\n宇宙",
+          "source": "推荐六个地方适合躺着等死"
+        },
+        {
+          "setup": "亚比的特点",
+          "punchline": "穿搭追求all black / 或穷尽世上所有的色彩\n拥有至少一处纹身 / 或一处穿刺\n认为自己特别地痛苦 / 或痛苦得特别",
+          "source": "没有亚比会觉得自己是亚比"
+        },
+        {
+          "setup": "置身亚比星球\n全场最亚的反而是",
+          "punchline": "1 误入的 阿那亚业主 以及 一个小孩\n2 夜半三点 舞池边荡秋千的 安保\n3 开了一晚上 摆渡车的司机 (及其评价)",
+          "source": "没有亚比会觉得自己是亚比"
+        }
+      ]
+    },
+    {
+      "scene": "恢复期",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "医美恢复期的尴尬、丑陋和自我嫌弃。",
+          "在投入巨大成本后，情况反而变得更糟的绝望感（植发后脱落期）。",
+          "事物并不像社交媒体上看起来那样完美，光鲜背后总有难言之隐。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 1,
+          "情绪共鸣": 1,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 2,
+          "伪客观": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "你们在网上看到的美照，背后是我顶着一头“尸体”拍出来的。",
+          "我即将变成一个武侠小说里最丑的女魔头，怕了吗？",
+          "我坦然接受自己恢复期最丑的样子，并能从中找到乐子。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "精准比喻": 1,
+          "拟人化 / 转折": 1,
+          "文化符号引用": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "precise_absurdity": 1,
+          "understated_irony": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "植发后1天\n肿成了",
+          "punchline": "40w人看过的\n托马斯小火车",
+          "source": "有钱了就要按照P图把自己整一遍"
+        },
+        {
+          "setup": "植发后7天\n恢复成正常人\n并跑去泉州拍了簪花娘子",
+          "punchline": "只是新搬来的头发像尸体一样没有生机\n会自顾自地变油",
+          "source": "有钱了就要按照P图把自己整一遍"
+        },
+        {
+          "setup": "植发后1个月\n搬来的头发\n开始脱落",
+          "punchline": "会脱成一位裘千尺",
+          "source": "有钱了就要按照P图把自己整一遍"
+        }
+      ]
+    },
+    {
+      "scene": "红毯",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "为了维持光鲜的外表，需要付出反人性的代价（节食）。",
+          "利用工作之便，为自己谋取私利或满足虚荣心。",
+          "工作中，形式主义和表面功夫比实际贡献更重要。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 1,
+          "身份共鸣": 1,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 1,
+          "洞察人心": 1,
+          "一本正经的荒诞": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "这个行业极度看重排场和虚荣，很多工作本质上是“给人看的”。",
+          "在名利场里，每个人都渴望被看见，哪怕只是蹭一个镜头。",
+          "在这个名利场里，无论是人是马，都被物化成了需要精心管理的、不能出错的道具。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "陈述事实式反讽": 1,
+          "夸张化描述": 1,
+          "拟人化 + 荒诞类比": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 2,
+          "escalation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "艺人团队\n需要腿脚很快\n第一时间拥簇\n在艺人的左右",
+          "punchline": "人数的多少可以\n彰显艺人的咖位",
+          "source": "测测你在内娱的站位"
+        },
+        {
+          "setup": "造型师\nor妆发老师\n需要眼明手快侍奉左右",
+          "punchline": "好处是鬼神不觉地混入红毯\n为自己赢得一个出镜机会",
+          "source": "测测你在内娱的站位"
+        },
+        {
+          "setup": "艺人的坐骑\n需要提前一天不吃饭\n避免随地拉屎的可能",
+          "punchline": "不要不平衡\n因为艺人也不吃饭",
+          "source": "测测你在内娱的站位"
+        }
+      ]
+    },
+    {
+      "scene": "家务",
+      "frequency": 3,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "年迈父母在子女家中那种小心翼翼、害怕添麻烦的局促感。",
+          "长辈出于好心帮忙，却因为代沟或常识差异，把事情搞得一团糟，让人哭笑不得。",
+          "为一项服务付费后，却发现不仅没得到服务，反而要自己加倍付出。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "把苦说甜": 2,
+          "冷静叙事 / 留白": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我不可能对外婆发火，她那么开心。这份损失我只能自己吞下，并把它记在这本荒谬的亲情账本上。",
+          "我看到这一幕时内心的震惊、自责和心疼。我的一句无心之言，给她带来了这么大的困扰和负担。",
+          "凭什么？"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "语义重构": 1,
+          "精确数字/品牌名词": 1,
+          "精确动词": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "understated_irony": 1,
+          "precise_absurdity": 1,
+          "escalation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "清洁费的意思是\n交钱享受",
+          "punchline": "自己清洁的\n乐趣",
+          "source": "爱彼迎花费0秒赶来公关"
+        },
+        {
+          "setup": "外婆兴致勃勃地用\n...把我衣服全洗一遍",
+          "punchline": "洗碗凝珠\n\n-¥10000\n/洗坏两件巴宝莉",
+          "source": "福建家庭相爱模式一览"
+        },
+        {
+          "setup": "因为我说了一句\n家里的东西不要乱动",
+          "punchline": "到家发现她正在\n逐件手洗\n我的衣服",
+          "source": "长大就是把妈妈再养一遍"
+        }
+      ]
+    },
+    {
+      "scene": "生日",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "30岁左右感觉自己一事无成，与同辈人的成就差距越来越大。",
+          "在人生重要节点（如生日）遭遇倒霉事，美好的仪式感被现实无情破坏。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 1,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 1,
+          "把苦说甜": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "虽然生日这天很倒霉，但我还是能从中找到一点幽默感来解构它。",
+          "我对自己的现状感到失望和焦虑，只能用幽默来化解。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "细节描写": 1,
+          "嫁接行话": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "我妈的32岁 独自拉扯大一个7岁的孩子\n我朋友的32岁 title是总监 出书一本 移民加拿大",
+          "punchline": "我的32岁 开车肇事 站在马路边 上网搜索撞到的士一般要赔偿多少误工费?",
+          "source": "32岁当天坐上法庭"
+        },
+        {
+          "setup": "事故认定流程之一 肇事双方合影留念",
+          "punchline": "32岁第一张合照\nfeat.被肇事司机",
+          "source": "32岁当天坐上法庭"
+        }
+      ]
+    },
+    {
+      "scene": "年龄焦虑",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "30岁左右感觉自己一事无成，与同辈人的成就差距越来越大。",
+          "对年龄增长的焦虑，以及对'颜值即正义'这一社会潜规则的无奈又暗爽的复杂情绪。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 1,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 2
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我对自己的现状感到失望和焦虑，只能用幽默来化解。",
+          "社会对女性年龄和外貌的苛刻标准，以及在这种标准下寻求自我肯定的挣扎。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "细节描写": 1,
+          "逻辑飞跃": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 1,
+          "expectation_violation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "我妈的32岁 独自拉扯大一个7岁的孩子\n我朋友的32岁 title是总监 出书一本 移民加拿大",
+          "punchline": "我的32岁 开车肇事 站在马路边 上网搜索撞到的士一般要赔偿多少误工费?",
+          "source": "32岁当天坐上法庭"
+        },
+        {
+          "setup": "30岁适合去首尔。\n适合去弘大的夜店\n如果安保看过护照上的年龄还是放行",
+          "punchline": "那就证明\n你是真的\n漂亮",
+          "source": "人不该在太年轻的时候去首尔"
+        }
+      ]
+    },
+    {
+      "scene": "睡眠",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "老房子隔音差，被邻居噪音（尤其是清晨）打扰的痛苦经历。",
+          "理想化的期待与现实体验之间的巨大落差，一种“我被骗了”的感觉。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "苦中作乐": 1,
+          "伪客观": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "这房子的隔音约等于没有，我每天都被迫早起。",
+          "我千辛万苦逃离了城市的喧嚣，结果换来了另一种喧嚣，真是白折腾了。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "平行结构": 1,
+          "反转": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 1,
+          "expectation_violation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "也不需要看时钟",
+          "punchline": "当你听见邻居们的闲话家常\n就说明是早上5点钟了",
+          "source": "业主直租的含金量还在上升"
+        },
+        {
+          "setup": "以为远离了人类社会\n就会获得宁静",
+          "punchline": "事实是大自然\n也可以\n很吵",
+          "source": "在法国租了一棵树，睡了几天"
+        }
+      ]
+    },
+    {
+      "scene": "独旅",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "在为“两个人”设计的世界里，一个人的落寞与倔强。",
+          "独自一人时，渴望与外界产生一点点特别的连结，却发现只是自己的一厢情愿。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 1,
+          "经验共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段 / 自嘲": 1,
+          "自嘲 / 戏剧化": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "一个人旅行时，会不自觉地放大任何来自外界的微小善意，并因此更容易感到失望。",
+          "我没有等到那个可以一起去蜜月的人，所以我自己去了。我很好，我还能拿这事开玩笑。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "轻描淡写（Understatement）": 1,
+          "夸张、古语化": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "expectation_violation": 1,
+          "deflation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "以上本该两个人去的地方",
+          "punchline": "不小心一个人全去完了",
+          "source": "为了去欧洲决定结个婚"
+        },
+        {
+          "setup": "一个人食大餐\n收获服务员珍藏的软糖\n说是只给我一个",
+          "punchline": "转头又给了隔壁桌\n*就这样被\n侍女骗",
+          "source": "为了去欧洲决定结个婚"
+        }
+      ]
+    },
+    {
+      "scene": "追星",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "人们在社交媒体上发布伤感内容时，背后真实的原因往往非常渺小和具体，与宏大的情感抒发形成反差。",
+          "年轻时对偶像的狂热崇拜，最终发现他们也是普通人甚至有缺点，从而感到幻灭。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 1,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 1,
+          "先自黑再输出": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "即使是过着如此“高段位”生活的人，其喜怒哀乐的根源也和普通人一样，是一些非常具体的小事。",
+          "追星是青春必经的徒劳，但这份徒劳本身就是青春的一部分。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "因果关系重构": 1,
+          "自我否定": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 2
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "18岁适合去首尔。\n适合去蚕室追一次星",
+          "punchline": "早点追星\n也就早点对明星死心",
+          "source": "人不该在太年轻的时候去首尔"
+        },
+        {
+          "setup": "来看演唱会啦\n哭得好伤心\n用的CPB光缎粉霜\n底妆没花\n不是因为青春",
+          "punchline": "是因为坐第一排都没点到歌",
+          "source": "你最讨厌的朋友圈TOP3"
+        }
+      ]
+    },
+    {
+      "scene": "青春",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "面对青春逝去，需要一个仪式感的场合来确认自己的成长和变化，并与过去和解。",
+          "年轻时对偶像的狂热崇拜，最终发现他们也是普通人甚至有缺点，从而感到幻灭。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 1,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 1,
+          "先自黑再输出观点": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "青春回不去了，但能花钱买一张门票，来和青春的自己见一面，也算是一种慰藉。",
+          "追星是青春必经的徒劳，但这份徒劳本身就是青春的一部分。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "因果关系重构": 1,
+          "格言化/金句": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "18岁适合去首尔。\n适合去蚕室追一次星",
+          "punchline": "早点追星\n也就早点对明星死心",
+          "source": "人不该在太年轻的时候去首尔"
+        },
+        {
+          "setup": "（默认）演唱会是来听歌的",
+          "punchline": "那就是没有谁是\n真的来\n听歌的\n\n主要来看看自己\n走出青春\n已经多远了",
+          "source": "预算1w见得到周杰伦吗"
+        }
+      ]
+    },
+    {
+      "scene": "时尚",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "对'人靠衣装'的认同，以及对男性外貌和穿搭关系的普遍观察或刻板印象。",
+          "表面光鲜亮丽，背后却有经济压力或不为人知的窘迫。"
+        ],
+        "resonance_types": {
+          "泛化共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "背后是对整个东亚社会外貌焦虑和审美趋同的一种吐槽。",
+          "我并没有看起来那么有钱和成功，这一切都是表演的一部分。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "先抑后扬": 1,
+          "口语化": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "understated_irony": 1,
+          "deflation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "女孩子适合去首尔\n男孩也适合去首尔\n\n看看韩男",
+          "punchline": "貌丑\n也能通过\n会穿\n来力挽狂澜",
+          "source": "人不该在太年轻的时候去首尔"
+        },
+        {
+          "setup": "穿上华服",
+          "punchline": "因为明天要还",
+          "source": "假装女明星直到成为女明星"
+        }
+      ]
+    },
+    {
+      "scene": "动物",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "对逝去宠物的思念无法释怀，会在不经意的瞬间被触发。",
+          "我们习惯用人类的情感和道德标准去套用在动物身上，结果常常是自作多情。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 1,
+          "经验共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "把苦说甜": 1,
+          "伪客观": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "人类社会所谓的“天伦之乐”和“家庭责任”，在大自然里可能毫无意义。这是一种对人类中心主义的温和嘲讽。",
+          "表面在说小羊，其实在表达对逝去宠物的深切怀念和无法言说的孤独。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "比喻": 1,
+          "拟人化再解构": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "understated_irony": 1,
+          "dual_frame": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "抱了抱这一只\n手感像我",
+          "punchline": "逝去的德文",
+          "source": "人在法国，想要养猪"
+        },
+        {
+          "setup": "我问孩子的父亲呢\n怎么不来\n陪床",
+          "punchline": "父亲在忙着吃草。\n并不知自己有了两个孩子",
+          "source": "人在法国，想要养猪"
+        }
+      ]
+    },
+    {
+      "scene": "宠物互动",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "即使是爱的人，有时也会因过度亲密而感到个人空间被侵犯。",
+          "在与宠物的互动中，自以为是掌控者，但实际上可能只是满足了对方的需求，陷入一种“谁服务谁”的哲学困惑。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 1,
+          "伪客观": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我虽然“不适”，但还是让她埋了，这是一种默许和接受，是傲娇的爱。",
+          "人与动物之间，主宰与被主宰的关系并非绝对，有时看似简单的快乐背后是复杂的权力关系。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "反思性提问": 1,
+          "克制": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "和狗玩有一个问题",
+          "punchline": "玩到最后总是分不清\n是我玩了狗\n还是\n被狗玩了",
+          "source": "人在法国，想要养猪"
+        },
+        {
+          "setup": "每天她都会出门狩猎\n回来时把脸埋在我的身体里\n说我闻起来像爆米花 燕麦\n和晒过的被子",
+          "punchline": "我感到不适\n但我忍住了",
+          "source": "沪上豪宅老人留守日记"
+        }
+      ]
+    },
+    {
+      "scene": "误解",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "因不被理解而做出的“傻事”；爱与恨的表达方式有时只在一线之间。",
+          "自己的一个无心之举，在别人眼里可能被解读成一出大戏，引发哭笑不得的误会。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自嘲": 1,
+          "伪客观": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我这么做，只是因为我太害怕你离开，想用我的气味留住你。",
+          "法国乡下人也太热心（和爱八卦）了。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "情景再现": 1,
+          "反讽": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "expectation_violation": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "教训是\n不要穿着浴袍在路边上走来走去",
+          "punchline": "否则过往的车辆\n会不断停下\n问需不需要帮忙\n是不是被丈夫赶出家门了",
+          "source": "人在法国，想要养猪"
+        },
+        {
+          "setup": "每当她收拾出一个大箱子\n就意味着她要离开很久",
+          "punchline": "我会在她的\n大箱子里\n拉屎\n她这么喜欢我的气味\n一定会很感动吧",
+          "source": "沪上豪宅老人留守日记"
+        }
+      ]
+    },
+    {
+      "scene": "尴尬",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "旅行中长时间等待的无聊，以及欧洲高昂的基础服务消费（如付费厕所）带来的憋屈感。",
+          "出于好心想给别人建议，却因为不了解对方的处境而显得何不食肉糜，事后感到尴尬和自责。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 2
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "旅行的真相，就是由这些一点也不酷的、狼狈琐碎的瞬间组成的。",
+          "我们这些都市人，对真正的劳动生活常常抱有不切实际的浪漫幻想，并且缺乏真正的共情能力。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "比喻": 1,
+          "夸张化用词、领域错配": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "self_deprecation": 1,
+          "deflation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "我推荐她看克拉克森的农场...她说她已经很久没时间看电视了",
+          "punchline": "我有点难为情\n感觉向失眠的人\n推荐了梦的解析",
+          "source": "人在法国，想要养猪"
+        },
+        {
+          "setup": "坐在车站\n痴等一班\n5小时后的火车",
+          "punchline": "拉个巨额的屎",
+          "source": "在欧洲不会开车的下场"
+        }
+      ]
+    },
+    {
+      "scene": "理论与实践",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "出于好心想给别人建议，却因为不了解对方的处境而显得何不食肉糜，事后感到尴尬和自责。",
+          "把自己从二手信息渠道（电视、网络）得来的知识奉为圭臬，却被现实无情打脸。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 1,
+          "自黑": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "不要轻易相信媒体上看到的一切，哪怕它看起来再有趣再真实。",
+          "我们这些都市人，对真正的劳动生活常常抱有不切实际的浪漫幻想，并且缺乏真正的共情能力。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "比喻": 1,
+          "引用与反驳": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "self_deprecation": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "我推荐她看克拉克森的农场...她说她已经很久没时间看电视了",
+          "punchline": "我有点难为情\n感觉向失眠的人\n推荐了梦的解析",
+          "source": "人在法国，想要养猪"
+        },
+        {
+          "setup": "但我我是个都市来的白痴\n所有农业知识\n都是克拉克森给的\n比如羊出生最大的目的\n就是千方百计地\n寻死",
+          "punchline": "*\n被农场主澄清并不是真的",
+          "source": "人在法国，想要养猪"
+        }
+      ]
+    },
+    {
+      "scene": "反差",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "对国内旅游目的地的刻板印象（认为好服务只存在于一线大城市）。",
+          "把自己从二手信息渠道（电视、网络）得来的知识奉为圭臬，却被现实无情打脸。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自黑": 1,
+          "伪客观": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "中国的消费升级已经渗透到了你意想不到的角落。",
+          "不要轻易相信媒体上看到的一切，哪怕它看起来再有趣再真实。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "引用与反驳": 1,
+          "限定范围的精确化": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "understated_irony": 1,
+          "expectation_violation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "但我我是个都市来的白痴\n所有农业知识\n都是克拉克森给的\n比如羊出生最大的目的\n就是千方百计地\n寻死",
+          "punchline": "*\n被农场主澄清并不是真的",
+          "source": "人在法国，想要养猪"
+        },
+        {
+          "setup": "在云南住了个酒店\n被中国的服务业震撼",
+          "punchline": "这里的云南指的是\n云南大理市\n里的一个村子",
+          "source": "公主病是一种福报"
+        }
+      ]
+    },
+    {
+      "scene": "人际关系",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "在人宠关系中，到底谁才是真正的主导者？",
+          "人际关系的复杂和伤害，远比自然界的困难更令人疲惫和心痛。"
+        ],
+        "resonance_types": {
+          "泛化共鸣": 1,
+          "经验共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "先抑后扬（对动物），再转折（对人）": 1,
+          "自降身段 (作为猫) 来输出观点": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "虽然我称她为玩具，但她是“最喜欢的”，这是一种别扭的爱意表达。",
+          "我来到这个农场，是为了治愈在人类社会里受到的创伤。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "对比与升华": 1,
+          "权力反转": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "比如你总是会在动物那\n吃点苦头",
+          "punchline": "但那不会比\n在人身上吃到的苦头\n更痛。",
+          "source": "人在法国，想要养猪"
+        },
+        {
+          "setup": "我有了一个室友",
+          "punchline": "她是我最喜欢的猫玩具",
+          "source": "沪上豪宅老人留守日记"
+        }
+      ]
+    },
+    {
+      "scene": "黑色幽默",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "对现实生活感到极度疲惫，渴望一种戏剧性的、一了百了的终结。",
+          "对历史的无知被打破时的震惊感，以及对殖民时期欧洲人一些匪夷所思行为的黑色幽默式理解。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 1,
+          "泛化共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段 (以一种夸张的、非正常的方式)": 1,
+          "伪客观": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "历史充满了我们无法想象的荒诞和残酷，而人类可以对这些事表现得习以为常。",
+          "我对现实世界已经不抱任何希望了。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "陈述式结尾": 1,
+          "deflation": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "expectation_violation": 1,
+          "precise_absurdity": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "实不相瞒\n我有个泰坦尼克梦\n过一种远离尘世的\n纸醉金迷\n的生活",
+          "punchline": "然后整艘船沉没",
+          "source": "但是被邮轮劝退"
+        },
+        {
+          "setup": "比如最爱买木乃伊的是欧洲人\n欧洲人: 又有我事?",
+          "punchline": "买来做成咖啡色的\n颜料\n成色特别好",
+          "source": "嘴都没亲到一个，夏天就要过去了"
+        }
+      ]
+    },
+    {
+      "scene": "亲密关系",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "成为宠物全部世界的甜蜜与沉重——这既是巨大的责任，也是无上的慰藉。",
+          "即使是爱的人，有时也会因过度亲密而感到个人空间被侵犯。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 1,
+          "经验共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 1,
+          "伪客观": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我的生活与这个小生命紧密相连。它对我的全然依赖和爱，既美好，也沉重。",
+          "我虽然“不适”，但还是让她埋了，这是一种默许和接受，是傲娇的爱。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "反转": 1,
+          "克制": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "expectation_violation": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "见面第一天,\n我就怀疑你有问题",
+          "punchline": "原来你最大的问题\n就是\n爱我",
+          "source": "假如给猫写一封情书"
+        },
+        {
+          "setup": "每天她都会出门狩猎\n回来时把脸埋在我的身体里\n说我闻起来像爆米花 燕麦\n和晒过的被子",
+          "punchline": "我感到不适\n但我忍住了",
+          "source": "沪上豪宅老人留守日记"
+        }
+      ]
+    },
+    {
+      "scene": "想象",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "对于抛弃宠物者的愤怒与不解，以及作为拯救者对宠物的强烈保护欲。",
+          "无处发泄的愤怒和最终被固化的无奈状态。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 1,
+          "一本正经地胡说八道": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "用树的故事来投射人的情绪困境——愤怒之后无法挽回的后果。",
+          "我无法理解怎么会有人放弃如此完美的你。他们的损失是我的幸运，但我依然为你感到愤怒。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "语气突变": 1,
+          "拟人化/故事化": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 1,
+          "precise_absurdity": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "我希望登门拜访你的双亲\n询问如何生出\n一只如此优秀的猫咪",
+          "punchline": "以及把你丢掉的原因",
+          "source": "假如给猫写一封情书"
+        },
+        {
+          "setup": "这一棵比较暴躁\n有一次太过生气",
+          "punchline": "一巴掌呼在墙上\n没能再下来过",
+          "source": "过一种蓬松的生活"
+        }
+      ]
+    },
+    {
+      "scene": "爱",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "对心爱宠物和自己生命终结的深层恐惧。",
+          "宠物在一个人的生活中扮演的多面、甚至矛盾的角色：它们既是依赖者也是稳定剂，既是快乐源泉也是甜蜜负担。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 1,
+          "经验共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "把苦说甜": 1,
+          "留白让读者悟": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我太害怕你比我先走。我处理这种恐惧的唯一方式，就是拿另一种不可能的选项开个玩笑。",
+          "我的身份认同，有一部分是由我与这只猫的关系所定义的。他不是我生活的附属品，而是我生活结构与意义的基石。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "夸张": 1,
+          "矛盾修辞": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "precise_absurdity": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "我希望你吃得比我多\n走得比我晚",
+          "punchline": "我的葬礼\n由你操办\n而不是反过来",
+          "source": "假如给猫写一封情书"
+        },
+        {
+          "setup": "他们说你是猫咪\n但你不是的",
+          "punchline": "你是我的好孩子\n我的老父亲\n我无法被托运的行李\n我必须回到的家庭\n我的消遣\n我的意义",
+          "source": "假如给猫写一封情书"
+        }
+      ]
+    },
+    {
+      "scene": "酒店",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "独自旅行时，在看似热闹或适合社交的场合里，实际却无人陪伴的孤独感。",
+          "酒店设施描述通常很无聊（如“超大浴缸”），缺乏记忆点。"
+        ],
+        "resonance_types": {
+          "泛化共鸣": 1,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 1,
+          "把苦说甜": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "酒店的设计有些过度，甚至到了滑稽的地步。",
+          "表面上是富贵闲人的尊贵生活，实际上连个能一起喝酒的人都没有。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "荒诞比喻 / 精确数字": 1,
+          "拟人化": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "precise_absurdity": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "大到可以居住一名",
+          "punchline": "185男大\n的浴缸",
+          "source": "公主病是一种福报"
+        },
+        {
+          "setup": "傍晚开始饮酒\n饮到日落\n在酒店的lounge",
+          "punchline": "酒搭子又是一尊佛",
+          "source": "有点小钱且有点品味的挨宰生活"
+        }
+      ]
+    },
+    {
+      "scene": "网络文化",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "信息过载时代，我们对事物的认知常常来自于网络meme而非现实。",
+          "酒店设施描述通常很无聊（如“超大浴缸”），缺乏记忆点。"
+        ],
+        "resonance_types": {
+          "泛化共鸣": 1,
+          "经验共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "酒店的设计有些过度，甚至到了滑稽的地步。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "荒诞比喻 / 精确数字": 1,
+          "并列": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "precise_absurdity": 2
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "大到可以居住一名",
+          "punchline": "185男大\n的浴缸",
+          "source": "公主病是一种福报"
+        },
+        {
+          "setup": "宠物好感度+\n喂食我的宠物\n\n卡皮巴拉>",
+          "punchline": "主要生活在南美洲和互联网",
+          "source": "动森照进现实"
+        }
+      ]
+    },
+    {
+      "scene": "行前准备",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "作为独居/独行女性对人身安全的深层焦虑。",
+          "投入大量精力学习新技能（尤其是语言），最终收效甚微的挫败感。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 1,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "self_deprecation": 1,
+          "伪客观": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "在异国他乡，最先学会的不是如何沟通，而是如何为自己的不擅长而道歉。这是一种深刻的局外人心态。",
+          "为了在不安全的环境中生存下去，人需要构建一种强大的心理铠甲，哪怕这种铠甲已经强大到了扭曲的程度。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "反差对比 (Juxtaposition)": 1,
+          "夸张 (Hyperbole)": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 1,
+          "escalation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "回欧前三个月\n开始正式学意大利语\n\n¥10000\n/50节1v1\n...意大利人这么简单的头脑\n为什么会发明出\n这么复杂的语法",
+          "punchline": "刻苦三个月\n已经可以流利地说出\nMI\nDISPIACE\nPARLO SOLO UN PO' DI\nITALIANO\n(对不起,\n我只会说一滴滴的意大利语)",
+          "source": "再一次回到意大利"
+        },
+        {
+          "setup": "以及最重要的防身本领",
+          "punchline": "学到一个\n期待夜路上有人蹿出\n这样我就能将之痛揍一顿\n\n的程度即可。",
+          "source": "再一次回到意大利"
+        }
+      ]
+    },
+    {
+      "scene": "自我提升",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "尝试通过学习和了解来解决焦虑，结果却了解了更多引发焦虑的信息，陷入“越学越焦虑”的怪圈。",
+          "投入大量精力学习新技能（尤其是语言），最终收效甚微的挫败感。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 1,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "self_deprecation": 1,
+          "先自黑再输出观点": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "在异国他乡，最先学会的不是如何沟通，而是如何为自己的不擅长而道歉。这是一种深刻的局外人心态。",
+          "在信息爆炸的时代，知识不再是解药，有时反而成了病本身。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "反差对比 (Juxtaposition)": 1,
+          "矛盾修辞 (Oxymoron)": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "回欧前三个月\n开始正式学意大利语\n\n¥10000\n/50节1v1\n...意大利人这么简单的头脑\n为什么会发明出\n这么复杂的语法",
+          "punchline": "刻苦三个月\n已经可以流利地说出\nMI\nDISPIACE\nPARLO SOLO UN PO' DI\nITALIANO\n(对不起,\n我只会说一滴滴的意大利语)",
+          "source": "再一次回到意大利"
+        },
+        {
+          "setup": "看书\n\n就算没法让你平静",
+          "punchline": "至少会让你\n焦虑得很渊博。",
+          "source": "宛平南路600号一日游"
+        }
+      ]
+    },
+    {
+      "scene": "购物",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "在旅行或新爱好中，尽管技能不足（玩得不好），但仍然希望通过外表（装备、服装）获得满足感和仪式感。",
+          "以爱为名，将自己的意愿强加给家人，却不自知。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 1,
+          "经验共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 1,
+          "自降身段 / 自我剖析": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我其实知道这是一种自私的爱，但我还是这么做了，这种育儿的笨拙感，和当年我妈养我时可能一样。",
+          "旅行的意义不在于'玩得好'，而在于体验和自我满足。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "使用游戏术语": 1,
+          "角色错位对话": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "玩家上路第一件事\n购买\n新皮肤",
+          "punchline": "玩得很菜但是\n穿得很靓丽",
+          "source": "动森照进现实"
+        },
+        {
+          "setup": "我的母爱主要依靠心血来潮\n比如给她买一条\n她不想要的\n裙子",
+          "punchline": "妈妈都几岁了，还穿这个，太幼稚了。\n女孩子就是要穿得天真烂漫才好看",
+          "source": "长大就是把妈妈再养一遍"
+        }
+      ]
+    },
+    {
+      "scene": "景点",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "为了虚无缥缈的'好处'（打卡、祈福、仪式）而付出实实在在的体力代价，事后觉得有点不值。",
+          "旅行中对千篇一律的景点感到审美疲劳，开始用自己的方式解构和娱乐。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 1,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 1,
+          "一本正经地胡说八道": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "这些所谓的仪式，对一个现代人来说，象征意义大于实际，身体的感受才是最真实的。",
+          "历史的沉重，在现代吃货的眼里，不过是另一种形态的食物。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "对比": 1,
+          "比喻": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "相传走一圈就能\n延寿一年",
+          "punchline": "延了三年就累了",
+          "source": "动森照进现实"
+        },
+        {
+          "setup": "饭后散步主要景点\n帝王的坟",
+          "punchline": "每走两步便遇\n一座抹茶蛋糕",
+          "source": "如果有钱到哪里都可以去的地步"
+        }
+      ]
+    },
+    {
+      "scene": "暗恋",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "暗恋初期，想和对方有身体接触但羞于直接表达，需要一个完美的借口。",
+          "你以为和对方是双向奔赴的暧昧，结果发现对方只把你当朋友（甚至是同性恋专属的“男/女闺蜜”），并且人家有自己的异性恋感情线。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 1,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "把苦说甜": 1,
+          "伪客观": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "听到这个消息时的震惊、心碎和强颜欢笑。",
+          "我非常渴望和crush有进展，但又胆小，只能靠这些精心设计的“意外”。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "口语化语气词": 1,
+          "对称结构": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "expectation_violation": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "铺垫了一个漫长、有文化追求的约会计划，并指出博物馆即便凌晨也人满为患。",
+          "punchline": "这样就可以和crush\n紧紧贴在一起啦",
+          "source": "嘴都没亲到一个，夏天就要过去了"
+        },
+        {
+          "setup": "与此同时\n你的CRUSH和你分享\n最近在约会的\n男生",
+          "punchline": "原来\n你把她当\n情人\n她把你当\n闺蜜",
+          "source": "沪上啦啦约会图鉴"
+        }
+      ]
+    },
+    {
+      "scene": "殖民主义",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "作为拥有悠久历史国家的公民，对于国宝流失海外的共同历史记忆和民族情感。",
+          "对历史的无知被打破时的震惊感，以及对殖民时期欧洲人一些匪夷所思行为的黑色幽默式理解。"
+        ],
+        "resonance_types": {
+          "泛化共鸣": 1,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我们都知道这是一段不光彩的历史，无需多言，这个事实本身就是一种控诉。",
+          "历史充满了我们无法想象的荒诞和残酷，而人类可以对这些事表现得习以为常。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "deflation": 1,
+          "省略和视觉排版": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "precise_absurdity": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "比如最爱买木乃伊的是欧洲人\n欧洲人: 又有我事?",
+          "punchline": "买来做成咖啡色的\n颜料\n成色特别好",
+          "source": "嘴都没亲到一个，夏天就要过去了"
+        },
+        {
+          "setup": "比如中国文物和埃及文物的一个共同点",
+          "punchline": ":最好的都在\n大英\n博物馆",
+          "source": "嘴都没亲到一个，夏天就要过去了"
+        }
+      ]
+    },
+    {
+      "scene": "中餐",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "对名不副实的“招牌菜”的失望。",
+          "在旅游景点吃到价格离谱、味道诡异的饭菜。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 1,
+          "文化共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "把苦说甜": 1,
+          "伪客观 / 假装天真": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "这顿饭，我吃得很难受，但我的吐槽，会让你看得很开心。",
+          "连这么有来头的菜都能做得这么难吃，这家店真是烂到根了。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "通感 / 跨界比喻": 1,
+          "反问": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "dual_frame": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "—¥123\n/一道豆腐",
+          "punchline": "比古早港片还咸湿",
+          "source": "在南半球过圣诞的下场"
+        },
+        {
+          "setup": "—¥168\n/毛式红烧肉",
+          "punchline": "姓毛怎么会不好吃呢",
+          "source": "在南半球过圣诞的下场"
+        }
+      ]
+    },
+    {
+      "scene": "吐槽",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "对名不副实的“招牌菜”的失望。",
+          "在旅游景点吃到价格离谱、味道诡异的饭菜。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 1,
+          "文化共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "把苦说甜": 1,
+          "伪客观 / 假装天真": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "这顿饭，我吃得很难受，但我的吐槽，会让你看得很开心。",
+          "连这么有来头的菜都能做得这么难吃，这家店真是烂到根了。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "通感 / 跨界比喻": 1,
+          "反问": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "dual_frame": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "—¥123\n/一道豆腐",
+          "punchline": "比古早港片还咸湿",
+          "source": "在南半球过圣诞的下场"
+        },
+        {
+          "setup": "—¥168\n/毛式红烧肉",
+          "punchline": "姓毛怎么会不好吃呢",
+          "source": "在南半球过圣诞的下场"
+        }
+      ]
+    },
+    {
+      "scene": "等待",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "旅行中长时间等待的无聊，以及欧洲高昂的基础服务消费（如付费厕所）带来的憋屈感。",
+          "为昂贵服务付费后，却得到名不副实的体验，那种“花钱买罪受”的失望感。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 1,
+          "伪客观": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "旅行的真相，就是由这些一点也不酷的、狼狈琐碎的瞬间组成的。",
+          "对所谓“殖民地遗风”的虚伪性的揭露——它只剩下形式，没有服务的实质。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "夸张化用词、领域错配": 1,
+          "夸张 (hyperbole)": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "坐在车站\n痴等一班\n5小时后的火车",
+          "punchline": "拉个巨额的屎",
+          "source": "在欧洲不会开车的下场"
+        },
+        {
+          "setup": "服务上带点殖民地遗风\n\n“你只要摇响这个铃铛 我就会出现”",
+          "punchline": "*但后来摇烂了 也无人出现",
+          "source": "躺着花钱才是正经事"
+        }
+      ]
+    },
+    {
+      "scene": "反思",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "“有心栽花花不开，无心插柳柳成荫”的讽刺：当你极力想变得“酷”和“与众不同”时，真正的酷却属于那些毫不在意这一切的人。",
+          "自我认知失调，发现自己并非想象中那样的人，即“我是个冒牌货”的冒充者综合症。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 1,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自黑再输出观点": 1,
+          "留白让读者悟": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "这次旅行虽然不完美，但让我对自己有了更清醒的认识，这或许比享受宁静更有价值。",
+          "真正的“亚”（alternative）不是一种可以消费和表演的风格，而是一种不自觉的、与环境疏离的天然状态。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "标签化": 1,
+          "反转列举": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "self_deprecation": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "人在城里\n还能昧着灵魂生活\n\n人在大自然里\n却得看清\n自己是个\n什么货色",
+          "punchline": "一个会被羊吓醒\n的伪自然主义者",
+          "source": "在法国租了一棵树，睡了几天"
+        },
+        {
+          "setup": "置身亚比星球\n全场最亚的反而是",
+          "punchline": "1 误入的 阿那亚业主 以及 一个小孩\n2 夜半三点 舞池边荡秋千的 安保\n3 开了一晚上 摆渡车的司机 (及其评价)",
+          "source": "没有亚比会觉得自己是亚比"
+        }
+      ]
+    },
+    {
+      "scene": "预算",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "想'润'但预算有限，担心在国外因经济能力不足而感到自卑或被排挤。",
+          "理想中的奢华体验与现实的经济限制之间的差距。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 1,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 2
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "出国生活不一定是为了阶级跃升，也可以是寻找一个能心安理得“躺平”的地方。",
+          "我想体验最好的，但我的钱包只允许我体验一小部分。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "精确数字": 1,
+          "第二人称“你”，拟人化动词": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "住一个显赫了两百年的房子\n*200年前最富有者的宅邸",
+          "punchline": "*中的一个厢房\n1/33",
+          "source": "如果有钱到哪里都可以去的地步"
+        },
+        {
+          "setup": "虽然你很穷",
+          "punchline": "但匈牙利人也很穷\n谁也不会嫌弃谁",
+          "source": "推荐六个地方适合躺着等死"
+        }
+      ]
+    },
+    {
+      "scene": "存在主义",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "意识到安稳的生活可能是一座温柔的监狱，而让你感到痛苦的不是生活本身，而是你内心无法磨灭的渴望和梦想。",
+          "个体在宏大的历史和时空中寻找自身存在意义的渴望，以及对这种渴望的自嘲。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 1,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段 / 哲学升华": 1,
+          "自嘲独白": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我们总想在生命中留下浓墨重彩的一笔，但最终，我们留下的可能只是像拍死一只蟑螂一样微不足道却又无比真实的印记。",
+          "我之所以痛苦，不是因为生活不好，而是因为我还有梦想。我的梦想在这个环境里，成了一种病。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "夸张 / 升华": 1,
+          "反讽": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "self_deprecation / redefinition": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "一巴掌\n拍入\n房子的名录",
+          "punchline": "作为200年历史里\n属于我的那一页",
+          "source": "如果有钱到哪里都可以去的地步"
+        },
+        {
+          "setup": "假如你能活到100岁 那这样的 日子就还有 73年",
+          "punchline": "只要你没有那些恶心的梦想",
+          "source": "此GQ非彼GQ……"
+        }
+      ]
+    },
+    {
+      "scene": "生活方式",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "尝试通过学习和了解来解决焦虑，结果却了解了更多引发焦虑的信息，陷入“越学越焦虑”的怪圈。",
+          "中国社会普遍的职业焦虑和对“成功”的单一想象，以及对欧洲“慢生活”的浪漫化想象。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "先自黑再输出观点": 1,
+          "伪客观": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "在信息爆炸的时代，知识不再是解药，有时反而成了病本身。",
+          "不要再羡慕所谓的“慢生活”了，你所拥有的高强度工作，在某种程度上也是一种特权。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "矛盾修辞 (Oxymoron)": 1,
+          "平行句式": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 1,
+          "dual_frame": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "看书\n\n就算没法让你平静",
+          "punchline": "至少会让你\n焦虑得很渊博。",
+          "source": "宛平南路600号一日游"
+        },
+        {
+          "setup": "工作日闲逛的年轻人in上海\n可能是年入千万的网红",
+          "punchline": "工作日闲逛的年轻人in意大利\n大概真的没有工作",
+          "source": "欧洲其实很像GenZ"
+        }
+      ]
+    },
+    {
+      "scene": "躺平",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "年轻人用一套看似有理的哲学来包装自己的不靠谱行为，让长辈无法正面反驳。",
+          "梦想中的“开个小店”的慢生活，实际上可能意味着毫无商业效率。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 1,
+          "经验共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 1,
+          "自降身段": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "能这么开店，要么是真爱，要么是真的不在乎赚钱。",
+          "你这套听起来很美的说辞，根本经不起推敲。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "精确数字": 1,
+          "反问": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "precise_absurdity": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "每天睡到十二点半\n掌管卷帘门的开合\n用亚朵星球深睡枕PRO2\n就是好睡",
+          "punchline": "独立书店营业时间\n13:00-18:00",
+          "source": "当文青梦照进现实"
+        },
+        {
+          "setup": "她说人在夏天做什么 都可以 被原谅",
+          "punchline": "我不知道是可以 被谁原谅?",
+          "source": "这篇交给我妈来写"
+        }
+      ]
+    },
+    {
+      "scene": "比喻",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "在经历了长时间的失望后，终于找到真正美味的食物时的巨大幸福感。",
+          "感觉自己复杂、有攻击性、不讨人喜欢，与理想中安静、美好的事物格格不入。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 1,
+          "一本正经地使用惊人比喻": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "这种美味带来的惊喜和复杂感受，已经无法用常规的语言来形容了。",
+          "我欣赏和向往那些安静美好的事物，但这不代表我自己就是那样的人。我接纳我自己的复杂和不完美。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "拟人/拟物、清单对比": 1,
+          "通感比喻": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "self_deprecation": 1,
+          "dual_frame": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "书作为一个人\n*沉默\n*故事很多\n*永远在一个地方等我",
+          "punchline": "我作为一本书\n悬疑*\n用词露骨*\n大概率被远洋捕捞*",
+          "source": "当文青梦照进现实"
+        },
+        {
+          "setup": "原来印度馕这样好吃\n拉扯度远胜",
+          "punchline": "女同间的\n情愫",
+          "source": "英国美食图鉴"
+        }
+      ]
+    },
+    {
+      "scene": "对话",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "想进行一场深刻对话，却无法抑制内心最八卦、最功利的好奇心。",
+          "女性的自我打扮和外貌选择受到来自保守派（尤其是家中男性长辈）的评判和不解。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 1,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段 (把自己塑造成一个口无遮拦的俗人)": 1,
+          "伪客观": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "外婆这一生可能都在这种“保守男子”的审美评判下生活，这是她一次小小的、漂亮的为自己辩护的胜利。",
+          "折腾了这几天，我还是没能脱离我的俗人思维，我只想知道这到底是不是一门好生意。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "问题排比": 1,
+          "口语化/引用对话": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "dual_frame": 2
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "晚饭后和道长聊天",
+          "punchline": "你们道士不是可以吃肉吗?\n你修仙\n修到哪个阶段了?\n隔壁少林捞了很多,\n你们呢?",
+          "source": "我在茅山当道士的一周"
+        },
+        {
+          "setup": "50后保守男子\n感到不满\n化这么白\n像什么?",
+          "punchline": "像个人啊!\n外婆说",
+          "source": "福建家庭相爱模式一览"
+        }
+      ]
+    },
+    {
+      "scene": "哲学",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "人们习惯将复杂的人类情感和身份投射到宠物身上。",
+          "在复杂的规则和期望中，渴望一种“关你屁事”的终极自由。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 1,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "借他人之口输出观点": 1,
+          "伪客观": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我的所有行为和情绪，都应该用哲学家的标准来理解。",
+          "真正的修行不在于那些仪式、装备和话术，而在于内心是否真的能做到“逍遥”。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "双关语 (Pun)": 1,
+          "拟人化": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 2
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "(对道家修行理念的回答)",
+          "punchline": "老子爱干什么干什么别管\n(老子躺在老子座下)",
+          "source": "我在茅山当道士的一周"
+        },
+        {
+          "setup": "（一个住在豪宅感到悲哀的神秘旁白）",
+          "punchline": "我是叔本华",
+          "source": "沪上豪宅老人留守日记"
+        }
+      ]
+    },
+    {
+      "scene": "消费心理",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "在不合理的消费后，通过“比下有余”的方式来强行自我安慰的阿Q精神。",
+          "在寻求专业意见改善外貌时，内心深处渴望得到“你已经很完美”的 reassurance，但现实往往是自己的“不完美”被专业人士进一步确认和放大。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 1,
+          "经验共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "分享普遍人性": 1,
+          "自嘲": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "听到这句话时，心里咯噔一下，钱包一紧，以及对未来漫长且昂贵的治疗产生恐惧的复杂心情。",
+          "我们这些粉丝，真是被拿捏得死死的。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "直接引语/对话": 1,
+          "括号补充": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "expectation_violation": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "人走入矫正外科和整形外科的心情一样\n我们真正想听到的是\n你根本不用整啊!",
+          "punchline": "但实际听到的是\n你怎么现在才来?",
+          "source": "我的收入水平，牙医全知道"
+        },
+        {
+          "setup": "左边加了¥5000\n右边加了¥3500",
+          "punchline": "(感觉赚到)",
+          "source": "预算1w见得到周杰伦吗"
+        }
+      ]
+    },
+    {
+      "scene": "旅居",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "对理想化生活（如旅居、田园）的幻想被琐碎、肮脏的现实击碎。",
+          "想'润'但预算有限，担心在国外因经济能力不足而感到自卑或被排挤。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 1,
+          "经验共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 1,
+          "伪客观": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "出国生活不一定是为了阶级跃升，也可以是寻找一个能心安理得“躺平”的地方。",
+          "所谓的“松弛感”生活，底色往往是混乱和无序。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "第二人称“你”，拟人化动词": 1,
+          "并列，反差": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "understated_irony": 1,
+          "precise_absurdity": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "虽然你很穷",
+          "punchline": "但匈牙利人也很穷\n谁也不会嫌弃谁",
+          "source": "推荐六个地方适合躺着等死"
+        },
+        {
+          "setup": "看着不明生物的屎和仰泳中的白人",
+          "punchline": "一起从面前漂过",
+          "source": "推荐六个地方适合躺着等死"
+        }
+      ]
+    },
+    {
+      "scene": "幻灭",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "对理想化生活（如旅居、田园）的幻想被琐碎、肮脏的现实击碎。",
+          "对所谓高端、昂贵体验的盲目崇拜，最终发现其背后可能是骗局甚至是恶心真相时的幻灭感。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 1,
+          "泛化共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "你看，我花了这么多钱体验的所谓“品味”，其源头就是这么个玩意儿。消费主义就是个天大的笑话。",
+          "所谓的“松弛感”生活，底色往往是混乱和无序。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "并列，反差": 1,
+          "新闻体叙事 (News-style narration)": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "precise_absurdity": 1,
+          "escalation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "看着不明生物的屎和仰泳中的白人",
+          "punchline": "一起从面前漂过",
+          "source": "推荐六个地方适合躺着等死"
+        },
+        {
+          "setup": "早起吃一份店主的\nomakase早餐\n¥88\n听闻店主的餐厅\n日前在上海安缦开业\n且人均4k+\n顿觉这一餐\n非常实惠\n...",
+          "punchline": "最新消息\n店主在安缦的餐厅\n因使用云南大象屎作为食材\n被举报关停了。",
+          "source": "有点小钱且有点品味的挨宰生活"
+        }
+      ]
+    },
+    {
+      "scene": "城市景观",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "对理想化生活（如旅居、田园）的幻想被琐碎、肮脏的现实击碎。",
+          "对权威和宏大叙事的解构。人们厌倦了官方的、一本正经的解释，更喜欢“接地气”的、人性化的解读。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 1,
+          "泛化共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "所有你奉为圭臬的宏大概念，其背后可能都只是因为一些非常草率和偶然的原因。",
+          "所谓的“松弛感”生活，底色往往是混乱和无序。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "并列，反差": 1,
+          "拟人化": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "precise_absurdity": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "看着不明生物的屎和仰泳中的白人",
+          "punchline": "一起从面前漂过",
+          "source": "推荐六个地方适合躺着等死"
+        },
+        {
+          "setup": "百年的雕像们 懒得再建一个博物馆了\n就这么摆着吧",
+          "punchline": "就这么成为\n文艺复兴\n的象征",
+          "source": "欧洲其实很像GenZ"
+        }
+      ]
+    },
+    {
+      "scene": "高端餐饮",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "在任何行业，讲故事和包装的能力有时比核心技能本身更重要。",
+          "对所谓高端、昂贵体验的盲目崇拜，最终发现其背后可能是骗局甚至是恶心真相时的幻灭感。"
+        ],
+        "resonance_types": {
+          "泛化共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 1,
+          "有理有据的戏谑": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "消费主义和精英文化追求的不是食物本身，而是一套关于“意义”和“体验”的叙事。",
+          "你看，我花了这么多钱体验的所谓“品味”，其源头就是这么个玩意儿。消费主义就是个天大的笑话。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "新闻体叙事 (News-style narration)": 1,
+          "对比与递进": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "escalation": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "早起吃一份店主的\nomakase早餐\n¥88\n听闻店主的餐厅\n日前在上海安缦开业\n且人均4k+\n顿觉这一餐\n非常实惠\n...",
+          "punchline": "最新消息\n店主在安缦的餐厅\n因使用云南大象屎作为食材\n被举报关停了。",
+          "source": "有点小钱且有点品味的挨宰生活"
+        },
+        {
+          "setup": "明星主厨\n做菜不难",
+          "punchline": "难的是给每道菜起名且想出美好寓意",
+          "source": "测测你在内娱的站位"
+        }
+      ]
+    },
+    {
+      "scene": "内心独白",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "喜欢的明星太火，导致演唱会门票永远抢不到也买不起。",
+          "感觉生活无意义、充满疲惫，但又没有放弃一切的决心，卡在中间的无力感。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 1,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 2
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我真的很想去看他，但是现实（贫穷）不允许。",
+          "生活很累，但我还在坚持，这种坚持本身就有点黑色幽默。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "省略": 1,
+          "反语": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "understated_irony": 2
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "懒得活了",
+          "punchline": "但还\n不想死",
+          "source": "欧洲其实很像GenZ"
+        },
+        {
+          "setup": "周杰伦\n怎么还没有\n过气\n啊",
+          "punchline": "(潜台词：过气了我就买得起票了)",
+          "source": "预算1w见得到周杰伦吗"
+        }
+      ]
+    },
+    {
+      "scene": "佛罗伦萨",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "对欧洲的浪漫幻想被旅行中遇到的种种低效和不便所打破的失望感。",
+          "对权威和宏大叙事的解构。人们厌倦了官方的、一本正经的解释，更喜欢“接地气”的、人性化的解读。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 1,
+          "泛化共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 2
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "所有你奉为圭臬的宏大概念，其背后可能都只是因为一些非常草率和偶然的原因。",
+          "别再对欧洲有不切实际的幻想了，我来告诉你真相。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "断行": 1,
+          "拟人化": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 2
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "一个城市概括欧洲的\n精神纲要",
+          "punchline": "懒惰",
+          "source": "欧洲其实很像GenZ"
+        },
+        {
+          "setup": "百年的雕像们 懒得再建一个博物馆了\n就这么摆着吧",
+          "punchline": "就这么成为\n文艺复兴\n的象征",
+          "source": "欧洲其实很像GenZ"
+        }
+      ]
+    },
+    {
+      "scene": "形式主义",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "在任何行业，讲故事和包装的能力有时比核心技能本身更重要。",
+          "从事着一份看似重要、有意义，实则毫无影响力、无人关注的“空转”工作，产生的价值虚无感。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 1,
+          "泛化共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 1,
+          "有理有据的戏谑": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "消费主义和精英文化追求的不是食物本身，而是一套关于“意义”和“体验”的叙事。",
+          "这份工作不仅薪水低，还消耗着人的才华和热情，提供不了任何专业成就感。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "精确数字": 1,
+          "对比与递进": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "understated_irony": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "你的日常工作是 外宣 *撰写歌颂政府先进工作的英文稿件",
+          "punchline": "*点阅量偶尔 能上十位数的",
+          "source": "此GQ非彼GQ……"
+        },
+        {
+          "setup": "明星主厨\n做菜不难",
+          "punchline": "难的是给每道菜起名且想出美好寓意",
+          "source": "测测你在内娱的站位"
+        }
+      ]
+    },
+    {
+      "scene": "领导",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "被迫将自己的专业技能用于满足领导个人的、极其自私的虚荣心，感受到职业尊严被践踏。",
+          "自己的专业技能和创造力在官僚化的环境中被无视，最终被简化为一种政治正确的、讨好领导的琐碎要求。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自嘲独白": 1,
+          "伪客观": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "这种环境对人的异化，让“为领导服务”凌驾于一切工作原则之上。",
+          "在这个环境里，专业能力一文不值，只有对权力的领悟和服从才是生存之道。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "夸张": 1,
+          "反差": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 1,
+          "precise_absurdity": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "入职第三天 你野心勃勃制作长图海报",
+          "punchline": "很快你意识到 这也是该工作对你的唯一要求",
+          "source": "此GQ非彼GQ……"
+        },
+        {
+          "setup": "入职第三个月 你被委以重任",
+          "punchline": "哪怕是四十人合照 也要准确地找到她 并只修修她一个",
+          "source": "此GQ非彼GQ……"
+        }
+      ]
+    },
+    {
+      "scene": "派对",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "“朋克养生”：既想放纵自己获得瞬间的快乐，又对身体健康感到焦虑的现代年轻人困境。",
+          "在各种社交场合中，包装在复杂身份和行为之下的，往往是最朴素和直接的社交/情感/生理需求。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 1,
+          "泛化共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 1,
+          "伪客观（像在宣布一个科学真理）": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "当代年轻人的所谓“叛逆”和“亚文化”，其底色依然是这个时代的集体焦虑——对健康的焦虑。",
+          "别装了，无论你穿什么、听什么音乐，来这儿的目的都一样。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "具体意象的罗列": 1,
+          "断句、词语降格": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "expectation_violation": 1,
+          "deflation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "亚比关注自己的亚健康。在舞池边",
+          "punchline": "排队推拿 / 自备瑜伽垫的女子 / 迎着日出 / 练八段锦",
+          "source": "没有亚比会觉得自己是亚比"
+        },
+        {
+          "setup": "不论是否亚比\n人蹦迪时的目标只有:",
+          "punchline": "今晚至少\n亲到\n一个嘴",
+          "source": "没有亚比会觉得自己是亚比"
+        }
+      ]
+    },
+    {
+      "scene": "租房纠纷",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "普通人面对法律纠纷时的焦虑、无助和对繁琐程序的恐惧。",
+          "与不讲理、不专业的客服或中介沟通时，对方放弃逻辑直接进行人身攻击的无力感。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 1,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 1,
+          "自降身段": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "跟这种人已经没办法讲道理了，又气又想笑。",
+          "虽然我嘴上说得轻松，但打官司这件事真的很烦人。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "引用/展示原始材料": 1,
+          "重新定义": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "precise_absurdity": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "我: 你要和我吵架?",
+          "punchline": "对方: 对的,要和你吵架\n对方: 见面吵,",
+          "source": "沪上租房倒霉buff叠满是什么样"
+        },
+        {
+          "setup": "要求赔偿家具\n*修好了家具\n找事吵架要我道歉\n不道歉押金不退 (?)",
+          "punchline": "旅游博主要去法庭旅游了",
+          "source": "沪上租房倒霉buff叠满是什么样"
+        }
+      ]
+    },
+    {
+      "scene": "代际沟通",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "家人用给钱的方式表达爱，感觉自己的情感需求被误解或忽视。",
+          "年轻人用一套看似有理的哲学来包装自己的不靠谱行为，让长辈无法正面反驳。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 1,
+          "自降身段": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我理解他们爱我的方式，也感激这份物质支持，但内心深处依然有一丝失落和对情感连接的渴望。",
+          "你这套听起来很美的说辞，根本经不起推敲。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "省略/断句": 1,
+          "反问": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "expectation_violation": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "我要的是爱",
+          "punchline": "怎么来的是\n钱。",
+          "source": "福建家庭相爱模式一览"
+        },
+        {
+          "setup": "她说人在夏天做什么 都可以 被原谅",
+          "punchline": "我不知道是可以 被谁原谅?",
+          "source": "这篇交给我妈来写"
+        }
+      ]
+    },
+    {
+      "scene": "代际差异",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "传统家庭观念（尤其在体制内家庭）对私企工作稳定性的不信任和偏见。",
+          "长辈出于好心帮忙，却因为代沟或常识差异，把事情搞得一团糟，让人哭笑不得。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 1,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "把苦说甜": 1,
+          "自降身段": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我的选择不被理解，但我还是要走这条路，只好用幽默来化解这份压力。",
+          "我不可能对外婆发火，她那么开心。这份损失我只能自己吞下，并把它记在这本荒谬的亲情账本上。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "精确数字/品牌名词": 1,
+          "情景错配": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "precise_absurdity": 1,
+          "understated_irony": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "外婆兴致勃勃地用\n...把我衣服全洗一遍",
+          "punchline": "洗碗凝珠\n\n-¥10000\n/洗坏两件巴宝莉",
+          "source": "福建家庭相爱模式一览"
+        },
+        {
+          "setup": "妈妈对不起",
+          "punchline": "我进了\n私企",
+          "source": "老鼠人职场回忆录（私企篇）"
+        }
+      ]
+    },
+    {
+      "scene": "亲情",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "成年后希望回报父母，却发现无论如何也比不上父母当年付出的复杂情感，以及想要让父母为自己骄傲的深层愿望。",
+          "在家庭关系中，情感付出与金钱回报之间复杂的、有时甚至有点尴尬的动态。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 1,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 1,
+          "以孩子气的方式表达深情": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我们家就是用这种奇特的方式来表达爱和感激，虽然听起来很怪，但这背后是深厚的情感联系。",
+          "我们之间的关系，是一场爱的竞赛，而我永远不想让你输。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "反讽/并置": 1,
+          "反问 / 逻辑反转": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 1,
+          "expectation_violation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "我给他爱\n他给我钱\n\n+¥10000",
+          "punchline": "/孝子的劳务费",
+          "source": "福建家庭相爱模式一览"
+        },
+        {
+          "setup": "小时候我们炫耀\n谁的妈妈更漂亮\n\n长大了妈妈们炫耀\n谁的女儿对自己更好\n\n小时候你让我赢过",
+          "punchline": "现在我要怎么让你输啊",
+          "source": "长大就是把妈妈再养一遍"
+        }
+      ]
+    },
+    {
+      "scene": "代际冲突",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "成年人在社会规范下压抑自我，渴望偶尔能不顾他人眼光、释放内心“小恶魔”的冲动。",
+          "女性的自我打扮和外貌选择受到来自保守派（尤其是家中男性长辈）的评判和不解。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 1,
+          "情绪共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "伪客观": 1,
+          "自降身段": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "外婆这一生可能都在这种“保守男子”的审美评判下生活，这是她一次小小的、漂亮的为自己辩护的胜利。",
+          "“我花了17个小时”不仅指飞行时间，也暗指为了来到这里所付出的所有沉没成本。和孩子争夺的不是滑梯，而是一种“我已经付出了这么多，理应得到一点补偿”的任性权利。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "口语化/引用对话": 1,
+          "荒诞推理/细节列举": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "dual_frame": 1,
+          "precise_absurdity": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "50后保守男子\n感到不满\n化这么白\n像什么?",
+          "punchline": "像个人啊!\n外婆说",
+          "source": "福建家庭相爱模式一览"
+        },
+        {
+          "setup": "人在欧洲比较方便\n当个混蛋",
+          "punchline": "和小孩争夺滑梯使用权\n你从家到这花了多久\n十分钟?\n我花了17个小时\n所以你走开",
+          "source": "问世间谁与我同频"
+        }
+      ]
+    },
+    {
+      "scene": "流行文化",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "拥有内在智慧或才华，却被外在的不修边幅或生理问题（如油头）所困扰。",
+          "当代年轻人的财务焦虑，感觉钱总是不够花、工资刚到手就没了的'月光'状态。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "先自黑再输出观点": 1,
+          "先扬后抑": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "对权威的解构，再伟大的人物也有普通人的烦恼。",
+          "全文对'老钱'的细致观察，看似疏离，实则是为了最后一句'我是老没钱'的身份认同做铺垫。它暗示了我们之所以如此着迷于观察'老钱'，正是因为我们身处其对立面。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "结构模仿 & 谐音梗": 1,
+          "比喻/反差": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 1,
+          "dual_frame": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "金洙元说有钱人和普通人的差别是\n有钱人不知道自己账户上有多少钱\n因为每分每秒都在变多",
+          "punchline": "我也不知道自己账户上有多少钱\n因为每分每秒都在变少\n\n我是老钱的表亲\n老没钱",
+          "source": "老钱是个伤人的动词"
+        },
+        {
+          "setup": "这一棵满腹经纶\n给它取名叫\n邓布利多",
+          "punchline": "就是好像不爱洗头。\n头发已经油\n得梳不开了",
+          "source": "过一种蓬松的生活"
+        }
+      ]
+    },
+    {
+      "scene": "内卷",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "无休止的会议、为了微不足道细节的反复修改，以及将时间压榨到极限的“卷文化”。",
+          "东亚文化中对“吃苦”的过度推崇和内化，导致了普遍的集体焦虑和自我PUA。"
+        ],
+        "resonance_types": {
+          "经验共鸣": 1,
+          "身份共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "冷静陈述荒诞事实": 1,
+          "先自黑再输出观点": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我们这代人被这种价值观捆绑了一辈子，我既希望你别像我，又为你不上进着急，我内心也很矛盾。",
+          "如果一天有48小时，我们就会开48小时的会。我们的工作强度只受物理定律的限制，而不受人性的限制。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "同义反复 / 废话文学": 1,
+          "悖论": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "precise_absurdity": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "你会一天开24小时的会\n只为了改一句文案",
+          "punchline": "一天开24小时\n是因为一天\n只有24小时",
+          "source": "老鼠人职场回忆录（私企篇）"
+        },
+        {
+          "setup": "我们中国人的美德是 吃苦耐劳",
+          "punchline": "没苦吃都要为 吃不到苦 感到痛苦",
+          "source": "这篇交给我妈来写"
+        }
+      ]
+    },
+    {
+      "scene": "午餐",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "面对一碗油腻到无法下口的食物时的无奈和不知所措。",
+          "一道菜不仅难吃，还油腻到令人产生生理不适。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "一本正经地胡说八道": 1,
+          "把无奈戏剧化": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "这道菜的难吃程度，已经超出了“口味”的范畴，进入了“对人生理造成挑战”的层面。",
+          "这饭没法吃了，钱白花了。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "恶意揣测": 1,
+          "拟人化": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "redefinition": 1,
+          "precise_absurdity": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "盘中有一块贴心的空地",
+          "punchline": "可能是方便你吐在这",
+          "source": "英国美食图鉴"
+        },
+        {
+          "setup": "吃到这里时\n同碗底的\n一池油",
+          "punchline": "面面相觑",
+          "source": "英国美食图鉴"
+        }
+      ]
+    },
+    {
+      "scene": "奢侈",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "“享福享累了”的倦怠感，即便是最美好的事物，过度重复也会导致边际效应递减，甚至产生厌烦。",
+          "人们在社交媒体上对“凡尔赛”行为的普遍感知和嘲讽心态。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 1,
+          "泛化共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "自降身段": 1,
+          "自降身段 (以抱怨的形式)": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "财富并不能消除烦恼，只是将烦恼替换成另一种更奢侈、在外人看来更无病呻吟的形式。",
+          "再昂贵的“呵护”也只是一种购买来的服务，它无法填补精神上的空虚或解决真正的问题，甚至它本身会成为一种新的负担。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "口语化 / 反问": 1,
+          "轻描淡写 (understatement) / 移情建议": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "deflation": 1,
+          "escalation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "做SPA购买的是一种呵护\n从来没有人如此\n呵护\n过我的脸\n我的手\n我的脚\n好像我真的\n如此贵重。",
+          "punchline": "就是做到第四个小时有点烦了\n你还要怎么呵护我?",
+          "source": "躺着花钱才是正经事"
+        },
+        {
+          "setup": "4日间最大的烦恼",
+          "punchline": "每天爬上爬下蛮累的\n大家家里还是得装个电梯呀",
+          "source": "躺着花钱才是正经事"
+        }
+      ]
+    },
+    {
+      "scene": "成长",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "成年后希望回报父母，却发现无论如何也比不上父母当年付出的复杂情感，以及想要让父母为自己骄傲的深层愿望。",
+          "成年后虽然获得了经济独立，但却发现很多东西（比如青春、快乐）是用钱也买不回或买不值的。这是一种成就感与失落感并存的复杂情绪。"
+        ],
+        "resonance_types": {
+          "情绪共鸣": 2
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "以孩子气的方式表达深情": 1,
+          "留白让读者悟": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "我们终于用钱实现了青春时的梦想，但这真的是我们想要的吗？我们付出的代价又是什么？",
+          "我们之间的关系，是一场爱的竞赛，而我永远不想让你输。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "反问 / 逻辑反转": 1,
+          "断行/慢节奏": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "expectation_violation": 1,
+          "redefinition": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "小时候我们炫耀\n谁的妈妈更漂亮\n\n长大了妈妈们炫耀\n谁的女儿对自己更好\n\n小时候你让我赢过",
+          "punchline": "现在我要怎么让你输啊",
+          "source": "长大就是把妈妈再养一遍"
+        },
+        {
+          "setup": "（普遍认知）大人意味着成熟、责任、年龄。",
+          "punchline": "长成买得起\n周杰伦\n演唱会门票的\n大人了",
+          "source": "预算1w见得到周杰伦吗"
+        }
+      ]
+    },
+    {
+      "scene": "人生反思",
+      "frequency": 2,
+      "emotion_strategy": {
+        "typical_pain_points": [
+          "面对世俗标准的成功（伴侣、事业、房车），感到压力巨大，甚至产生逃避心理，质疑这些标准是否适合自己。",
+          "对于“人生的意义在于贡献”这一宏大叙事的反叛，渴望一种更关注个体感受和体验的、自洽的人生评价体系。"
+        ],
+        "resonance_types": {
+          "身份共鸣": 1,
+          "价值观共鸣": 1
+        }
+      },
+      "expression_strategy": {
+        "delivery_approaches": {
+          "坦诚自剖": 1,
+          "坦然的自我接纳": 1
+        },
+        "closeness": "平视",
+        "unsaid_patterns": [
+          "选择“独自生活”并非没有代价，它伴随着对传统生活路径的舍弃和对存在意义的持续追问。这种选择是一种主动的“减轻负重”。",
+          "快乐本身就是一种意义，无需用“贡献”来证明其价值。这是一种温柔的反抗。"
+        ]
+      },
+      "language_strategy": {
+        "preferred_techniques": {
+          "类比/排比/反问": 1,
+          "口语化/反高潮": 1
+        }
+      },
+      "structure_strategy": {
+        "preferred_mechanisms": {
+          "self_deprecation": 1,
+          "deflation": 1
+        }
+      },
+      "best_examples": [
+        {
+          "setup": "独自生活的第三十年\n还是不知道我的人生该装点什么呢",
+          "punchline": "一个伴侣?\n一份事业?\n一个房子?\n一辆车?\n好像都太重了。",
+          "source": "问世间谁与我同频"
+        },
+        {
+          "setup": "希望我的墓志铭上写的是",
+          "punchline": "此人对世界没有贡献\n但她玩得\n蛮开心的\n\n让我们也为她感到开心。",
+          "source": "问世间谁与我同频"
+        }
+      ]
+    }
+  ]
+}

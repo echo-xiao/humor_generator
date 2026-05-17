@@ -21,7 +21,7 @@ try:
 except ImportError:
     pass
 
-_PROJECT_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
+_PROJECT_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 sys.path.insert(0, _PROJECT_ROOT)
 load_dotenv(os.path.join(_PROJECT_ROOT, ".env"))
 
@@ -169,7 +169,7 @@ def _draw_text_element(draw, elem, bg_img=None):
             draw.text((lx, ly), line, font=font, fill=fill)
 
 
-STYLE_DB_PATH = os.path.join(_PROJECT_ROOT, "data", "style_database_v2.json")
+STYLE_DB_PATH = os.path.join(_PROJECT_ROOT, "data", "styles.json")
 
 
 def _get_photo_brightness(img):

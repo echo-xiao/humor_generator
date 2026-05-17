@@ -1,26 +1,8 @@
-# 核心
 google-genai
 google-cloud-storage
+google-auth
 python-dotenv
-networkx
+Pillow
+requests
 tqdm
-jieba
-
-# 语义词典
-OpenHowNet
-cilin
-
-# 谐音梗
-pypinyin
-
-# 繁简转换（ConceptNet 数据为繁体）
-opencc-python-reimplemented
-
-# YouTube 数据采集（可选，仅 extract_youtube.py 需要）
-# google-api-python-client
-# youtube-transcript-api
-# yt-dlp
-# funasr
-# modelscope
-# torch
-# torchaudio
+mcp

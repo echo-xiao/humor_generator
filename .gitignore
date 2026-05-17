@@ -1,20 +1,8 @@
 .env
+data/google_photos_token.json
 __pycache__/
 .DS_Store
 *.pyc
-*.ipynb
-
-# 大文件/数据（不提交）
-data/cache/
-data/input_data/
-data/external/
-data/external_triples/
-data/annotations/
-*.pkl
-
-# Docs (local only, not committed)
-docs/
-
-# IDE
+output/
 .idea/
 .vscode/

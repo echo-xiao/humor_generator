@@ -6,11 +6,6 @@
       "env": {
         "PYTHONPATH": "/Users/echoooooo/Desktop/code/humor_generator"
       }
-    },
-    "google_photos": {
-      "command": "node",
-      "args": ["/tmp/google-photos-mcp/src/index.js", "--stdio"],
-      "cwd": "/tmp/google-photos-mcp"
     }
   }
 }

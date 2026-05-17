@@ -23,14 +23,13 @@ import logging
 
 from dotenv import load_dotenv
 
-_PROJECT_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
+_PROJECT_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 sys.path.insert(0, _PROJECT_ROOT)
 load_dotenv(os.path.join(_PROJECT_ROOT, ".env"))
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(message)s")
 
-PREVIEW_DIR = os.path.join(_PROJECT_ROOT, "output", "preview")
-PUBLISH_DIR = os.path.join(_PROJECT_ROOT, "output", "publish")
+OUTPUT_DIR = os.path.join(_PROJECT_ROOT, "output")
 PHOTO_CACHE_DIR = os.path.join(_PROJECT_ROOT, "output", "photo_cache")
 
 
@@ -68,8 +67,8 @@ def split_slide_text(text):
 def _auto_match_photos(post_text, slides):
     """自动从 Google Photos 匹配配图并下载到本地"""
     try:
-        from pipeline.images.match_images import match_images_for_post
-        from pipeline.images.photo_index import get_drive_creds
+        from pipeline.match_images import match_images_for_post
+        from pipeline.photo_index import get_drive_creds
         import requests as _req
 
         results = match_images_for_post(post_text)
@@ -82,67 +81,97 @@ def _auto_match_photos(post_text, slides):
         photo_paths = {}
         for r in results:
             slide_num = r["slide"]
+
+            # 尝试推荐照片，如果失败就尝试候选列表
+            candidates = []
             rec = r.get("recommended")
-            if not rec or not rec.get("id"):
-                continue
+            if rec and rec.get("id"):
+                candidates.append(rec)
+            for c in r.get("candidates", []):
+                if c.get("id") and c["id"] not in [x.get("id") for x in candidates]:
+                    candidates.append(c)
 
-            # 下载照片到本地缓存
-            photo_id = rec["id"]
-            local_path = os.path.join(PHOTO_CACHE_DIR, f"{photo_id}.jpg")
+            for cand in candidates:
+                photo_id = cand["id"]
+                local_path = os.path.join(PHOTO_CACHE_DIR, f"{photo_id}.jpg")
 
-            if not os.path.exists(local_path):
-                resp = _req.get(
-                    f"https://www.googleapis.com/drive/v3/files/{photo_id}?alt=media",
-                    headers={"Authorization": f"Bearer {creds.token}"},
-                )
-                if resp.status_code == 200:
-                    with open(local_path, "wb") as f:
-                        f.write(resp.content)
-                    print(f"  图{slide_num}: 下载照片 {rec.get('name', photo_id)}")
-                else:
+                if os.path.exists(local_path):
+                    photo_paths[slide_num] = local_path
+                    print(f"  图{slide_num}: 使用缓存 {cand.get('name', photo_id)}")
+                    break
+
+                try:
+                    resp = _req.get(
+                        f"https://www.googleapis.com/drive/v3/files/{photo_id}?alt=media",
+                        headers={"Authorization": f"Bearer {creds.token}"},
+                        timeout=30,
+                    )
+                    if resp.status_code == 200 and len(resp.content) > 1000:
+                        with open(local_path, "wb") as f:
+                            f.write(resp.content)
+                        photo_paths[slide_num] = local_path
+                        print(f"  图{slide_num}: 下载照片 {cand.get('name', photo_id)}")
+                        break
+                except Exception:
                     continue
-
-            photo_paths[slide_num] = local_path
 
         print(f"匹配了 {len(photo_paths)}/{len(slides)} 张配图")
         return photo_paths
 
     except Exception as e:
-        print(f"自动配图失败: {e}，将使用纯文字卡片")
+        import traceback
+        print(f"自动配图失败: {e}\n{traceback.format_exc()}")
         return {}
 
 
-def preview_post(post_text, photo_paths=None):
+def preview_post(post_text, photo_paths=None, title=""):
     """
     预览帖子：自动匹配图片 + 渲染所有图片并打开 Finder
+
+    输出到 output/{title}/ 文件夹，文案和图片放在一起。
 
     Args:
         post_text: 帖子文案（===图1=== 格式）
         photo_paths: dict {slide_num: photo_path}，None则自动从Google Photos匹配
+        title: 帖子标题（用作文件夹名）
 
     Returns:
         list of rendered image paths
     """
-    from pipeline.images.render_post import render_slide, render_text_card, render_cover, render_cover_no_photo, render_on_photo
+    from pipeline.render_post import render_slide, render_text_card, render_cover, render_cover_no_photo, render_on_photo
 
     slides = parse_slides(post_text)
     if not slides:
         print("无法解析文案，请确认格式：===图1===")
         return []
 
+    # 确定输出目录
+    if title:
+        safe_title = re.sub(r'[^\w\u4e00-\u9fff]', '_', title)[:30]
+    else:
+        import time
+        safe_title = time.strftime("%m%d_%H%M")
+    post_dir = os.path.join(OUTPUT_DIR, safe_title)
+
+    # 如果目录已存在，清理旧图片
+    if os.path.exists(post_dir):
+        for f in os.listdir(post_dir):
+            if f.endswith('.jpg'):
+                os.remove(os.path.join(post_dir, f))
+    os.makedirs(post_dir, exist_ok=True)
+
+    # 保存文案
+    with open(os.path.join(post_dir, "post.txt"), "w", encoding="utf-8") as f:
+        f.write(post_text)
+
     # 如果没有指定配图，自动从 Google Photos 匹配
     if photo_paths is None:
         photo_paths = _auto_match_photos(post_text, slides)
 
-    # 清理预览目录
-    if os.path.exists(PREVIEW_DIR):
-        shutil.rmtree(PREVIEW_DIR)
-    os.makedirs(PREVIEW_DIR, exist_ok=True)
-
     rendered = []
     for s in slides:
         main_text, sub_text = split_slide_text(s["text"])
-        out_path = os.path.join(PREVIEW_DIR, f"slide_{s['num']:02d}.jpg")
+        out_path = os.path.join(post_dir, f"slide_{s['num']:02d}.jpg")
 
         photo = photo_paths.get(s["num"]) if photo_paths else None
 
@@ -158,9 +187,9 @@ def preview_post(post_text, photo_paths=None):
         print(f"  图{s['num']}: {main_text[:30]}... → {os.path.basename(path)}")
 
     # 打开 Finder 预览
-    subprocess.run(["open", PREVIEW_DIR])
-    print(f"\n预览目录已打开: {PREVIEW_DIR}")
-    print(f"共 {len(rendered)} 张图片，请检查后确认发布")
+    subprocess.run(["open", post_dir])
+    print(f"\n预览目录已打开: {post_dir}")
+    print(f"共 {len(rendered)} 张图片")
 
     return rendered
 
@@ -178,7 +207,7 @@ def prepare_publish(post_text, photo_paths=None, title="", description=""):
     Returns:
         dict with publish info
     """
-    from pipeline.images.render_post import render_slide, render_text_card, render_cover_no_photo
+    from pipeline.render_post import render_slide, render_text_card, render_cover_no_photo
 
     slides = parse_slides(post_text)
 
