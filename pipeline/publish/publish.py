@@ -123,7 +123,7 @@ def preview_post(post_text, photo_paths=None):
     Returns:
         list of rendered image paths
     """
-    from pipeline.images.render_post import render_slide, render_text_card, render_cover
+    from pipeline.images.render_post import render_slide, render_text_card, render_cover, render_cover_no_photo, render_on_photo
 
     slides = parse_slides(post_text)
     if not slides:
@@ -150,9 +150,9 @@ def preview_post(post_text, photo_paths=None):
         if photo and os.path.exists(photo):
             path = render_slide(photo, main_text, sub_text, out_path, is_cover=is_cover)
         elif is_cover:
-            path = render_text_card(main_text, sub_text, out_path)
+            path = render_text_card(main_text, sub_text, out_path, dark=True)
         else:
-            path = render_text_card(main_text, sub_text, out_path)
+            path = render_text_card(main_text, sub_text, out_path, dark=False)
 
         rendered.append(path)
         print(f"  图{s['num']}: {main_text[:30]}... → {os.path.basename(path)}")
@@ -178,7 +178,7 @@ def prepare_publish(post_text, photo_paths=None, title="", description=""):
     Returns:
         dict with publish info
     """
-    from pipeline.images.render_post import render_slide, render_text_card
+    from pipeline.images.render_post import render_slide, render_text_card, render_cover_no_photo
 
     slides = parse_slides(post_text)
 
@@ -197,8 +197,7 @@ def prepare_publish(post_text, photo_paths=None, title="", description=""):
         if photo and os.path.exists(photo):
             path = render_slide(photo, main_text, sub_text, out_path, is_cover=is_cover)
         elif is_cover:
-            # 封面没配图也用纯文字封面风格
-            path = render_text_card(main_text, sub_text, out_path)
+            path = render_cover_no_photo(main_text, out_path)
         else:
             path = render_text_card(main_text, sub_text, out_path)
         rendered.append(path)

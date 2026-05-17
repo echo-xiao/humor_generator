@@ -505,7 +505,7 @@ def match_images(post_text: str) -> str:
 
 
 @mcp.tool()
-def render_and_preview(post_text: str, title: str = "") -> str:
+def render_and_preview(post_text: str, title: str = "", text_only: bool = False) -> str:
     """
     渲染帖子所有图片并打开预览文件夹 + 上传到 Google Drive。
 
@@ -518,60 +518,12 @@ def render_and_preview(post_text: str, title: str = "") -> str:
     """
     try:
         from pipeline.publish.publish import preview_post
-        rendered = preview_post(post_text)
+        photo_paths = {} if text_only else None
+        rendered = preview_post(post_text, photo_paths=photo_paths)
         if not rendered:
             return "渲染失败，请检查文案格式"
 
-        upload_msg = ""
-        try:
-            from pipeline.images.photo_index import get_drive_creds
-            import requests as _req
-            creds = get_drive_creds()
-
-            resp = _req.get(
-                "https://www.googleapis.com/drive/v3/files",
-                headers={"Authorization": f"Bearer {creds.token}"},
-                params={"q": "name='小红书发布' and mimeType='application/vnd.google-apps.folder' and trashed=false",
-                        "fields": "files(id)"},
-            )
-            folders = resp.json().get("files", [])
-            if folders:
-                folder_id = folders[0]["id"]
-            else:
-                resp = _req.post(
-                    "https://www.googleapis.com/drive/v3/files",
-                    headers={"Authorization": f"Bearer {creds.token}", "Content-Type": "application/json"},
-                    json={"name": "小红书发布", "mimeType": "application/vnd.google-apps.folder"},
-                )
-                folder_id = resp.json()["id"]
-
-            from datetime import datetime
-            sub_name = title if title else datetime.now().strftime("%m%d_%H%M")
-            resp = _req.post(
-                "https://www.googleapis.com/drive/v3/files",
-                headers={"Authorization": f"Bearer {creds.token}", "Content-Type": "application/json"},
-                json={"name": sub_name, "mimeType": "application/vnd.google-apps.folder", "parents": [folder_id]},
-            )
-            sub_id = resp.json()["id"]
-
-            for img_path in rendered:
-                fname = os.path.basename(img_path)
-                metadata = json.dumps({"name": fname, "parents": [sub_id]})
-                with open(img_path, "rb") as f:
-                    img_data = f.read()
-                _req.post(
-                    "https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart",
-                    headers={"Authorization": f"Bearer {creds.token}"},
-                    files={
-                        "metadata": ("metadata", metadata, "application/json"),
-                        "file": (fname, img_data, "image/jpeg"),
-                    },
-                )
-            upload_msg = f"\n\n已上传到 Google Drive: 小红书发布/{sub_name}\n手机打开 Google Drive app 即可下载发布"
-        except Exception as e:
-            upload_msg = f"\n\nGoogle Drive 上传失败({e})，请手动从预览文件夹获取图片"
-
-        return f"渲染完成！共 {len(rendered)} 张图片\n预览文件夹已打开{upload_msg}"
+        return f"渲染完成！共 {len(rendered)} 张图片\n预览文件夹已打开: output/preview/"
     except Exception as e:
         return f"渲染出错: {e}"
 

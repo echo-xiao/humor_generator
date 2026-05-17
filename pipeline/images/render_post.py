@@ -84,8 +84,21 @@ def _crop34(img):
     return img.resize((W, H), Image.LANCZOS)
 
 
-def _draw_text_element(draw, elem):
-    """根据排版指令绘制一个文字元素"""
+def _check_local_brightness(img, x, y, w, h):
+    """检查图片某个区域的平均亮度"""
+    from PIL import ImageStat
+    x1 = max(0, int(x))
+    y1 = max(0, int(y))
+    x2 = min(img.width, int(x + w))
+    y2 = min(img.height, int(y + h))
+    if x2 <= x1 or y2 <= y1:
+        return 128
+    region = img.crop((x1, y1, x2, y2)).convert("L")
+    return ImageStat.Stat(region).mean[0]
+
+
+def _draw_text_element(draw, elem, bg_img=None):
+    """根据排版指令绘制一个文字元素，plain样式自动检测可读性"""
     text = elem.get("text", "")
     if not text:
         return
@@ -95,7 +108,7 @@ def _draw_text_element(draw, elem):
     font_size = max(20, min(elem.get("font_size", 60), 160))
     bold = elem.get("bold", True)
     color = elem.get("color", "white")
-    style = elem.get("style", "shadow")  # shadow / white_bar / black_bar / plain
+    style = elem.get("style", "plain")  # white_bar / black_bar / plain
     max_width = elem.get("max_width", W - 100)
 
     font = _font(font_size, bold)
@@ -122,41 +135,48 @@ def _draw_text_element(draw, elem):
         if ly + lh > H - 20:
             ly = H - lh - 20
 
-        if style == "white_bar":
+        actual_style = style
+
+        # plain 样式：自动检测可读性，看不清就加框
+        if actual_style == "plain" and bg_img is not None:
+            local_bright = _check_local_brightness(bg_img, lx, ly, lw, lh)
+            is_text_light = (fill[0] + fill[1] + fill[2]) > 384  # 文字是亮色
+            # 亮文字在亮背景上，或暗文字在暗背景上 → 看不清
+            if is_text_light and local_bright > 100:
+                actual_style = "black_bar"  # 加黑底让白字可读
+            elif not is_text_light and local_bright < 140:
+                actual_style = "white_bar"  # 加白底让黑字可读
+            elif color == "red":
+                actual_style = "white_bar"  # 红字配白底更好看
+
+        if actual_style == "white_bar":
             padding = max(8, font_size // 5)
             draw.rectangle(
                 [lx - padding, ly - padding // 2, lx + lw + padding, ly + lh + padding // 2],
                 fill=(255, 255, 255, 235),
             )
-            draw.text((lx, ly), line, font=font, fill=(20, 20, 20, 255))
+            draw.text((lx, ly), line, font=font, fill=(20, 20, 20, 255) if color != "red" else fill)
 
-        elif style == "black_bar":
+        elif actual_style == "black_bar":
             padding = max(10, font_size // 4)
             draw.rectangle(
                 [lx - padding, ly - padding // 2, lx + lw + padding, ly + lh + padding // 2],
                 fill=(0, 0, 0, 220),
             )
-            draw.text((lx, ly), line, font=font, fill=(255, 255, 255, 255))
+            draw.text((lx, ly), line, font=font, fill=(255, 255, 255, 255) if color != "red" else fill)
 
-        elif style == "shadow":
-            shadow = (0, 0, 0, 200)
-            for dx, dy in [(-2, -2), (-2, 2), (2, -2), (2, 2), (0, -2), (0, 2), (-2, 0), (2, 0)]:
-                draw.text((lx + dx, ly + dy), line, font=font, fill=shadow)
-            draw.text((lx + 3, ly + 3), line, font=font, fill=(0, 0, 0, 100))
-            draw.text((lx, ly), line, font=font, fill=fill)
-
-        else:  # plain
+        else:  # plain — 对比度够，直接叠
             draw.text((lx, ly), line, font=font, fill=fill)
 
 
-STYLE_DB_PATH = os.path.join(_PROJECT_ROOT, "data", "style_database.json")
+STYLE_DB_PATH = os.path.join(_PROJECT_ROOT, "data", "style_database_v2.json")
 
 
 def _get_photo_brightness(img):
     """判断照片整体亮度"""
     from PIL import ImageStat
     stat = ImageStat.Stat(img.convert("L"))
-    return stat.mean[0]  # 0-255, >140 算亮
+    return stat.mean[0]  # 0-255, >120 算亮
 
 
 def _load_style_templates():
@@ -173,7 +193,7 @@ def _find_matching_template(brightness, num_title_chars, num_sub_chars, has_pric
     if not db:
         return None
 
-    is_bright = brightness > 140
+    is_bright = brightness > 120
 
     best = None
     best_score = -1
@@ -182,7 +202,7 @@ def _find_matching_template(brightness, num_title_chars, num_sub_chars, has_pric
         if entry.get("is_cover"):
             continue  # 封面用固定模板
 
-        elems = entry.get("text_elements", entry.get("elements", []))
+        elems = entry.get("elements", entry.get("text_elements", []))
         if not elems:
             continue
 
@@ -194,7 +214,7 @@ def _find_matching_template(brightness, num_title_chars, num_sub_chars, has_pric
             score += 5
 
         # 文字数量匹配
-        title_elems = [e for e in elems if e.get("role") in ("title", "keyword", "subtitle")]
+        title_elems = [e for e in elems if e.get("role") in ("title", "keyword")]
         sub_elems = [e for e in elems if e.get("role") in ("annotation",)]
         if len(title_elems) > 0 and num_title_chars > 0:
             score += 2
@@ -215,33 +235,49 @@ def _find_matching_template(brightness, num_title_chars, num_sub_chars, has_pric
     return best
 
 
+def _bg_type_to_style(bg_type):
+    """将 v2 的 bg_type 转换为渲染用的 style"""
+    if bg_type in ("white_bar",):
+        return "white_bar"
+    elif bg_type in ("black_bar", "black_block"):
+        return "black_bar"
+    else:
+        return "plain"
+
+
 def _apply_template_style(elements, template, brightness):
     """将模板的样式应用到Gemini返回的位置上"""
     if not template:
-        # 无模板，用默认
-        is_bright = brightness > 140
-        default_style = "white_bar" if is_bright else "shadow"
-        default_color = "black" if is_bright else "white"
+        # 无模板，用默认：暗底用白框黑字，亮底用黑框白字
+        is_bright = brightness > 120
+        default_style = "black_bar" if is_bright else "white_bar"
+        default_color = "white" if is_bright else "black"
         for elem in elements:
             text = elem.get("text", "")
             if re.search(r'[¥$￥]\d', text):
-                elem["style"] = "shadow"
+                elem["style"] = "plain"
                 elem["color"] = "red"
             else:
                 elem["style"] = default_style
                 elem["color"] = default_color
         return
 
-    template_elems = template.get("text_elements", template.get("elements", []))
+    template_elems = template.get("elements", template.get("text_elements", []))
 
-    # 按 role 分类模板元素的样式
+    # 按 role 分类模板元素的样式 (bg_type + color)
     role_styles = {}
     for te in template_elems:
         role = te.get("role", "title")
+        bg_type = te.get("bg_type", te.get("style", "none"))
         role_styles[role] = {
-            "style": te.get("style", "shadow"),
+            "style": _bg_type_to_style(bg_type),
             "color": te.get("color", "white"),
+            "font_size": te.get("font_size", 60),
         }
+
+    is_bright = brightness > 120
+    default_style = "black_bar" if is_bright else "white_bar"
+    default_color = "white" if is_bright else "black"
 
     for elem in elements:
         text = elem.get("text", "")
@@ -249,14 +285,14 @@ def _apply_template_style(elements, template, brightness):
 
         # 判断角色
         if re.search(r'[¥$￥]\d', text):
-            elem["style"] = "shadow"
+            elem["style"] = "plain"
             elem["color"] = "red"
         elif fs >= 70:
-            rs = role_styles.get("title", role_styles.get("keyword", {"style": "shadow", "color": "white"}))
+            rs = role_styles.get("title", role_styles.get("keyword", {"style": default_style, "color": default_color}))
             elem["style"] = rs["style"]
             elem["color"] = rs["color"]
         else:
-            rs = role_styles.get("annotation", {"style": "shadow", "color": "white"})
+            rs = role_styles.get("annotation", {"style": default_style, "color": default_color})
             elem["style"] = rs["style"]
             elem["color"] = rs["color"]
 
@@ -272,11 +308,12 @@ def _get_layout(photo_path, main_text, sub_text, is_cover=False, max_retries=3):
         f'小字注释：{sub_text}\n\n'
         '请告诉我每段文字应该放在什么位置（x,y坐标），以及合适的字号。\n'
         '规则：\n'
-        '1. 文字放在空白/暗处/纯色区域\n'
-        '2. 可以稍微挡一点主体\n'
-        '3. 人脸必须被文字覆盖\n'
-        '4. 大标题偏左，注释放右下角\n'
-        '5. 元素不能重叠\n\n'
+        '1. 优先把文字放在空白/天空/纯色区域，避免放在复杂纹理上\n'
+        '2. 如果照片中有人脸，大标题必须覆盖住人脸（隐私保护）\n'
+        '3. 大标题放在图片上半部分偏左位置\n'
+        '4. 小字注释放在图片下半部分，和大标题不能重叠\n'
+        '5. 大标题和小字注释之间至少间隔200px\n'
+        '6. 小字注释不要和照片主体重叠，放在边角空白处\n\n'
         '输出JSON：\n'
         '{"elements":[{"text":"文字","x":50,"y":300,"font_size":70,"max_width":800}]}\n'
         '只输出JSON。'
@@ -371,7 +408,7 @@ def _fallback_layout(main_text, sub_text, is_cover):
             elements.append({
                 "text": sub_text, "x": 500, "y": 1200,
                 "font_size": 32, "bold": True, "color": "white",
-                "style": "shadow", "max_width": 500,
+                "style": "plain", "max_width": 500,
             })
     return {"elements": elements}
 
@@ -479,9 +516,9 @@ def render_slide(photo_path, main_text, sub_text="", output_path=None, is_cover=
     layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     draw = ImageDraw.Draw(layer)
 
-    # 4. 绘制每个元素
+    # 4. 绘制每个元素（传入原图用于可读性检测）
     for elem in elements:
-        _draw_text_element(draw, elem)
+        _draw_text_element(draw, elem, bg_img=img)
 
     # 4. 合成输出
     result = Image.alpha_composite(img, layer).convert("RGB")
@@ -501,33 +538,182 @@ def render_cover(photo_path, main_text, output_path=None):
     return render_slide(photo_path, main_text, "", output_path, is_cover=True)
 
 
-def render_text_card(main_text, sub_text="", output_path=None):
-    """纯文字卡片"""
-    img = Image.new("RGBA", (W, H), (250, 248, 244, 255))
+def render_cover_no_photo(main_text, output_path=None):
+    """无照片封面：深色背景 + 黑块白字，保持博主风格"""
+    img = Image.new("RGBA", (W, H), (35, 33, 30, 255))
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(layer)
+
+    lines = [l.strip() for l in main_text.strip().split("\n") if l.strip()]
+
+    sized_lines = []
+    for line in lines:
+        n = len(line)
+        if n <= 2:
+            fs = 160
+        elif n <= 4:
+            fs = 120
+        elif n <= 6:
+            fs = 100
+        elif n <= 10:
+            fs = 80
+        else:
+            fs = 65
+        sized_lines.append((line, fs))
+
+    total_h = 0
+    max_w = 0
+    line_metrics = []
+    for line, fs in sized_lines:
+        font = _font(fs)
+        wrapped = _wrap(draw, line, font, W - 200)
+        lh = int(fs * 1.3)
+        for wl in wrapped:
+            tw, th = _tw(draw, wl, font)
+            line_metrics.append((wl, fs, font, tw, lh))
+            max_w = max(max_w, tw)
+            total_h += lh
+
+    block_pad_x = 50
+    block_pad_y = 35
+    block_w = max_w + block_pad_x * 2
+    block_h = total_h + block_pad_y * 2
+
+    block_x = max(30, (W - block_w) // 2 - 30)
+    block_y = max(80, int(H * 0.22))
+
+    if block_x + block_w > W - 20:
+        block_w = W - block_x - 20
+    if block_y + block_h > H - 100:
+        block_y = H - block_h - 100
+
+    draw.rectangle(
+        [block_x, block_y, block_x + block_w, block_y + block_h],
+        fill=(0, 0, 0, 250),
+    )
+
+    cy = block_y + block_pad_y
+    for wl, fs, font, tw, lh in line_metrics:
+        cx = block_x + block_pad_x
+        draw.text((cx, cy), wl, font=font, fill=(255, 255, 255, 255))
+        cy += lh
+
+    result = Image.alpha_composite(img, layer).convert("RGB")
+    if output_path is None:
+        out_dir = os.path.join(_PROJECT_ROOT, "output")
+        os.makedirs(out_dir, exist_ok=True)
+        output_path = os.path.join(out_dir, "cover_no_photo.jpg")
+    result.save(output_path, "JPEG", quality=95)
+    return output_path
+
+
+def render_text_card(main_text, sub_text="", output_path=None, dark=False):
+    """纯文字卡片：所有文字作为一个整体渲染，不拆分"""
+    if dark:
+        bg_color = (30, 28, 25, 255)
+        text_color = (245, 243, 240)
+    else:
+        bg_color = (250, 248, 244, 255)
+        text_color = (30, 30, 30)
+
+    img = Image.new("RGBA", (W, H), bg_color)
     draw = ImageDraw.Draw(img)
 
-    title_font = _font(64)
-    lines = _wrap(draw, main_text, title_font, W - 160)
-    line_h = 84
-    total_h = len(lines) * line_h
-    y0 = (H - total_h) // 2 - 60
-
-    for i, line in enumerate(lines):
-        draw.text((80, y0 + i * line_h), line, font=title_font, fill=(30, 30, 30))
-
-    sep_y = y0 + total_h + 40
-    draw.line([(80, sep_y), (W - 80, sep_y)], fill=(200, 195, 188), width=2)
-
+    # 合并所有文字，保留原始换行
+    full_text = main_text
     if sub_text:
-        sf = _font(30, bold=False)
-        for i, line in enumerate(sub_text.strip().split("\n")):
-            draw.text((80, sep_y + 30 + i * 42), line.strip(), font=sf, fill=(120, 115, 108))
+        full_text = main_text + "\n" + sub_text
+
+    lines = [l.strip() for l in full_text.strip().split("\n") if l.strip()]
+
+    margin = 80
+    max_w = W - margin * 2
+
+    # 自动选字号：让文字填满画面但不溢出
+    for fs in [56, 48, 42, 36, 30]:
+        font = _font(fs)
+        line_h = int(fs * 1.6)
+        # 计算换行后总行数
+        wrapped = []
+        for line in lines:
+            wrapped.extend(_wrap(draw, line, font, max_w))
+        total_h = len(wrapped) * line_h
+        if total_h <= H - 200:
+            break
+
+    # 垂直居中
+    y0 = (H - total_h) // 2
+
+    # 渲染每一行
+    for i, line in enumerate(wrapped):
+        draw.text((margin, y0 + i * line_h), line, font=font, fill=text_color)
 
     result = img.convert("RGB")
     if output_path is None:
         out_dir = os.path.join(_PROJECT_ROOT, "output")
         os.makedirs(out_dir, exist_ok=True)
         output_path = os.path.join(out_dir, "text_card.jpg")
+    result.save(output_path, "JPEG", quality=95)
+    return output_path
+
+
+def render_on_photo(photo_path, full_text, output_path=None, is_cover=False):
+    """照片+文字：自动检测明暗，加半透明底+文字"""
+    img = Image.open(photo_path).convert("RGBA")
+    img = _crop34(img)
+    brightness = _get_photo_brightness(img)
+    is_bright = brightness > 120
+
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(layer)
+
+    lines = [l.strip() for l in full_text.strip().split("\n") if l.strip()]
+    margin = 60
+
+    # 自动选字号
+    max_w = W - margin * 2
+    for fs in [72, 60, 50, 42, 36, 30]:
+        font = _font(fs)
+        line_h = int(fs * 1.5)
+        wrapped = []
+        for line in lines:
+            wrapped.extend(_wrap(draw, line, font, max_w))
+        total_h = len(wrapped) * line_h
+        if total_h <= H - 200:
+            break
+
+    # 文字区域位置（垂直居中偏上）
+    y0 = max(60, (H - total_h) // 2 - 40)
+    pad_x, pad_y = 40, 30
+
+    # 每行文字单独加细条半透明背景
+    bar_pad_x = 12
+    bar_pad_y = 4
+
+    if is_bright:
+        bar_color = (255, 255, 255, 180)
+        text_color = (20, 20, 20, 255)
+    else:
+        bar_color = (0, 0, 0, 160)
+        text_color = (245, 243, 240, 255)
+
+    for i, line in enumerate(wrapped):
+        lx = margin
+        ly = y0 + i * line_h
+        tw, th = _tw(draw, line, font)
+        # 细条背景，只包裹这一行文字
+        draw.rectangle(
+            [lx - bar_pad_x, ly - bar_pad_y,
+             lx + tw + bar_pad_x, ly + th + bar_pad_y],
+            fill=bar_color,
+        )
+        draw.text((lx, ly), line, font=font, fill=text_color)
+
+    result = Image.alpha_composite(img, layer).convert("RGB")
+    if output_path is None:
+        out_dir = os.path.join(_PROJECT_ROOT, "output")
+        os.makedirs(out_dir, exist_ok=True)
+        output_path = os.path.join(out_dir, "on_photo.jpg")
     result.save(output_path, "JPEG", quality=95)
     return output_path
 
